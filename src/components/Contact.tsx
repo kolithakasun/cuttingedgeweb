@@ -56,12 +56,12 @@ const Contact = () => {
   };
   
   return (
-    <section id="contact" className="section-padding bg-blue-50">
+    <section id="contact" className="py-16 px-4 bg-blue-50">
       <div className="container max-w-7xl mx-auto">
         <Motion animation="fade-up" className="text-center mb-16">
           <span className="px-3 py-1 text-sm font-medium bg-secondary text-primary rounded-full">Get In Touch</span>
-          <h2 className="section-title mt-6">Contact Us</h2>
-          <p className="section-subtitle mx-auto">
+          <h2 className="text-3xl font-bold mt-6 mb-4">Contact Us</h2>
+          <p className="text-gray-600 max-w-2xl mx-auto">
             Have questions or need a consultation? Reach out to us and we'll get back to you shortly.
           </p>
         </Motion>
@@ -82,8 +82,8 @@ const Contact = () => {
                 href="tel:+15551234567" 
               />
               
-              <div className="flex flex-col gap-3">
-                <h4 className="font-medium mb-1">Our Offices</h4>
+              <div className="space-y-4">
+                <h4 className="font-medium">Our Offices</h4>
                 
                 <ContactItem 
                   icon={MapPin} 
@@ -103,7 +103,7 @@ const Contact = () => {
           </Motion>
           
           <Motion animation="fade-left" className="lg:col-span-3">
-            <form onSubmit={handleSubmit} className="glass-card rounded-2xl p-8 shadow-sm">
+            <form onSubmit={handleSubmit} className="bg-white rounded-2xl p-8 shadow-sm">
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-6">
                 <div className="space-y-2">
                   <label htmlFor="name" className="block text-sm font-medium">
@@ -113,7 +113,6 @@ const Contact = () => {
                     id="name" 
                     placeholder="John Doe" 
                     required 
-                    className="glass-input" 
                   />
                 </div>
                 <div className="space-y-2">
@@ -125,7 +124,6 @@ const Contact = () => {
                     type="email" 
                     placeholder="john@example.com" 
                     required 
-                    className="glass-input" 
                   />
                 </div>
               </div>
@@ -138,7 +136,6 @@ const Contact = () => {
                   id="subject" 
                   placeholder="How can we help you?" 
                   required 
-                  className="glass-input" 
                 />
               </div>
               
@@ -150,7 +147,7 @@ const Contact = () => {
                   id="message" 
                   placeholder="Tell us about your project or inquiry..." 
                   required 
-                  className="glass-input min-h-[150px]" 
+                  className="min-h-[150px]" 
                 />
               </div>
               
