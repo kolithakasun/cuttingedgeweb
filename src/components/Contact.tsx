@@ -72,8 +72,8 @@ const Contact = () => {
               <ContactItem 
                 icon={Mail} 
                 title="Email" 
-                content="info@techsolutions.example" 
-                href="mailto:info@techsolutions.example" 
+                content="sales@cuttingedgesl.com" 
+                href="mailto:sales@cuttingedgesl.com" 
               />
               <ContactItem 
                 icon={Phone} 
@@ -81,12 +81,24 @@ const Contact = () => {
                 content="+1 (555) 123-4567" 
                 href="tel:+15551234567" 
               />
-              <ContactItem 
-                icon={MapPin} 
-                title="Office" 
-                content="123 Business Ave, Tech City, TC 98765" 
-                href="https://maps.google.com" 
-              />
+              
+              <div className="flex flex-col gap-3">
+                <h4 className="font-medium mb-1">Our Offices</h4>
+                
+                <ContactItem 
+                  icon={MapPin} 
+                  title="Sri Lanka Office" 
+                  content="27/2, St. Mitchel Road, Hedigama, Piliyandala, Sri Lanka" 
+                  href="https://maps.google.com/?q=27/2,+St.+Mitchel+Road,+Hedigama,+Piliyandala,+Sri+Lanka" 
+                />
+                
+                <ContactItem 
+                  icon={MapPin} 
+                  title="Australia Office" 
+                  content="8, Smethurst Road, Tarneit 3029, VIC, Australia" 
+                  href="https://maps.google.com/?q=8,+Smethurst+Road,+Tarneit+3029,+VIC,+Australia" 
+                />
+              </div>
             </div>
           </Motion>
           

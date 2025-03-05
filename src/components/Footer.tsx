@@ -14,7 +14,7 @@ const Footer = () => {
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-12">
             <div className="md:col-span-2">
               <div className="mb-4">
-                <a href="#" className="text-2xl font-bold">TechSolutions</a>
+                <a href="#" className="text-2xl font-bold">CuttingEdge Technologies</a>
               </div>
               <p className="text-muted-foreground max-w-md mb-6">
                 Providing innovative IT solutions to help businesses thrive in the digital era. We're your trusted technology partner.
@@ -58,7 +58,7 @@ const Footer = () => {
           
           <div className="border-t border-gray-100 pt-8 flex flex-col md:flex-row justify-between items-center">
             <p className="text-muted-foreground text-sm">
-              &copy; {currentYear} TechSolutions. All rights reserved.
+              &copy; {currentYear} CuttingEdge Technologies. All rights reserved.
             </p>
             <div className="flex space-x-6 mt-4 md:mt-0">
               <a href="#" className="text-muted-foreground hover:text-foreground text-sm transition-colors">Privacy Policy</a>
