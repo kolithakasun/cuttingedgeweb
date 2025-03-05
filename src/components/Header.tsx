@@ -31,7 +31,7 @@ const Header = () => {
     )}>
       <div className="container flex items-center justify-between">
         <a href="#" className="flex items-center gap-2">
-          <span className="text-xl font-bold tracking-tight">TechSolutions</span>
+          <span className="text-xl font-bold tracking-tight">CuttingEdge Technologies</span>
         </a>
 
         {/* Desktop Navigation */}
