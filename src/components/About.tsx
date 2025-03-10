@@ -1,8 +1,7 @@
 
 import React from 'react';
-import { cn } from '@/lib/utils';
-import { Motion } from '@/components/ui/motion';
 import { CheckCircle } from 'lucide-react';
+import { Motion } from '@/components/ui/motion';
 
 const features = [
   'Expert team with over 15 years of experience',
@@ -28,7 +27,7 @@ const About = () => {
                   loading="lazy"
                 />
               </div>
-              <div className="absolute -bottom-8 -right-8 glass-card rounded-2xl p-6 shadow-lg max-w-xs hidden md:block">
+              <div className="absolute -bottom-8 -right-8 bg-white/80 backdrop-blur-md rounded-2xl p-6 shadow-lg max-w-xs hidden md:block">
                 <p className="text-lg font-medium">
                   "Our mission is to empower businesses through technology that works seamlessly."
                 </p>
