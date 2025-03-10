@@ -15,7 +15,7 @@ const features = [
 
 const About = () => {
   return (
-    <section id="about" className="section-padding bg-white">
+    <section id="about" className="py-16 px-4 bg-white">
       <div className="container max-w-7xl mx-auto">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
           <Motion animation="fade-right" className="order-2 lg:order-1">
@@ -39,7 +39,7 @@ const About = () => {
           
           <Motion animation="fade-left" className="order-1 lg:order-2">
             <span className="px-3 py-1 text-sm font-medium bg-secondary text-primary rounded-full">About Us</span>
-            <h2 className="section-title mt-6">We Make Technology Work for Your Business</h2>
+            <h2 className="text-3xl font-bold mt-6 mb-4">We Make Technology Work for Your Business</h2>
             <p className="text-muted-foreground mt-6">
               With over 15 years of experience, we've helped countless businesses leverage technology to overcome challenges and achieve their goals. Our team of certified IT professionals is dedicated to providing exceptional service and innovative solutions.
             </p>
