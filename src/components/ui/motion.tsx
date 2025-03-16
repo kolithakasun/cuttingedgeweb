@@ -62,7 +62,7 @@ export function Motion({
   return (
     <div 
       ref={ref} 
-      className={cn('opacity-0', className)}
+      className={cn('opacity-2', className)}
       style={{ willChange: 'opacity, transform' }}
     >
       {children}
