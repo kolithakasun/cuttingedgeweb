@@ -1,5 +1,6 @@
 
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { cn } from '@/lib/utils';
 import { Motion, MotionGroup } from '@/components/ui/motion';
 import { 
@@ -8,7 +9,8 @@ import {
   Cloud, 
   Smartphone, 
   MonitorSmartphone, 
-  Code 
+  Code, 
+  ArrowRight 
 } from 'lucide-react';
 
 const serviceItems = [
@@ -16,51 +18,63 @@ const serviceItems = [
     icon: Server,
     title: 'IT Infrastructure',
     description: 'Design, implementation and management of robust IT infrastructure tailored to your business needs.',
+    link: '/services/it-infrastructure'
   },
   {
     icon: Shield,
     title: 'Cybersecurity',
     description: 'Comprehensive security solutions to protect your business from evolving cyber threats.',
+    link: '/services/cybersecurity'
   },
   {
     icon: Cloud,
     title: 'Cloud Services',
     description: 'Seamless migration and management of cloud solutions that scale with your business.',
+    link: '/services/cloud-services'
   },
   {
     icon: Smartphone,
     title: 'Managed IT Services',
     description: 'Proactive monitoring and management of your IT environment to ensure optimal performance.',
+    link: '/services/managed-it-services'
   },
   {
     icon: MonitorSmartphone,
     title: 'Digital Transformation',
     description: 'Strategic guidance to help your business leverage digital technologies for growth.',
+    link: '/services/digital-transformation'
   },
   {
     icon: Code,
     title: 'Custom Software',
     description: 'Tailored software solutions designed to address your unique business challenges.',
+    link: '/services/custom-software'
   }
 ];
 
 const ServiceCard = ({ 
   icon: Icon, 
   title, 
-  description 
+  description,
+  link
 }: { 
   icon: React.ElementType; 
   title: string; 
   description: string;
+  link: string;
 }) => {
   return (
-    <div className="group p-8 rounded-2xl glass-card flex flex-col items-start transition-all duration-300 hover:shadow-lg hover:translate-y-[-5px]">
+    <Link to={link} className="group p-8 rounded-2xl glass-card flex flex-col items-start transition-all duration-300 hover:shadow-lg hover:translate-y-[-5px]">
       <div className="p-3 rounded-xl bg-primary/10 text-primary mb-5">
         <Icon className="h-6 w-6" />
       </div>
       <h3 className="text-xl font-semibold mb-3">{title}</h3>
-      <p className="text-muted-foreground">{description}</p>
-    </div>
+      <p className="text-muted-foreground mb-4">{description}</p>
+      <div className="mt-auto flex items-center text-primary font-medium">
+        Learn more 
+        <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
+      </div>
+    </Link>
   );
 };
 
@@ -80,10 +94,21 @@ const Services = () => {
               key={index} 
               icon={service.icon} 
               title={service.title} 
-              description={service.description} 
+              description={service.description}
+              link={service.link}
             />
           ))}
         </MotionGroup>
+        
+        <div className="text-center mt-12">
+          <Link 
+            to="/services" 
+            className="inline-flex items-center text-primary font-medium hover:underline"
+          >
+            View all services
+            <ArrowRight className="ml-1 h-4 w-4" />
+          </Link>
+        </div>
       </div>
     </section>
   );

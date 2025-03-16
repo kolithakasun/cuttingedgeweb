@@ -1,5 +1,6 @@
 
 import React, { useEffect, useState } from 'react';
+import { Link, useLocation } from 'react-router-dom';
 import { cn } from '@/lib/utils';
 import { Button } from '@/components/ui/button';
 import { Menu, X } from 'lucide-react';
@@ -7,6 +8,7 @@ import { Menu, X } from 'lucide-react';
 const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const location = useLocation();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -18,11 +20,23 @@ const Header = () => {
   }, []);
 
   const navLinks = [
-    { title: 'Home', href: '#' },
-    { title: 'Services', href: '#services' },
-    { title: 'About', href: '#about' },
-    { title: 'Contact', href: '#contact' },
+    { title: 'Home', href: '/' },
+    { title: 'Services', href: '/services' },
+    { title: 'About', href: '/#about' },
+    { title: 'Contact', href: '/#contact' },
   ];
+
+  const handleNavClick = (href: string) => {
+    setIsMobileMenuOpen(false);
+    
+    // Handle anchor links on the home page
+    if (href.startsWith('/#') && location.pathname === '/') {
+      const element = document.getElementById(href.substring(2));
+      if (element) {
+        element.scrollIntoView({ behavior: 'smooth' });
+      }
+    }
+  };
 
   return (
     <header className={cn(
@@ -30,27 +44,39 @@ const Header = () => {
       isScrolled ? 'bg-white/80 backdrop-blur-lg shadow-sm py-4' : 'bg-transparent py-6'
     )}>
       <div className="container flex items-center justify-between">
-        <a href="#" className="flex items-center gap-2">
+        <Link to="/" className="flex items-center gap-2">
           <img 
             src="/lovable-uploads/e44b6988-8639-4875-86d4-8bf052f2215d.png" 
             alt="CuttingEdge Technologies Logo" 
             className="h-10 w-auto" 
           />
           <span className="text-lg font-bold tracking-tight">CUTTINGEDGE Technologies</span>
-        </a>
+        </Link>
 
         {/* Desktop Navigation */}
         <nav className="hidden md:flex items-center gap-8">
           {navLinks.map((link) => (
-            <a
+            <Link
               key={link.title}
-              href={link.href}
+              to={link.href}
               className="text-sm font-medium text-foreground/80 hover:text-foreground transition-colors"
+              onClick={() => handleNavClick(link.href)}
             >
               {link.title}
-            </a>
+            </Link>
           ))}
-          <Button className="ml-2">Get in Touch</Button>
+          <Button 
+            className="ml-2"
+            onClick={() => {
+              if (location.pathname === '/') {
+                document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' });
+              } else {
+                window.location.href = '/#contact';
+              }
+            }}
+          >
+            Get in Touch
+          </Button>
         </nav>
 
         {/* Mobile Menu Button */}
@@ -72,20 +98,24 @@ const Header = () => {
       )}>
         <nav className="container flex flex-col py-6 gap-6">
           {navLinks.map((link) => (
-            <a
+            <Link
               key={link.title}
-              href={link.href}
+              to={link.href}
               className="text-base font-medium text-foreground/80 hover:text-foreground transition-colors"
-              onClick={() => setIsMobileMenuOpen(false)}
+              onClick={() => handleNavClick(link.href)}
             >
               {link.title}
-            </a>
+            </Link>
           ))}
           <Button 
             className="w-full mt-2"
             onClick={() => {
               setIsMobileMenuOpen(false);
-              document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' });
+              if (location.pathname === '/') {
+                document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' });
+              } else {
+                window.location.href = '/#contact';
+              }
             }}
           >
             Get in Touch

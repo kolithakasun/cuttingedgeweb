@@ -74,12 +74,21 @@ const Contact = () => {
                 content="sales@cuttingedgesl.com" 
                 href="mailto:sales@cuttingedgesl.com" 
               />
-              <ContactItem 
-                icon={Phone} 
-                title="Phone" 
-                content="+1 (555) 123-4567" 
-                href="tel:+15551234567" 
-              />
+              <div className="space-y-4">
+                <h4 className="font-medium">Phone Numbers</h4>
+                <ContactItem 
+                  icon={Phone} 
+                  title="Sri Lanka Office" 
+                  content="+94 112 638 532" 
+                  href="tel:+94112638532" 
+                />
+                <ContactItem 
+                  icon={Phone} 
+                  title="Australia Office" 
+                  content="+61 420 814 130" 
+                  href="tel:+61420814130" 
+                />
+              </div>
               
               <div className="space-y-4">
                 <h4 className="font-medium">Our Offices</h4>
