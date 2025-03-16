@@ -1,5 +1,6 @@
 
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { cn } from '@/lib/utils';
 import { Motion } from '@/components/ui/motion';
 import { Twitter, Linkedin, Facebook, Instagram } from 'lucide-react';
@@ -20,7 +21,7 @@ const Footer = () => {
                     alt="CuttingEdge Technologies Logo" 
                     className="h-12 w-auto" 
                   />
-                  <span className="text-xl font-bold tracking-tight">CUTTINGEDGE Technologies</span>
+                  <span className="text-xl font-bold tracking-tight">CuttingEdge Technologies</span>
                 </a>
               </div>
               <p className="text-muted-foreground max-w-md mb-6">
@@ -45,10 +46,10 @@ const Footer = () => {
             <div>
               <h3 className="text-sm font-semibold uppercase tracking-wider text-gray-400 mb-4">Services</h3>
               <ul className="space-y-3">
-                <li><a href="#" className="text-muted-foreground hover:text-foreground transition-colors">IT Infrastructure</a></li>
-                <li><a href="#" className="text-muted-foreground hover:text-foreground transition-colors">Cybersecurity</a></li>
-                <li><a href="#" className="text-muted-foreground hover:text-foreground transition-colors">Cloud Services</a></li>
-                <li><a href="#" className="text-muted-foreground hover:text-foreground transition-colors">Managed IT</a></li>
+                <li><Link to="/services/it-infrastructure" className="text-muted-foreground hover:text-foreground transition-colors">IT Infrastructure</Link></li>
+                <li><Link to="/services/cybersecurity" className="text-muted-foreground hover:text-foreground transition-colors">Cybersecurity</Link></li>
+                <li><Link to="/services/cloud-services" className="text-muted-foreground hover:text-foreground transition-colors">Cloud Services</Link></li>
+                <li><Link to="/services/managed-it-services" className="text-muted-foreground hover:text-foreground transition-colors">Managed IT</Link></li>
               </ul>
             </div>
             
@@ -65,12 +66,12 @@ const Footer = () => {
           
           <div className="border-t border-gray-100 pt-8 flex flex-col md:flex-row justify-between items-center">
             <p className="text-muted-foreground text-sm">
-              &copy; {currentYear} CUTTINGEDGE Technologies. All rights reserved.
+              &copy; {currentYear} CuttingEdge Technologies. All rights reserved.
             </p>
             <div className="flex space-x-6 mt-4 md:mt-0">
-              <a href="#" className="text-muted-foreground hover:text-foreground text-sm transition-colors">Privacy Policy</a>
-              <a href="#" className="text-muted-foreground hover:text-foreground text-sm transition-colors">Terms of Service</a>
-              <a href="#" className="text-muted-foreground hover:text-foreground text-sm transition-colors">Cookie Policy</a>
+              <Link to="/privacy-policy" className="text-muted-foreground hover:text-foreground text-sm transition-colors">Privacy Policy</Link>
+              <Link to="/terms-of-service" className="text-muted-foreground hover:text-foreground text-sm transition-colors">Terms of Service</Link>
+              <Link to="/cookie-policy" className="text-muted-foreground hover:text-foreground text-sm transition-colors">Cookie Policy</Link>
             </div>
           </div>
         </div>

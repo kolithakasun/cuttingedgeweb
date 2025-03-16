@@ -31,16 +31,89 @@ const clients = [
   }
 ];
 
-const vendors = [
-  { name: 'Google', type: 'Cloud & Workspace' },
-  { name: 'Microsoft', type: 'Azure, 365, etc' },
-  { name: 'AWS', type: 'Cloud Services' },
-  { name: 'Dell', type: 'Hardware' },
-  { name: 'HP', type: 'Hardware' },
-  { name: 'Lenovo', type: 'Hardware' },
-  { name: 'Adobe', type: 'Software' },
-  { name: 'AutoCAD', type: 'Software' },
-  { name: 'Sketchup', type: 'Software' }
+const partners = [
+  { 
+    name: 'Google', 
+    logo: 'https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_272x92dp.png',
+    services: [
+      { name: 'Google Workspace', description: 'Comprehensive productivity and collaboration tools' },
+      { name: 'Google Cloud Platform', description: 'Scalable cloud computing services' },
+      { name: 'Google Ads', description: 'Digital advertising solutions' }
+    ]
+  },
+  { 
+    name: 'Microsoft', 
+    logo: 'https://img-prod-cms-rt-microsoft-com.akamaized.net/cms/api/am/imageFileData/RE1Mu3b?ver=5c31',
+    services: [
+      { name: 'Microsoft 365', description: 'Business productivity apps and cloud services' },
+      { name: 'Azure', description: 'Cloud computing platform and services' },
+      { name: 'Dynamics 365', description: 'Business applications and CRM' },
+      { name: 'Windows', description: 'Operating system and management' }
+    ]
+  },
+  { 
+    name: 'AWS', 
+    logo: 'https://upload.wikimedia.org/wikipedia/commons/9/93/Amazon_Web_Services_Logo.svg',
+    services: [
+      { name: 'EC2', description: 'Secure and resizable compute capacity' },
+      { name: 'S3', description: 'Scalable storage infrastructure' },
+      { name: 'RDS', description: 'Managed relational database service' },
+      { name: 'Lambda', description: 'Serverless computing service' }
+    ]
+  },
+  { 
+    name: 'Adobe', 
+    logo: 'https://upload.wikimedia.org/wikipedia/commons/8/8d/Adobe_Corporate_Logo.png',
+    services: [
+      { name: 'Creative Cloud', description: 'Collection of creative apps and services' },
+      { name: 'Acrobat', description: 'PDF creation and management' },
+      { name: 'Adobe Sign', description: 'Electronic signature solution' }
+    ]
+  },
+  { 
+    name: 'Autodesk', 
+    logo: 'https://upload.wikimedia.org/wikipedia/commons/0/0f/Autodesk_logo.svg',
+    services: [
+      { name: 'AutoCAD', description: '2D and 3D design and drafting' },
+      { name: 'Revit', description: 'Building information modeling software' },
+      { name: 'Fusion 360', description: 'Cloud-based 3D CAD/CAM tool' }
+    ]
+  },
+  { 
+    name: 'Sketchup', 
+    logo: 'https://upload.wikimedia.org/wikipedia/commons/e/e7/SketchUp_logo.png',
+    services: [
+      { name: 'SketchUp Pro', description: '3D modeling for professionals' },
+      { name: 'SketchUp Studio', description: 'Advanced 3D modeling and design tools' }
+    ]
+  },
+  { 
+    name: 'Dell', 
+    logo: 'https://upload.wikimedia.org/wikipedia/commons/1/18/Dell_logo_2016.svg',
+    services: [
+      { name: 'Servers & Storage', description: 'Enterprise-grade hardware solutions' },
+      { name: 'Desktops & Laptops', description: 'Business computing devices' },
+      { name: 'Networking', description: 'Connectivity and network management' }
+    ]
+  },
+  { 
+    name: 'HP', 
+    logo: 'https://upload.wikimedia.org/wikipedia/commons/a/ad/HP_logo_2012.svg',
+    services: [
+      { name: 'Computing Devices', description: 'Workstations, laptops, and desktops' },
+      { name: 'Printing Solutions', description: 'Enterprise printing and scanning' },
+      { name: 'Security Solutions', description: 'Security services and products' }
+    ]
+  },
+  { 
+    name: 'Lenovo', 
+    logo: 'https://upload.wikimedia.org/wikipedia/commons/b/bd/Lenovo_Logo_2015.svg',
+    services: [
+      { name: 'ThinkPad', description: 'Business-class laptops and tablets' },
+      { name: 'ThinkCentre', description: 'Commercial desktop computers' },
+      { name: 'ThinkServer', description: 'Server solutions for businesses' }
+    ]
+  }
 ];
 
 const About = () => {
@@ -120,7 +193,7 @@ const About = () => {
           </div>
         </Motion>
         
-        {/* Vendors Section */}
+        {/* Strategic Partners Section */}
         <Motion animation="fade-up" className="mt-20">
           <div className="text-center mb-12">
             <span className="px-3 py-1 text-sm font-medium bg-secondary text-primary rounded-full">Our Partners</span>
@@ -130,12 +203,34 @@ const About = () => {
             </p>
           </div>
           
-          <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
-            {vendors.map((vendor, index) => (
-              <div key={index} className="flex items-center p-4 bg-gray-50 rounded-lg">
-                <div className="flex-1">
-                  <h4 className="font-semibold">{vendor.name}</h4>
-                  <p className="text-sm text-gray-500">{vendor.type}</p>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            {partners.map((partner, index) => (
+              <div key={index} className="bg-white shadow-sm rounded-xl overflow-hidden border border-gray-100 transition-all hover:shadow-md">
+                <div className="p-6 flex items-center justify-between">
+                  <div>
+                    <h3 className="text-xl font-semibold">{partner.name}</h3>
+                    <p className="text-sm text-gray-500">Technology Partner</p>
+                  </div>
+                  <img 
+                    src={partner.logo} 
+                    alt={`${partner.name} logo`} 
+                    className="h-10 max-w-[120px] object-contain" 
+                  />
+                </div>
+                <div className="bg-gray-50 p-4">
+                  <h4 className="text-sm font-medium text-gray-700 mb-2">Services we provide:</h4>
+                  <ul className="space-y-2">
+                    {partner.services.map((service, serviceIdx) => (
+                      <li key={serviceIdx} className="text-sm">
+                        <span className="font-medium">{service.name}</span>
+                        {service.description && (
+                          <span className="text-gray-500 block text-xs">
+                            {service.description}
+                          </span>
+                        )}
+                      </li>
+                    ))}
+                  </ul>
                 </div>
               </div>
             ))}

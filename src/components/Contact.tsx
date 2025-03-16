@@ -75,7 +75,7 @@ const Contact = () => {
                 href="mailto:sales@cuttingedgesl.com" 
               />
               <div className="space-y-4">
-                <h4 className="font-medium">Phone Numbers</h4>
+                <h4 className="font-medium">Phone</h4>
                 <ContactItem 
                   icon={Phone} 
                   title="Sri Lanka Office" 
@@ -97,7 +97,7 @@ const Contact = () => {
                   icon={MapPin} 
                   title="Sri Lanka Office" 
                   content="27/2, St. Mitchel Road, Hedigama, Piliyandala, Sri Lanka" 
-                  href="https://maps.google.com/?q=27/2,+St.+Mitchel+Road,+Hedigama,+Piliyandala,+Sri+Lanka" 
+                  href="https://maps.app.goo.gl/bPuZ9gv2Ag3C65uo9" 
                 />
                 
                 <ContactItem 
