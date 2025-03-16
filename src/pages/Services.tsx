@@ -34,13 +34,13 @@ const serviceItems = [
   {
     icon: MonitorSmartphone,
     title: 'Digital Transformation',
-    description: 'Strategic guidance to help your business leverage digital technologies for growth.',
+    description: 'Strategic guidance to help your business leverage digital technologies for growth including web development.',
     link: '/services/digital-transformation'
   },
   {
     icon: Code,
     title: 'Custom Software',
-    description: 'Tailored software solutions designed to address your unique business challenges.',
+    description: 'Tailored software solutions including web applications designed to address your unique business challenges.',
     link: '/services/custom-software'
   }
 ];
@@ -107,7 +107,7 @@ const Services = () => {
           <div className="container max-w-7xl mx-auto px-4">
             <Motion animation="fade-up" className="text-center mb-16">
               <span className="px-3 py-1 text-sm font-medium bg-secondary text-primary rounded-full">Why Choose Us</span>
-              <h2 className="text-3xl font-bold mt-6 mb-4">The CUTTINGEDGE Advantage</h2>
+              <h2 className="text-3xl font-bold mt-6 mb-4">The CuttingEdge Advantage</h2>
               <p className="text-gray-600 max-w-2xl mx-auto">
                 We differentiate ourselves through our customer-first approach and technical excellence.
               </p>

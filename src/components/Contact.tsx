@@ -78,14 +78,14 @@ const Contact = () => {
                 <h4 className="font-medium">Phone</h4>
                 <ContactItem 
                   icon={Phone} 
-                  title="Sri Lanka Office" 
-                  content="+94 112 638 532" 
+                  title="+94 112 638 532" 
+                  content="Sri Lanka" 
                   href="tel:+94112638532" 
                 />
                 <ContactItem 
                   icon={Phone} 
-                  title="Australia Office" 
-                  content="+61 420 814 130" 
+                  title="+61 420 814 130" 
+                  content="Australia" 
                   href="tel:+61420814130" 
                 />
               </div>
@@ -97,7 +97,7 @@ const Contact = () => {
                   icon={MapPin} 
                   title="Sri Lanka Office" 
                   content="27/2, St. Mitchel Road, Hedigama, Piliyandala, Sri Lanka" 
-                  href="https://maps.app.goo.gl/bPuZ9gv2Ag3C65uo9" 
+                  href="https://maps.app.goo.gl/sbF14MbaGxoGRmtz6" 
                 />
                 
                 <ContactItem 

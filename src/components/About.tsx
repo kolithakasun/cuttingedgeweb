@@ -15,19 +15,38 @@ const features = [
 const clients = [
   {
     name: 'Unilever',
-    logo: 'https://upload.wikimedia.org/wikipedia/commons/a/a7/Unilever_logo.svg'
+    logo: 'https://www.unilever.com.lk/Images/Unilever_logo_tcm1329-408376_w230.png',
+    url: 'https://www.unilever.com.lk/'
   },
   {
     name: 'Lalanka Group',
-    logo: 'https://placehold.co/200x80/e4e4e7/18181b?text=Lalanka+Group'
+    logo: 'https://lalanka.com/wp-content/uploads/2022/01/logo-png.png',
+    url: 'https://www.lalanka.com'
   },
   {
-    name: 'New Interiors (Pvt) Ltd',
-    logo: 'https://placehold.co/200x80/e4e4e7/18181b?text=New+Interiors'
+    name: 'New Interiors',
+    logo: 'https://newinteriorslk.com/wp-content/uploads/2023/03/NIPL-logo.jpeg',
+    url: 'https://www.newinteriorslk.com'
   },
   {
     name: 'Tuk Tuk Rental',
-    logo: 'https://placehold.co/200x80/e4e4e7/18181b?text=Tuk+Tuk+Rental'
+    logo: 'https://tuktukrental.com/assets/images/ttr-logo.png',
+    url: 'https://tuktukrental.com/'
+  },
+  {
+    name: 'Worldwide International',
+    logo: 'https://placehold.co/200x80/e4e4e7/18181b?text=WW+International',
+    url: 'http://www.wweinternational.com/'
+  },
+  {
+    name: 'MBE International',
+    logo: 'https://placehold.co/200x80/e4e4e7/18181b?text=MBE+International',
+    url: 'http://www.mbeinternational.com/'
+  },
+  {
+    name: 'CCE International',
+    logo: 'https://placehold.co/200x80/e4e4e7/18181b?text=CCE+International',
+    url: 'http://www.cceinternational.com/'
   }
 ];
 
@@ -36,82 +55,82 @@ const partners = [
     name: 'Google', 
     logo: 'https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_272x92dp.png',
     services: [
-      { name: 'Google Workspace', description: 'Comprehensive productivity and collaboration tools' },
-      { name: 'Google Cloud Platform', description: 'Scalable cloud computing services' },
-      { name: 'Google Ads', description: 'Digital advertising solutions' }
+      { name: 'Google Workspace', description: 'Gmail, Drive, Docs, Sheets, Slides, Meet and more' },
+      { name: 'Google Cloud Platform', description: 'Compute Engine, Cloud Storage, BigQuery, Kubernetes Engine' },
+      { name: 'Google Ads', description: 'Search, Display, Video, Shopping campaigns and analytics' }
     ]
   },
   { 
     name: 'Microsoft', 
     logo: 'https://img-prod-cms-rt-microsoft-com.akamaized.net/cms/api/am/imageFileData/RE1Mu3b?ver=5c31',
     services: [
-      { name: 'Microsoft 365', description: 'Business productivity apps and cloud services' },
-      { name: 'Azure', description: 'Cloud computing platform and services' },
-      { name: 'Dynamics 365', description: 'Business applications and CRM' },
-      { name: 'Windows', description: 'Operating system and management' }
+      { name: 'Microsoft 365', description: 'Teams, Word, Excel, PowerPoint, Outlook, SharePoint and more' },
+      { name: 'Azure', description: 'VMs, App Services, Storage, SQL, AI & Machine Learning' },
+      { name: 'Dynamics 365', description: 'Sales, Customer Service, Finance, Supply Chain Management' },
+      { name: 'Windows', description: 'Windows 11, Windows 10, Windows Server' }
     ]
   },
   { 
     name: 'AWS', 
-    logo: 'https://upload.wikimedia.org/wikipedia/commons/9/93/Amazon_Web_Services_Logo.svg',
+    logo: 'https://d1.awsstatic.com/logos/aws-logo-lockups/poweredbyaws/PB_AWS_logo_RGB_stacked_REV_SQ.91cd4af40773cbfbd15577a3c2b8a346fe3e8fa2.png',
     services: [
-      { name: 'EC2', description: 'Secure and resizable compute capacity' },
-      { name: 'S3', description: 'Scalable storage infrastructure' },
-      { name: 'RDS', description: 'Managed relational database service' },
-      { name: 'Lambda', description: 'Serverless computing service' }
+      { name: 'EC2', description: 'Virtual servers in the cloud with various instance types' },
+      { name: 'S3', description: 'Object storage with industry-leading scalability and availability' },
+      { name: 'RDS', description: 'Managed database service for MySQL, PostgreSQL, SQL Server' },
+      { name: 'Lambda', description: 'Run code without provisioning or managing servers' }
     ]
   },
   { 
     name: 'Adobe', 
-    logo: 'https://upload.wikimedia.org/wikipedia/commons/8/8d/Adobe_Corporate_Logo.png',
+    logo: 'https://www.adobe.com/content/dam/cc/icons/Adobe_Corporate_Horizontal_Red_HEX.svg',
     services: [
-      { name: 'Creative Cloud', description: 'Collection of creative apps and services' },
-      { name: 'Acrobat', description: 'PDF creation and management' },
-      { name: 'Adobe Sign', description: 'Electronic signature solution' }
+      { name: 'Creative Cloud', description: 'Photoshop, Illustrator, InDesign, Premiere Pro, After Effects' },
+      { name: 'Acrobat', description: 'Create, edit, sign, and manage PDFs professionally' },
+      { name: 'Adobe Sign', description: 'Digital document signing and approval workflows' }
     ]
   },
   { 
     name: 'Autodesk', 
-    logo: 'https://upload.wikimedia.org/wikipedia/commons/0/0f/Autodesk_logo.svg',
+    logo: 'https://www.autodesk.com/content/dam/autodesk/www/images/resources/logo-autodesk-300x100.png',
     services: [
-      { name: 'AutoCAD', description: '2D and 3D design and drafting' },
-      { name: 'Revit', description: 'Building information modeling software' },
-      { name: 'Fusion 360', description: 'Cloud-based 3D CAD/CAM tool' }
+      { name: 'AutoCAD', description: 'Computer-aided design software for precise 2D and 3D drafting' },
+      { name: 'Revit', description: 'BIM software for architects, structural engineers and contractors' },
+      { name: 'Fusion 360', description: 'Integrated CAD, CAM, CAE, and PCB design software' }
     ]
   },
   { 
-    name: 'Sketchup', 
-    logo: 'https://upload.wikimedia.org/wikipedia/commons/e/e7/SketchUp_logo.png',
+    name: 'SketchUp', 
+    logo: 'https://static.trimble.com/sites/default/files/styles/large_3x/public/2021-03/logo-sketchup.png',
     services: [
-      { name: 'SketchUp Pro', description: '3D modeling for professionals' },
-      { name: 'SketchUp Studio', description: 'Advanced 3D modeling and design tools' }
+      { name: 'SketchUp Pro', description: 'Intuitive 3D modeling tool for architects and designers' },
+      { name: 'SketchUp Studio', description: 'Professional 3D modeling with advanced features and rendering' }
     ]
   },
   { 
     name: 'Dell', 
-    logo: 'https://upload.wikimedia.org/wikipedia/commons/1/18/Dell_logo_2016.svg',
+    logo: 'https://upload.wikimedia.org/wikipedia/commons/8/82/Dell_Logo.png',
     services: [
-      { name: 'Servers & Storage', description: 'Enterprise-grade hardware solutions' },
-      { name: 'Desktops & Laptops', description: 'Business computing devices' },
-      { name: 'Networking', description: 'Connectivity and network management' }
+      { name: 'Servers & Storage', description: 'PowerEdge servers, PowerVault storage, and Dell EMC solutions' },
+      { name: 'Desktops & Laptops', description: 'OptiPlex, Latitude, Precision, and XPS systems' },
+      { name: 'Networking', description: 'Switches, routers, and network management solutions' }
     ]
   },
   { 
     name: 'HP', 
-    logo: 'https://upload.wikimedia.org/wikipedia/commons/a/ad/HP_logo_2012.svg',
+    logo: 'https://upload.wikimedia.org/wikipedia/commons/thumb/2/29/HP_New_Logo_2D.svg/2048px-HP_New_Logo_2D.svg.png',
     services: [
-      { name: 'Computing Devices', description: 'Workstations, laptops, and desktops' },
-      { name: 'Printing Solutions', description: 'Enterprise printing and scanning' },
-      { name: 'Security Solutions', description: 'Security services and products' }
+      { name: 'Computing Devices', description: 'EliteBook, ProBook, Z workstations, and commercial desktops' },
+      { name: 'Printing Solutions', description: 'LaserJet, OfficeJet, DesignJet, and managed print services' },
+      { name: 'Security Solutions', description: 'HP Sure Suite, device security, and secure document workflows' }
     ]
   },
   { 
     name: 'Lenovo', 
-    logo: 'https://upload.wikimedia.org/wikipedia/commons/b/bd/Lenovo_Logo_2015.svg',
+    logo: 'https://www.lenovo.com/medias/lenovo-logo-full.png?context=bWFzdGVyfHJvb3R8MzcyODl8aW1hZ2UvcG5nfGhmNy9oZDMvOTQ3MDU0MDUyMzU1MC5wbmd8M2Y1NDEzYTQ4ZTQ2MTNhZmZlZmZkZDYwMmJkZmU2YjcyN2YxNTgzYzc4OTVhZDg0YTFhOGRmZGEyMzMyY2JhMA',
     services: [
-      { name: 'ThinkPad', description: 'Business-class laptops and tablets' },
-      { name: 'ThinkCentre', description: 'Commercial desktop computers' },
-      { name: 'ThinkServer', description: 'Server solutions for businesses' }
+      { name: 'ThinkPad', description: 'Business laptops with industry-leading reliability and security' },
+      { name: 'ThinkCentre', description: 'Commercial desktops optimized for business performance' },
+      { name: 'ThinkServer', description: 'Enterprise-grade servers for businesses of all sizes' }
     ]
   }
 ];
@@ -133,9 +152,9 @@ const About = () => {
               </div>
               <div className="absolute -bottom-8 -right-8 bg-white/80 backdrop-blur-md rounded-2xl p-6 shadow-lg max-w-xs hidden md:block">
                 <p className="text-lg font-medium">
-                  "Our mission is to empower businesses through technology that works seamlessly."
+                  "Technology is our passion, your success is our mission."
                 </p>
-                <p className="text-primary mt-2 font-medium">— Our Commitment</p>
+                <p className="text-primary mt-2 font-medium">— CuttingEdge Technologies</p>
               </div>
             </div>
           </Motion>
@@ -186,9 +205,15 @@ const About = () => {
           
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
             {clients.map((client, index) => (
-              <div key={index} className="flex items-center justify-center p-6 bg-gray-50 rounded-xl h-24">
+              <a 
+                key={index} 
+                href={client.url} 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="flex items-center justify-center p-6 bg-gray-50 rounded-xl h-24 hover:shadow-md transition-shadow"
+              >
                 <img src={client.logo} alt={client.name} className="max-h-16 max-w-full" />
-              </div>
+              </a>
             ))}
           </div>
         </Motion>

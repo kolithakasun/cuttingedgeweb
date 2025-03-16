@@ -4,6 +4,7 @@ import { cn } from '@/lib/utils';
 import { Button } from '@/components/ui/button';
 import { Motion, MotionGroup } from '@/components/ui/motion';
 import { ChevronDown } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 const Hero = () => {
   return (
@@ -30,9 +31,11 @@ const Hero = () => {
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 mt-4">
-            <Button size="lg" className="h-12 px-8 text-base">
-              Explore Our Services
-            </Button>
+            <Link to="/services">
+              <Button size="lg" className="h-12 px-8 text-base">
+                Explore Our Services
+              </Button>
+            </Link>
             <Button 
               variant="outline" 
               size="lg" 

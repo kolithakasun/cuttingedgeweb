@@ -41,13 +41,13 @@ const serviceItems = [
   {
     icon: MonitorSmartphone,
     title: 'Digital Transformation',
-    description: 'Strategic guidance to help your business leverage digital technologies for growth.',
+    description: 'Strategic guidance to help your business leverage digital technologies for growth including web development.',
     link: '/services/digital-transformation'
   },
   {
     icon: Code,
     title: 'Custom Software',
-    description: 'Tailored software solutions designed to address your unique business challenges.',
+    description: 'Tailored software solutions including web applications designed to address your unique business challenges.',
     link: '/services/custom-software'
   }
 ];
