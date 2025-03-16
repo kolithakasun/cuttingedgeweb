@@ -14,7 +14,13 @@ const Footer = () => {
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-12">
             <div className="md:col-span-2">
               <div className="mb-4">
-                <a href="#" className="text-2xl font-bold">CuttingEdge Technologies</a>
+                <a href="#" className="inline-block">
+                  <img 
+                    src="/lovable-uploads/e44b6988-8639-4875-86d4-8bf052f2215d.png" 
+                    alt="CuttingEdge Technologies Logo" 
+                    className="h-12 w-auto" 
+                  />
+                </a>
               </div>
               <p className="text-muted-foreground max-w-md mb-6">
                 Providing innovative IT solutions to help businesses thrive in the digital era. We're your trusted technology partner.

@@ -31,7 +31,11 @@ const Header = () => {
     )}>
       <div className="container flex items-center justify-between">
         <a href="#" className="flex items-center gap-2">
-          <span className="text-xl font-bold tracking-tight">CuttingEdge Technologies</span>
+          <img 
+            src="/lovable-uploads/e44b6988-8639-4875-86d4-8bf052f2215d.png" 
+            alt="CuttingEdge Technologies Logo" 
+            className="h-10 w-auto" 
+          />
         </a>
 
         {/* Desktop Navigation */}
