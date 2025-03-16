@@ -14,12 +14,13 @@ const Footer = () => {
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-12">
             <div className="md:col-span-2">
               <div className="mb-4">
-                <a href="#" className="inline-block">
+                <a href="#" className="inline-flex items-center gap-2">
                   <img 
                     src="/lovable-uploads/e44b6988-8639-4875-86d4-8bf052f2215d.png" 
                     alt="CuttingEdge Technologies Logo" 
                     className="h-12 w-auto" 
                   />
+                  <span className="text-xl font-bold tracking-tight">CUTTINGEDGE Technologies</span>
                 </a>
               </div>
               <p className="text-muted-foreground max-w-md mb-6">
@@ -64,7 +65,7 @@ const Footer = () => {
           
           <div className="border-t border-gray-100 pt-8 flex flex-col md:flex-row justify-between items-center">
             <p className="text-muted-foreground text-sm">
-              &copy; {currentYear} CuttingEdge Technologies. All rights reserved.
+              &copy; {currentYear} CUTTINGEDGE Technologies. All rights reserved.
             </p>
             <div className="flex space-x-6 mt-4 md:mt-0">
               <a href="#" className="text-muted-foreground hover:text-foreground text-sm transition-colors">Privacy Policy</a>

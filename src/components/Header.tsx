@@ -36,6 +36,7 @@ const Header = () => {
             alt="CuttingEdge Technologies Logo" 
             className="h-10 w-auto" 
           />
+          <span className="text-lg font-bold tracking-tight">CUTTINGEDGE Technologies</span>
         </a>
 
         {/* Desktop Navigation */}
