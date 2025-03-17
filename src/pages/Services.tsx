@@ -1,6 +1,6 @@
 
 import React, { useEffect } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import { Motion, MotionGroup } from '@/components/ui/motion';
 import { 
   Server, 
@@ -109,9 +109,11 @@ const ServiceCard = ({
 };
 
 const Services = () => {
+  const location = useLocation();
+
   useEffect(() => {
     window.scrollTo(0, 0);
-  }, []);
+  }, [location]);
 
   return (
     <div className="min-h-screen bg-background">

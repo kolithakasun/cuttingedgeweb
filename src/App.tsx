@@ -36,7 +36,16 @@ const App = () => (
         <Routes>
           <Route path="/" element={<Index />} />
           <Route path="/services" element={<Services />} />
-          <Route path="/services/:serviceId" element={<ServiceDetail />} />
+          <Route path="/services/it-infrastructure" element={<ServiceDetail />} />
+          <Route path="/services/cybersecurity" element={<ServiceDetail />} />
+          <Route path="/services/cloud-services" element={<ServiceDetail />} />
+          <Route path="/services/managed-it-services" element={<ServiceDetail />} />
+          <Route path="/services/digital-transformation" element={<ServiceDetail />} />
+          <Route path="/services/custom-software" element={<ServiceDetail />} />
+          <Route path="/services/data-management" element={<ServiceDetail />} />
+          <Route path="/services/enterprise-integration" element={<ServiceDetail />} />
+          <Route path="/services/service-desk" element={<ServiceDetail />} />
+          <Route path="/services/analytics-ai" element={<ServiceDetail />} />
           <Route path="/privacy-policy" element={<PrivacyPolicy />} />
           <Route path="/terms-of-service" element={<TermsOfService />} />
           <Route path="/cookie-policy" element={<CookiePolicy />} />
