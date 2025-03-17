@@ -91,7 +91,7 @@ const partners = [
   },
   { 
     name: 'Autodesk', 
-    logo: 'https://cuttingedgesl.com/lovable-uploads/autodesk-logo.svg',
+    logo: 'https://www.autodesk.com/content/dam/autodesk/www/images/resources/logo-autodesk-300x100.png',
     services: [
       { name: 'AutoCAD', description: 'Computer-aided design software for precise 2D and 3D drafting' },
       { name: 'Revit', description: 'BIM software for architects, structural engineers and contractors' },
@@ -100,7 +100,7 @@ const partners = [
   },
   { 
     name: 'SketchUp', 
-    logo: 'https://cuttingedgesl.com/lovable-uploads/sketchup-logo.png',
+    logo: 'https://static.trimble.com/sites/default/files/styles/large_3x/public/2021-03/logo-sketchup.png',
     services: [
       { name: 'SketchUp Pro', description: 'Intuitive 3D modeling tool for architects and designers' },
       { name: 'SketchUp Studio', description: 'Professional 3D modeling with advanced features and rendering' }
@@ -117,7 +117,7 @@ const partners = [
   },
   { 
     name: 'HP', 
-    logo: 'https://cuttingedgesl.com/lovable-uploads/Hewlett-Packard-Logo-2009.png',
+    logo: 'https://upload.wikimedia.org/wikipedia/commons/thumb/2/29/HP_New_Logo_2D.svg/2048px-HP_New_Logo_2D.svg.png',
     services: [
       { name: 'Computing Devices', description: 'EliteBook, ProBook, Z workstations, and commercial desktops' },
       { name: 'Printing Solutions', description: 'LaserJet, OfficeJet, DesignJet, and managed print services' },
@@ -126,7 +126,7 @@ const partners = [
   },
   { 
     name: 'Lenovo', 
-    logo: 'https://cuttingedgesl.com/lovable-uploads/lenovo-logo.png',
+    logo: 'https://www.lenovo.com/medias/lenovo-logo-full.png?context=bWFzdGVyfHJvb3R8MzcyODl8aW1hZ2UvcG5nfGhmNy9oZDMvOTQ3MDU0MDUyMzU1MC5wbmd8M2Y1NDEzYTQ4ZTQ2MTNhZmZlZmZkZDYwMmJkZmU2YjcyN2YxNTgzYzc4OTVhZDg0YTFhOGRmZGEyMzMyY2JhMA',
     services: [
       { name: 'ThinkPad', description: 'Business laptops with industry-leading reliability and security' },
       { name: 'ThinkCentre', description: 'Commercial desktops optimized for business performance' },
