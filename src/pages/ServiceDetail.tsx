@@ -402,6 +402,170 @@ const serviceDetails: Record<string, ServiceDetail> = {
         </div>
       </div>
     )
+  },
+  "data-management": {
+    title: "Data Management",
+    description: "Effectively store, manage and analyze your data with industry leading technology",
+    icon: "Database",
+    heroImage: "https://images.unsplash.com/photo-1544383835-bda2bc66a55d",
+    fullDescription: `Our Data Management services enable organizations to effectively collect, store, and analyze data. We implement robust solutions that transform your data into a strategic asset, driving better decision-making and business outcomes.`,
+    benefits: [
+      "Enhanced data quality and consistency",
+      "Improved decision making through reliable data",
+      "Reduced data management costs",
+      "Better compliance with data regulations",
+      "Elimination of data silos",
+      "Faster access to critical information"
+    ],
+    offerings: [
+      {
+        title: "Data Governance",
+        description: "Frameworks and policies to ensure data quality, compliance, and security."
+      },
+      {
+        title: "Database Design & Implementation",
+        description: "Customized database solutions optimized for your business requirements."
+      },
+      {
+        title: "Data Integration",
+        description: "Connecting disparate data sources for a unified view of your information."
+      },
+      {
+        title: "Data Migration & Transitions",
+        description: "Accurate and efficient transfer of data using proven practices."
+      }
+    ],
+    approach: "We take a holistic approach to data management, focusing on your organization's unique data challenges and objectives. Our experts implement industry best practices and cutting-edge technologies to ensure your data is accurate, accessible, and secure throughout its lifecycle.",
+    vendorLogos: [
+      { name: "Microsoft", logo: "https://img-prod-cms-rt-microsoft-com.akamaized.net/cms/api/am/imageFileData/RE1Mu3b?ver=5c31" },
+      { name: "Oracle", logo: "https://upload.wikimedia.org/wikipedia/commons/5/50/Oracle_logo.svg" },
+      { name: "Snowflake", logo: "https://upload.wikimedia.org/wikipedia/commons/f/ff/Snowflake_Logo.svg" },
+      { name: "MongoDB", logo: "https://upload.wikimedia.org/wikipedia/commons/9/93/MongoDB_Logo.svg" }
+    ],
+    additionalContent: null
+  },
+  "enterprise-integration": {
+    title: "Enterprise Integration",
+    description: "Remove manual processes to improve the accuracy and timeliness of information",
+    icon: "Network",
+    heroImage: "https://images.unsplash.com/photo-1498050108023-c5249f4df085",
+    fullDescription: `Our Enterprise Integration solutions connect disparate systems, applications, and data sources to create a cohesive IT ecosystem. We eliminate information silos and automate workflows to enhance operational efficiency and data accuracy.`,
+    benefits: [
+      "Streamlined business processes",
+      "Automated data exchange between systems",
+      "Reduced manual intervention and errors",
+      "Improved real-time visibility across systems",
+      "Enhanced operational efficiency",
+      "Better scalability of IT infrastructure"
+    ],
+    offerings: [
+      {
+        title: "API Development",
+        description: "Custom APIs to facilitate seamless communication between applications."
+      },
+      {
+        title: "Middleware Integration",
+        description: "Implementation of middleware solutions to connect diverse systems."
+      },
+      {
+        title: "ERP Integration",
+        description: "Connecting ERP systems with other business applications for unified operations."
+      },
+      {
+        title: "Legacy System Integration",
+        description: "Bridging the gap between legacy systems and modern applications."
+      }
+    ],
+    approach: "We employ a methodical integration approach, first understanding your IT landscape and business processes, then designing integration solutions that optimize data flow and eliminate redundancies. Our implementations are scalable, adaptable, and built to support your evolving business needs.",
+    vendorLogos: [
+      { name: "MuleSoft", logo: "https://upload.wikimedia.org/wikipedia/commons/c/c0/MuleSoft_Logo.png" },
+      { name: "Microsoft", logo: "https://img-prod-cms-rt-microsoft-com.akamaized.net/cms/api/am/imageFileData/RE1Mu3b?ver=5c31" },
+      { name: "IBM", logo: "https://upload.wikimedia.org/wikipedia/commons/5/51/IBM_logo.svg" },
+      { name: "Dell Boomi", logo: "https://www.boomi.com/wp-content/uploads/Boomi-LogoLockup-750x250-1.png" }
+    ],
+    additionalContent: null
+  },
+  "service-desk": {
+    title: "Service Desk",
+    description: "Level 1, 2 & 3 triage and issue management for all your IT needs",
+    icon: "RefreshCw",
+    heroImage: "https://images.unsplash.com/photo-1549923746-c502d488b3ea",
+    fullDescription: `Our Service Desk solutions provide comprehensive IT support to ensure minimal disruption to your business operations. From routine technical assistance to complex problem resolution, our skilled technicians deliver responsive and effective support.`,
+    benefits: [
+      "Minimized IT downtime",
+      "Quick resolution of technical issues",
+      "24/7 support availability",
+      "Multilevel escalation process",
+      "Consistent user experience",
+      "Detailed reporting and analytics"
+    ],
+    offerings: [
+      {
+        title: "Level 1 Support",
+        description: "Initial contact point for issue logging and basic troubleshooting."
+      },
+      {
+        title: "Level 2 Support",
+        description: "More complex issue resolution requiring specialized knowledge."
+      },
+      {
+        title: "Level 3 Support",
+        description: "Expert assistance for the most challenging technical problems."
+      },
+      {
+        title: "Service Desk Management",
+        description: "Oversight and continuous improvement of support processes."
+      }
+    ],
+    approach: "Our Service Desk operates with well-defined processes and SLAs to ensure consistent, high-quality support. We emphasize not just quick issue resolution, but also root cause analysis and proactive measures to prevent recurring problems, reducing overall support needs over time.",
+    vendorLogos: [
+      { name: "ServiceNow", logo: "https://upload.wikimedia.org/wikipedia/commons/5/57/ServiceNow_logo.svg" },
+      { name: "Zendesk", logo: "https://upload.wikimedia.org/wikipedia/commons/c/c8/Zendesk_logo.svg" },
+      { name: "JIRA", logo: "https://cdn.icon-icons.com/icons2/2699/PNG/512/atlassian_jira_logo_icon_170511.png" },
+      { name: "PagerDuty", logo: "https://upload.wikimedia.org/wikipedia/commons/f/f7/PagerDuty_logo.svg" }
+    ],
+    additionalContent: null
+  },
+  "analytics-ai": {
+    title: "Analytics & AI",
+    description: "Business intelligence and Data Analytics platforms that enable informed decision making",
+    icon: "Brain",
+    heroImage: "https://images.unsplash.com/photo-1515879218367-8466d910aaa4",
+    fullDescription: `Our Analytics and AI services help organizations harness the power of their data through advanced analytics, business intelligence, and artificial intelligence solutions. We transform raw data into actionable insights that drive strategic decision-making and business growth.`,
+    benefits: [
+      "Data-driven decision making",
+      "Predictive insights for future planning",
+      "Identification of new revenue opportunities",
+      "Enhanced customer understanding",
+      "Optimized operational processes",
+      "Competitive advantage through innovation"
+    ],
+    offerings: [
+      {
+        title: "Business Intelligence",
+        description: "Dashboards and reporting solutions for visualizing key business metrics."
+      },
+      {
+        title: "Predictive Analytics",
+        description: "Advanced statistical models to forecast trends and outcomes."
+      },
+      {
+        title: "Machine Learning Solutions",
+        description: "Custom AI models trained on your data to solve specific business challenges."
+      },
+      {
+        title: "Data Visualization",
+        description: "Interactive visual representations of complex data for easier understanding."
+      }
+    ],
+    approach: "We follow a systematic approach to analytics and AI implementation, starting with understanding your business questions, then designing solutions that leverage the right combination of technologies and methodologies. Our focus is on delivering practical, actionable insights rather than theoretical models.",
+    vendorLogos: [
+      { name: "Microsoft Power BI", logo: "https://powerbi.microsoft.com/pictures/shared/social/social-default-image.png" },
+      { name: "Tableau", logo: "https://upload.wikimedia.org/wikipedia/commons/4/4b/Tableau_Logo.png" },
+      { name: "TensorFlow", logo: "https://upload.wikimedia.org/wikipedia/commons/2/2d/Tensorflow_logo.svg" },
+      { name: "Python", logo: "https://upload.wikimedia.org/wikipedia/commons/c/c3/Python-logo-notext.svg" }
+    ],
+    additionalContent: null
   }
 };
 
@@ -410,7 +574,7 @@ const ServiceDetail = () => {
   const navigate = useNavigate();
   
   // Get the service details or redirect if not found
-  const service = serviceId && serviceDetails[serviceId as keyof typeof serviceDetails];
+  const service = serviceId ? serviceDetails[serviceId] : undefined;
   
   if (!service) {
     return (
