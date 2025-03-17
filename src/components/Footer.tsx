@@ -17,7 +17,7 @@ const Footer = () => {
               <div className="mb-4">
                 <Link to="/" className="inline-flex items-center gap-2">
                   <img 
-                    src="/lovable-uploads/05210934-5ae8-499f-87bc-acaa4792d0d3.png" 
+                    src="/lovable-uploads/cc8fb853-4c1f-4b10-8fe0-752100360a7c.png" 
                     alt="CuttingEdge Technologies Logo" 
                     className="h-12 w-auto" 
                   />
@@ -52,6 +52,9 @@ const Footer = () => {
                 <li><Link to="/services/managed-it-services" className="text-muted-foreground hover:text-foreground transition-colors">Managed IT</Link></li>
                 <li><Link to="/services/digital-transformation" className="text-muted-foreground hover:text-foreground transition-colors">Digital Transformation</Link></li>
                 <li><Link to="/services/custom-software" className="text-muted-foreground hover:text-foreground transition-colors">Custom Software</Link></li>
+                <li><Link to="/services/data-management" className="text-muted-foreground hover:text-foreground transition-colors">Data Management</Link></li>
+                <li><Link to="/services/enterprise-integration" className="text-muted-foreground hover:text-foreground transition-colors">Enterprise Integration</Link></li>
+                <li><Link to="/services/analytics-ai" className="text-muted-foreground hover:text-foreground transition-colors">Analytics & AI</Link></li>
               </ul>
             </div>
             

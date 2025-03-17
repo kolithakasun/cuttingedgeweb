@@ -6,6 +6,7 @@ import { Button } from '@/components/ui/button';
 import { Motion } from '@/components/ui/motion';
 import { Mail, Phone, MapPin, Send } from 'lucide-react';
 import { useToast } from '@/hooks/use-toast';
+import { toast } from 'sonner';
 
 const ContactItem = ({ 
   icon: Icon, 
@@ -22,6 +23,8 @@ const ContactItem = ({
     <a 
       href={href} 
       className="flex items-start gap-4 p-5 rounded-xl bg-white/50 border border-white/20 transition-all hover:bg-white/80 hover:shadow-sm"
+      target="_blank"
+      rel="noopener noreferrer"
     >
       <div className="p-3 rounded-lg bg-primary/10 text-primary">
         <Icon className="h-5 w-5" />
@@ -35,22 +38,46 @@ const ContactItem = ({
 };
 
 const Contact = () => {
-  const { toast } = useToast();
+  const { toast: uiToast } = useToast();
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    subject: '',
+    message: ''
+  });
+  
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    const { id, value } = e.target;
+    setFormData({
+      ...formData,
+      [id]: value
+    });
+  };
   
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
     
+    // Show both toast notifications to ensure the user gets feedback
+    toast.success("Message sent! We'll get back to you as soon as possible.");
+    uiToast({
+      title: "Message sent!",
+      description: "We'll get back to you as soon as possible.",
+    });
+    
+    // Email would normally be sent via a server endpoint
+    console.log("Form submitted with data:", formData);
+    
     // Simulate form submission
     setTimeout(() => {
       setIsSubmitting(false);
-      toast({
-        title: "Message sent!",
-        description: "We'll get back to you as soon as possible.",
+      setFormData({
+        name: '',
+        email: '',
+        subject: '',
+        message: ''
       });
-      // Reset form
-      (e.target as HTMLFormElement).reset();
     }, 1500);
   };
   
@@ -121,6 +148,8 @@ const Contact = () => {
                     id="name" 
                     placeholder="John Doe" 
                     required 
+                    value={formData.name}
+                    onChange={handleChange}
                   />
                 </div>
                 <div className="space-y-2">
@@ -132,6 +161,8 @@ const Contact = () => {
                     type="email" 
                     placeholder="john@example.com" 
                     required 
+                    value={formData.email}
+                    onChange={handleChange}
                   />
                 </div>
               </div>
@@ -144,6 +175,8 @@ const Contact = () => {
                   id="subject" 
                   placeholder="How can we help you?" 
                   required 
+                  value={formData.subject}
+                  onChange={handleChange}
                 />
               </div>
               
@@ -156,6 +189,8 @@ const Contact = () => {
                   placeholder="Tell us about your project or inquiry..." 
                   required 
                   className="min-h-[150px]" 
+                  value={formData.message}
+                  onChange={handleChange}
                 />
               </div>
               

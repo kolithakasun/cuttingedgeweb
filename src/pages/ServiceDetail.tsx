@@ -1,9 +1,9 @@
 
-import React from 'react';
+import React, { useEffect } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import { Motion } from '@/components/ui/motion';
 import { Button } from '@/components/ui/button';
-import { ArrowLeft, CheckCircle, Globe, Code } from 'lucide-react';
+import { ArrowLeft, CheckCircle, Globe, Code, Shield, Server, RefreshCw } from 'lucide-react';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 
@@ -17,7 +17,7 @@ type ServiceDetail = {
   benefits: string[];
   offerings: { title: string; description: string; }[];
   approach: string;
-  vendorLogos: { name: string; logo: string; }[];
+  vendorLogos: { name: string; logo: string; url: string; }[];
   additionalContent?: React.ReactNode;
 };
 
@@ -28,7 +28,7 @@ const serviceDetails: Record<string, ServiceDetail> = {
     description: "Comprehensive IT infrastructure solutions tailored to your business needs",
     icon: "Server",
     heroImage: "https://images.unsplash.com/photo-1558494949-ef010cbdcc31",
-    fullDescription: `Our IT Infrastructure services provide the foundation for your business technology needs. We design, implement, and manage robust infrastructure solutions that are scalable, secure, and aligned with your business objectives.`,
+    fullDescription: `Our IT Infrastructure services provide the foundation for your business technology needs. We design, implement, and manage robust infrastructure solutions that are scalable, secure, and aligned with your business objectives. From network architecture to server infrastructure and storage solutions, we ensure your technology backbone supports your business operations effectively.`,
     benefits: [
       "Improved reliability and performance",
       "Reduced downtime and operational disruptions",
@@ -53,14 +53,24 @@ const serviceDetails: Record<string, ServiceDetail> = {
       {
         title: "Virtualization",
         description: "Optimize resource utilization and improve flexibility with virtualization technologies."
+      },
+      {
+        title: "Infrastructure Monitoring",
+        description: "Proactive monitoring of all infrastructure components to ensure optimal performance."
+      },
+      {
+        title: "On-premises & Cloud Infrastructure",
+        description: "Establishment and support of on-premises, private and public cloud platforms."
       }
     ],
     approach: "We take a consultative approach to understand your business needs before designing and implementing IT infrastructure solutions. Our team of certified professionals ensures seamless integration with your existing systems and provides ongoing support to maximize performance and reliability.",
     vendorLogos: [
-      { name: "Dell", logo: "https://upload.wikimedia.org/wikipedia/commons/8/82/Dell_Logo.png" },
-      { name: "HP", logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/2/29/HP_New_Logo_2D.svg/2048px-HP_New_Logo_2D.svg.png" },
-      { name: "Cisco", logo: "https://www.cisco.com/c/dam/en/us/td/i/300001-400000/310001-320000/319001-320000/319641.jpg" },
-      { name: "VMware", logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Vmware.svg/1200px-Vmware.svg.png" }
+      { name: "Dell", logo: "/lovable-uploads/4f689f47-78aa-467e-9014-e5d029c3908f.png", url: "https://www.dell.com/" },
+      { name: "HP", logo: "https://www.hp.com/content/dam/sites/worldwide/hp-logo-footer-white.svg", url: "https://www.hp.com/" },
+      { name: "Cisco", logo: "/lovable-uploads/88d6cc73-451e-4266-8a99-d89216eefeb8.png", url: "https://www.cisco.com/" },
+      { name: "VMware", logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Vmware.svg/1200px-Vmware.svg.png", url: "https://www.vmware.com/" },
+      { name: "Lenovo", logo: "/lovable-uploads/eb8f968e-3b6c-45bd-be2f-aec5410920f3.png", url: "https://www.lenovo.com/" },
+      { name: "Fortinet", logo: "/lovable-uploads/a430eb04-04dd-4edb-aec1-ed4b14a6a755.png", url: "https://www.fortinet.com/" }
     ],
     additionalContent: null
   },
@@ -69,7 +79,7 @@ const serviceDetails: Record<string, ServiceDetail> = {
     description: "Protecting your business from evolving cyber threats",
     icon: "Shield",
     heroImage: "https://images.unsplash.com/photo-1518770660439-4636190af475",
-    fullDescription: `In today's digital landscape, cybersecurity is not optional. Our comprehensive security solutions protect your business from increasing cyber threats, safeguarding your data, systems, and reputation.`,
+    fullDescription: `In today's digital landscape, cybersecurity is not optional. Our comprehensive security solutions protect your business from increasing cyber threats, safeguarding your data, systems, and reputation. We implement multi-layered security strategies that combine advanced technologies, best practices, and proactive monitoring to provide comprehensive protection for your digital assets.`,
     benefits: [
       "Protection against evolving cyber threats",
       "Compliance with industry regulations",
@@ -98,14 +108,28 @@ const serviceDetails: Record<string, ServiceDetail> = {
       {
         title: "Advanced Threat Protection",
         description: "Multi-layered defense against sophisticated threats and zero-day vulnerabilities."
+      },
+      {
+        title: "Vulnerability Assessment",
+        description: "Regular scanning and assessment of systems to identify and address security vulnerabilities."
+      },
+      {
+        title: "Penetration Testing",
+        description: "Controlled security testing to identify weaknesses in your cybersecurity defenses."
+      },
+      {
+        title: "VAPT Assessment Reports",
+        description: "Detailed vulnerability assessment and penetration testing with actionable remediation plans."
       }
     ],
     approach: "We implement defense-in-depth security strategies tailored to your risk profile and business needs. Our approach combines cutting-edge technologies, best practices, and ongoing monitoring to provide comprehensive protection for your digital assets.",
     vendorLogos: [
-      { name: "Microsoft", logo: "https://img-prod-cms-rt-microsoft-com.akamaized.net/cms/api/am/imageFileData/RE1Mu3b?ver=5c31" },
-      { name: "ESET", logo: "https://www.eset.com/fileadmin/en/home/company/brand-design/logo/eset-logo-400x250.png" },
-      { name: "Symantec", logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0b/Symantec_logo10.svg/2560px-Symantec_logo10.svg.png" },
-      { name: "Sentinel", logo: "https://miro.medium.com/v2/resize:fit:1400/1*S3nFu_D3JQaD9sXLNVfDtg.png" }
+      { name: "Microsoft", logo: "https://img-prod-cms-rt-microsoft-com.akamaized.net/cms/api/am/imageFileData/RE1Mu3b?ver=5c31", url: "https://www.microsoft.com/" },
+      { name: "ESET", logo: "/lovable-uploads/290e5970-3e3d-4de3-be09-8908b57071e3.png", url: "https://www.eset.com/" },
+      { name: "Symantec", logo: "/lovable-uploads/b3c28d88-13f6-4572-b281-63fe406eec18.png", url: "https://www.broadcom.com/products/cyber-security" },
+      { name: "SentinelOne", logo: "/lovable-uploads/937a97b0-9b36-48bc-b424-dc6bceb32d22.png", url: "https://www.sentinelone.com/" },
+      { name: "Nessus", logo: "https://www.tenable.com/sites/all/themes/tenablefourteen/images/Logo-Tenable-Blue-Inline-RGB.svg", url: "https://www.tenable.com/products/nessus" },
+      { name: "Fortinet", logo: "/lovable-uploads/a430eb04-04dd-4edb-aec1-ed4b14a6a755.png", url: "https://www.fortinet.com/" }
     ],
     additionalContent: (
       <div className="mt-12 bg-gray-50 p-8 rounded-xl">
@@ -114,27 +138,38 @@ const serviceDetails: Record<string, ServiceDetail> = {
         
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
           <div className="bg-white p-6 rounded-lg shadow-sm">
-            <img 
-              src="https://azure.microsoft.com/content/dam/microsoft/final/en-us/microsoft-brand/microsoft-brand-guidelines/logos/azure-sentinel-logo.png" 
-              alt="Azure Sentinel" 
-              className="h-12 mb-4" 
-            />
             <h4 className="text-lg font-semibold mb-2">Azure Sentinel</h4>
-            <p className="text-gray-600">Cloud-native SIEM solution that provides intelligent security analytics for your entire enterprise.</p>
+            <p className="text-gray-600 mb-4">Cloud-native SIEM solution that provides intelligent security analytics for your entire enterprise.</p>
+            <a href="https://azure.microsoft.com/en-us/products/microsoft-sentinel" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">Learn more</a>
           </div>
           
           <div className="bg-white p-6 rounded-lg shadow-sm">
-            <img 
-              src="https://www.microsoft.com/en-us/security/assets/images/hero/defender-logo.png" 
-              alt="Microsoft Defender" 
-              className="h-12 mb-4" 
-            />
             <h4 className="text-lg font-semibold mb-2">Microsoft Defender</h4>
-            <p className="text-gray-600">Advanced threat protection for endpoints, identity, email, and applications.</p>
+            <p className="text-gray-600 mb-4">Advanced threat protection for endpoints, identity, email, and applications.</p>
+            <a href="https://www.microsoft.com/en-us/security/business/microsoft-defender" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">Learn more</a>
           </div>
         </div>
         
-        <p>Our security experts will help you implement these solutions, configure them to your specific requirements, and provide ongoing management to ensure your organization stays protected from evolving threats.</p>
+        <h3 className="text-2xl font-bold mb-6">Security Testing & Assessment</h3>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div className="bg-white p-6 rounded-lg shadow-sm flex flex-col">
+            <div className="flex items-center mb-4">
+              <Shield className="h-6 w-6 text-primary mr-3" />
+              <h4 className="text-lg font-semibold">Vulnerability Scanning</h4>
+            </div>
+            <p className="text-gray-600 mb-4">Regular automated scanning of your systems to identify potential security vulnerabilities before they can be exploited.</p>
+          </div>
+          
+          <div className="bg-white p-6 rounded-lg shadow-sm flex flex-col">
+            <div className="flex items-center mb-4">
+              <Server className="h-6 w-6 text-primary mr-3" />
+              <h4 className="text-lg font-semibold">Penetration Testing</h4>
+            </div>
+            <p className="text-gray-600 mb-4">Controlled attacks by our security experts to identify and address weaknesses in your security defenses.</p>
+          </div>
+        </div>
+        
+        <p className="mt-6">Our security experts will help you implement these solutions, configure them to your specific requirements, and provide ongoing management to ensure your organization stays protected from evolving threats.</p>
       </div>
     )
   },
@@ -143,7 +178,7 @@ const serviceDetails: Record<string, ServiceDetail> = {
     description: "Seamless migration and management of cloud solutions",
     icon: "Cloud",
     heroImage: "https://images.unsplash.com/photo-1639322537228-f710d846310a",
-    fullDescription: `Our cloud services help businesses leverage the flexibility, scalability, and cost-efficiency of cloud computing. We provide strategic guidance and implementation support for public, private, and hybrid cloud environments.`,
+    fullDescription: `Our cloud services help businesses leverage the flexibility, scalability, and cost-efficiency of cloud computing. We provide strategic guidance and implementation support for public, private, and hybrid cloud environments, ensuring your cloud implementation aligns with your business objectives and delivers measurable value.`,
     benefits: [
       "Increased operational agility",
       "Improved collaboration and accessibility",
@@ -168,22 +203,53 @@ const serviceDetails: Record<string, ServiceDetail> = {
       {
         title: "Cloud Security",
         description: "Specialized security measures for cloud environments."
+      },
+      {
+        title: "Cost Optimization",
+        description: "Continuous monitoring and optimization of cloud resources to minimize costs."
+      },
+      {
+        title: "Performance Optimization",
+        description: "Fine-tuning cloud resources to deliver optimal application performance."
+      },
+      {
+        title: "Cloud Disaster Recovery",
+        description: "Robust backup and recovery solutions to ensure business continuity."
       }
     ],
     approach: "We help you navigate the complexities of cloud adoption with a strategic approach focused on your business objectives. Our certified cloud specialists ensure smooth migration, optimal configuration, and ongoing management of your cloud environment.",
     vendorLogos: [
-      { name: "AWS", logo: "https://d1.awsstatic.com/logos/aws-logo-lockups/poweredbyaws/PB_AWS_logo_RGB_stacked_REV_SQ.91cd4af40773cbfbd15577a3c2b8a346fe3e8fa2.png" },
-      { name: "Microsoft Azure", logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fa/Microsoft_Azure.svg/1200px-Microsoft_Azure.svg.png" },
-      { name: "Google Cloud", logo: "https://cloud.google.com/_static/cloud/images/social-icon-google-cloud-1200-630.png" }
+      { name: "AWS", logo: "/lovable-uploads/7cdbc548-87fd-4d70-ad02-626876564e8c.png", url: "https://aws.amazon.com/" },
+      { name: "Microsoft Azure", logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fa/Microsoft_Azure.svg/1200px-Microsoft_Azure.svg.png", url: "https://azure.microsoft.com/" },
+      { name: "Google Cloud", logo: "https://cloud.google.com/_static/cloud/images/social-icon-google-cloud-1200-630.png", url: "https://cloud.google.com/" },
+      { name: "Oracle Cloud", logo: "https://upload.wikimedia.org/wikipedia/commons/5/50/Oracle_logo.svg", url: "https://www.oracle.com/cloud/" },
+      { name: "IBM Cloud", logo: "https://upload.wikimedia.org/wikipedia/commons/5/51/IBM_logo.svg", url: "https://www.ibm.com/cloud" }
     ],
-    additionalContent: null
+    additionalContent: (
+      <div className="mt-12 bg-gray-50 p-8 rounded-xl">
+        <h3 className="text-2xl font-bold mb-6">Cloud Optimization Services</h3>
+        <p className="mb-6">Our optimization services help you maximize the value of your cloud investment:</p>
+        
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+          <div className="bg-white p-6 rounded-lg shadow-sm">
+            <h4 className="text-lg font-semibold mb-2">Cost Management</h4>
+            <p className="text-gray-600">We help you identify and eliminate wasteful spending, right-size resources, and implement policies to control cloud costs.</p>
+          </div>
+          
+          <div className="bg-white p-6 rounded-lg shadow-sm">
+            <h4 className="text-lg font-semibold mb-2">Performance Enhancement</h4>
+            <p className="text-gray-600">Our experts optimize your cloud configuration to ensure maximum performance for your applications and workloads.</p>
+          </div>
+        </div>
+      </div>
+    )
   },
   "managed-it-services": {
     title: "Managed IT Services",
     description: "Proactive monitoring and management of your IT environment",
     icon: "Smartphone",
     heroImage: "https://images.unsplash.com/photo-1587614382346-4ec70e388b28",
-    fullDescription: `Our Managed IT Services provide comprehensive support for your technology infrastructure, allowing you to focus on your core business. We proactively monitor, manage, and optimize your IT environment to ensure reliability and performance.`,
+    fullDescription: `Our Managed IT Services provide comprehensive support for your technology infrastructure, allowing you to focus on your core business. We proactively monitor, manage, and optimize your IT environment to ensure reliability and performance, handling everything from day-to-day support to strategic planning.`,
     benefits: [
       "Predictable IT costs with fixed monthly pricing",
       "Reduced downtime through proactive maintenance",
@@ -208,23 +274,73 @@ const serviceDetails: Record<string, ServiceDetail> = {
       {
         title: "IT Strategy & Consulting",
         description: "Strategic guidance for technology investments and roadmaps."
+      },
+      {
+        title: "Service Desk",
+        description: "Level 1, 2 & 3 triage and issue management for all your IT needs."
+      },
+      {
+        title: "Infrastructure Management",
+        description: "Proactive management of servers, networks, and other infrastructure."
+      },
+      {
+        title: "Vendor Management",
+        description: "Coordination with technology vendors to resolve issues efficiently."
       }
     ],
     approach: "Our managed services model delivers proactive maintenance, rapid support, and strategic guidance through a team of certified IT professionals. We become your trusted technology partner, ensuring your IT environment supports and enhances your business operations.",
     vendorLogos: [
-      { name: "Microsoft", logo: "https://img-prod-cms-rt-microsoft-com.akamaized.net/cms/api/am/imageFileData/RE1Mu3b?ver=5c31" },
-      { name: "Dell", logo: "https://upload.wikimedia.org/wikipedia/commons/8/82/Dell_Logo.png" },
-      { name: "HP", logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/2/29/HP_New_Logo_2D.svg/2048px-HP_New_Logo_2D.svg.png" },
-      { name: "Cisco", logo: "https://www.cisco.com/c/dam/en/us/td/i/300001-400000/310001-320000/319001-320000/319641.jpg" }
+      { name: "Microsoft", logo: "https://img-prod-cms-rt-microsoft-com.akamaized.net/cms/api/am/imageFileData/RE1Mu3b?ver=5c31", url: "https://www.microsoft.com/" },
+      { name: "Dell", logo: "/lovable-uploads/4f689f47-78aa-467e-9014-e5d029c3908f.png", url: "https://www.dell.com/" },
+      { name: "HP", logo: "https://www.hp.com/content/dam/sites/worldwide/hp-logo-footer-white.svg", url: "https://www.hp.com/" },
+      { name: "Cisco", logo: "/lovable-uploads/88d6cc73-451e-4266-8a99-d89216eefeb8.png", url: "https://www.cisco.com/" },
+      { name: "Lenovo", logo: "/lovable-uploads/eb8f968e-3b6c-45bd-be2f-aec5410920f3.png", url: "https://www.lenovo.com/" },
+      { name: "PagerDuty", logo: "https://upload.wikimedia.org/wikipedia/commons/f/f7/PagerDuty_logo.svg", url: "https://www.pagerduty.com/" },
+      { name: "xMatters", logo: "https://www.xmatters.com/wp-content/themes/xmatters-2023/img/icons/logo-xmatters.svg", url: "https://www.xmatters.com/" }
     ],
-    additionalContent: null
+    additionalContent: (
+      <div className="mt-12 bg-gray-50 p-8 rounded-xl">
+        <h3 className="text-2xl font-bold mb-6">Service Desk Solutions</h3>
+        <p className="mb-6">Our comprehensive Service Desk solutions provide multi-level support for all your IT needs:</p>
+        
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+          <div className="bg-white p-6 rounded-lg shadow-sm">
+            <h4 className="text-lg font-semibold mb-2">Level 1 Support</h4>
+            <p className="text-gray-600">First point of contact for all IT issues, providing immediate assistance for common problems and basic troubleshooting.</p>
+          </div>
+          
+          <div className="bg-white p-6 rounded-lg shadow-sm">
+            <h4 className="text-lg font-semibold mb-2">Level 2 Support</h4>
+            <p className="text-gray-600">Handling more complex issues that require specialized knowledge and technical expertise beyond basic troubleshooting.</p>
+          </div>
+          
+          <div className="bg-white p-6 rounded-lg shadow-sm">
+            <h4 className="text-lg font-semibold mb-2">Level 3 Support</h4>
+            <p className="text-gray-600">Advanced support for the most challenging technical problems, typically provided by subject matter experts with deep domain knowledge.</p>
+          </div>
+        </div>
+        
+        <h3 className="text-2xl font-bold mb-6">Operating System Expertise</h3>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div className="bg-white p-6 rounded-lg shadow-sm flex flex-col">
+            <h4 className="text-lg font-semibold mb-2">Windows Platforms</h4>
+            <p className="text-gray-600">Comprehensive support for all Microsoft Windows desktop and server operating systems.</p>
+          </div>
+          
+          <div className="bg-white p-6 rounded-lg shadow-sm flex flex-col">
+            <h4 className="text-lg font-semibold mb-2">Linux Technologies</h4>
+            <p className="text-gray-600">Expert management of various Linux distributions including Ubuntu, Red Hat, CentOS, and more.</p>
+          </div>
+        </div>
+      </div>
+    )
   },
   "digital-transformation": {
     title: "Digital Transformation",
     description: "Strategic guidance to help your business leverage digital technologies",
     icon: "MonitorSmartphone",
     heroImage: "https://images.unsplash.com/photo-1512758017271-d7b84c2113f1",
-    fullDescription: `Our Digital Transformation services help businesses reimagine their operations through the strategic application of digital technologies. We guide you through the journey of adapting to the digital age, enhancing customer experiences and operational efficiency.`,
+    fullDescription: `Our Digital Transformation services help businesses reimagine their operations through the strategic application of digital technologies. We guide you through the journey of adapting to the digital age, enhancing customer experiences and operational efficiency through innovative solutions and strategic implementation.`,
     benefits: [
       "Enhanced customer experience",
       "Streamlined business processes",
@@ -253,13 +369,24 @@ const serviceDetails: Record<string, ServiceDetail> = {
       {
         title: "Web Development",
         description: "Custom websites and web applications that drive business growth."
+      },
+      {
+        title: "Business Process Reengineering",
+        description: "Redesigning core processes to leverage digital capabilities."
+      },
+      {
+        title: "Change Management",
+        description: "Strategies to help your organization adopt new digital ways of working."
       }
     ],
     approach: "We approach digital transformation as a strategic journey unique to each organization. Our consultative process identifies opportunities for digital enhancement, develops implementation strategies, and guides you through the change management required for successful transformation.",
     vendorLogos: [
-      { name: "Microsoft", logo: "https://img-prod-cms-rt-microsoft-com.akamaized.net/cms/api/am/imageFileData/RE1Mu3b?ver=5c31" },
-      { name: "Adobe", logo: "https://www.adobe.com/content/dam/cc/icons/Adobe_Corporate_Horizontal_Red_HEX.svg" },
-      { name: "Salesforce", logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f9/Salesforce.com_logo.svg/2560px-Salesforce.com_logo.svg.png" }
+      { name: "Microsoft", logo: "https://img-prod-cms-rt-microsoft-com.akamaized.net/cms/api/am/imageFileData/RE1Mu3b?ver=5c31", url: "https://www.microsoft.com/" },
+      { name: "Adobe", logo: "https://www.adobe.com/content/dam/cc/icons/Adobe_Corporate_Horizontal_Red_HEX.svg", url: "https://www.adobe.com/" },
+      { name: "Salesforce", logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f9/Salesforce.com_logo.svg/2560px-Salesforce.com_logo.svg.png", url: "https://www.salesforce.com/" },
+      { name: "SAP", logo: "https://www.sap.com/dam/application/shared/logos/sap-logo-svg.svg", url: "https://www.sap.com/" },
+      { name: "HubSpot", logo: "https://www.hubspot.com/hubfs/assets/hubspot.com/style-guide/brand-guidelines/guidelines_the-logo.svg", url: "https://www.hubspot.com/" },
+      { name: "Zoho", logo: "https://www.zoho.com/branding/images/zoho-logo.svg", url: "https://www.zoho.com/" }
     ],
     additionalContent: (
       <div className="mt-12 bg-gray-50 p-8 rounded-xl">
@@ -299,7 +426,7 @@ const serviceDetails: Record<string, ServiceDetail> = {
     description: "Tailored software solutions designed to address your unique business challenges",
     icon: "Code",
     heroImage: "https://images.unsplash.com/photo-1461749280684-dccba630e2f6",
-    fullDescription: `Our Custom Software Development services deliver tailor-made applications designed specifically for your business needs. When off-the-shelf solutions aren't enough, we create custom software that streamlines your operations and enhances your competitive advantage.`,
+    fullDescription: `Our Custom Software Development services deliver tailor-made applications designed specifically for your business needs. When off-the-shelf solutions aren't enough, we create custom software that streamlines your operations and enhances your competitive advantage through innovative, purpose-built solutions.`,
     benefits: [
       "Solutions tailored to your specific requirements",
       "Streamlined workflows and processes",
@@ -328,17 +455,27 @@ const serviceDetails: Record<string, ServiceDetail> = {
       {
         title: "Mobile Application Development",
         description: "Custom apps for iOS and Android platforms."
+      },
+      {
+        title: "API Development",
+        description: "Custom interfaces that allow different software systems to communicate."
+      },
+      {
+        title: "WordPress Development",
+        description: "Custom WordPress themes, plugins, and enterprise solutions."
       }
     ],
     approach: "Our development process follows industry best practices, combining agile methodologies with rigorous quality assurance. We collaborate closely with stakeholders throughout the development lifecycle to ensure the final solution precisely meets your business requirements.",
     vendorLogos: [
-      { name: "Microsoft", logo: "https://img-prod-cms-rt-microsoft-com.akamaized.net/cms/api/am/imageFileData/RE1Mu3b?ver=5c31" },
-      { name: "AWS", logo: "https://d1.awsstatic.com/logos/aws-logo-lockups/poweredbyaws/PB_AWS_logo_RGB_stacked_REV_SQ.91cd4af40773cbfbd15577a3c2b8a346fe3e8fa2.png" },
-      { name: "Google Cloud", logo: "https://cloud.google.com/_static/cloud/images/social-icon-google-cloud-1200-630.png" }
+      { name: "Microsoft", logo: "https://img-prod-cms-rt-microsoft-com.akamaized.net/cms/api/am/imageFileData/RE1Mu3b?ver=5c31", url: "https://www.microsoft.com/" },
+      { name: "AWS", logo: "/lovable-uploads/7cdbc548-87fd-4d70-ad02-626876564e8c.png", url: "https://aws.amazon.com/" },
+      { name: "Google Cloud", logo: "https://cloud.google.com/_static/cloud/images/social-icon-google-cloud-1200-630.png", url: "https://cloud.google.com/" },
+      { name: "WordPress", logo: "https://s.w.org/style/images/about/WordPress-logotype-standard.png", url: "https://wordpress.org/" }
     ],
     additionalContent: (
       <div className="mt-12">
         <h3 className="text-2xl font-bold mb-6">Our Development Technologies</h3>
+        <p className="mb-6">Our technology stack includes, but is not limited to, the following technologies:</p>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           <div className="bg-gray-50 p-6 rounded-lg">
             <h4 className="text-xl font-semibold mb-4">Frontend Technologies</h4>
@@ -366,6 +503,12 @@ const serviceDetails: Record<string, ServiceDetail> = {
                   <img src="https://upload.wikimedia.org/wikipedia/commons/4/4c/Typescript_logo_2020.svg" alt="TypeScript" className="max-h-8" />
                 </div>
                 <span>TypeScript</span>
+              </li>
+              <li className="flex items-center">
+                <div className="w-8 h-8 mr-3 flex items-center justify-center">
+                  <img src="https://upload.wikimedia.org/wikipedia/commons/6/61/HTML5_logo_and_wordmark.svg" alt="HTML5" className="max-h-8" />
+                </div>
+                <span>HTML5/CSS3</span>
               </li>
             </ul>
           </div>
@@ -397,8 +540,39 @@ const serviceDetails: Record<string, ServiceDetail> = {
                 </div>
                 <span>Python</span>
               </li>
+              <li className="flex items-center">
+                <div className="w-8 h-8 mr-3 flex items-center justify-center">
+                  <img src="https://upload.wikimedia.org/wikipedia/en/3/30/Java_programming_language_logo.svg" alt="Java" className="max-h-8" />
+                </div>
+                <span>Java</span>
+              </li>
             </ul>
           </div>
+        </div>
+        
+        <div className="bg-gray-50 p-6 rounded-lg mt-8">
+          <h4 className="text-xl font-semibold mb-4">Content Management Systems</h4>
+          <ul className="grid grid-cols-1 md:grid-cols-3 gap-4">
+            <li className="flex items-center">
+              <div className="w-8 h-8 mr-3 flex items-center justify-center">
+                <img src="https://s.w.org/style/images/about/WordPress-logotype-standard.png" alt="WordPress" className="max-h-8" />
+              </div>
+              <span>WordPress</span>
+            </li>
+            <li className="flex items-center">
+              <div className="w-8 h-8 mr-3 flex items-center justify-center">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/7/75/Drupal_logo.svg" alt="Drupal" className="max-h-8" />
+              </div>
+              <span>Drupal</span>
+            </li>
+            <li className="flex items-center">
+              <div className="w-8 h-8 mr-3 flex items-center justify-center">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/0/00/Shopify_logo_2018.svg" alt="Shopify" className="max-h-8" />
+              </div>
+              <span>Shopify</span>
+            </li>
+          </ul>
+          <p className="mt-4 text-gray-600">Note: This is not an exhaustive list. We work with many other technologies and platforms based on project requirements.</p>
         </div>
       </div>
     )
@@ -408,7 +582,7 @@ const serviceDetails: Record<string, ServiceDetail> = {
     description: "Effectively store, manage and analyze your data with industry leading technology",
     icon: "Database",
     heroImage: "https://images.unsplash.com/photo-1544383835-bda2bc66a55d",
-    fullDescription: `Our Data Management services enable organizations to effectively collect, store, and analyze data. We implement robust solutions that transform your data into a strategic asset, driving better decision-making and business outcomes.`,
+    fullDescription: `Our Data Management services enable organizations to effectively collect, store, and analyze data. We implement robust solutions that transform your data into a strategic asset, driving better decision-making and business outcomes through secure, efficient, and scalable data platforms.`,
     benefits: [
       "Enhanced data quality and consistency",
       "Improved decision making through reliable data",
@@ -433,23 +607,64 @@ const serviceDetails: Record<string, ServiceDetail> = {
       {
         title: "Data Migration & Transitions",
         description: "Accurate and efficient transfer of data using proven practices."
+      },
+      {
+        title: "Data Warehousing",
+        description: "Centralized repositories designed for analysis and reporting."
+      },
+      {
+        title: "Master Data Management",
+        description: "Creating a single source of truth for critical business data."
+      },
+      {
+        title: "Data Quality Management",
+        description: "Processes and tools to maintain high-quality, reliable data."
       }
     ],
     approach: "We take a holistic approach to data management, focusing on your organization's unique data challenges and objectives. Our experts implement industry best practices and cutting-edge technologies to ensure your data is accurate, accessible, and secure throughout its lifecycle.",
     vendorLogos: [
-      { name: "Microsoft", logo: "https://img-prod-cms-rt-microsoft-com.akamaized.net/cms/api/am/imageFileData/RE1Mu3b?ver=5c31" },
-      { name: "Oracle", logo: "https://upload.wikimedia.org/wikipedia/commons/5/50/Oracle_logo.svg" },
-      { name: "Snowflake", logo: "https://upload.wikimedia.org/wikipedia/commons/f/ff/Snowflake_Logo.svg" },
-      { name: "MongoDB", logo: "https://upload.wikimedia.org/wikipedia/commons/9/93/MongoDB_Logo.svg" }
+      { name: "Microsoft", logo: "https://img-prod-cms-rt-microsoft-com.akamaized.net/cms/api/am/imageFileData/RE1Mu3b?ver=5c31", url: "https://www.microsoft.com/" },
+      { name: "Oracle", logo: "https://upload.wikimedia.org/wikipedia/commons/5/50/Oracle_logo.svg", url: "https://www.oracle.com/" },
+      { name: "Snowflake", logo: "https://upload.wikimedia.org/wikipedia/commons/f/ff/Snowflake_Logo.svg", url: "https://www.snowflake.com/" },
+      { name: "MongoDB", logo: "https://upload.wikimedia.org/wikipedia/commons/9/93/MongoDB_Logo.svg", url: "https://www.mongodb.com/" },
+      { name: "PostgreSQL", logo: "https://upload.wikimedia.org/wikipedia/commons/2/29/Postgresql_elephant.svg", url: "https://www.postgresql.org/" },
+      { name: "AWS", logo: "/lovable-uploads/7cdbc548-87fd-4d70-ad02-626876564e8c.png", url: "https://aws.amazon.com/" }
     ],
-    additionalContent: null
+    additionalContent: (
+      <div className="mt-12 bg-gray-50 p-8 rounded-xl">
+        <h3 className="text-2xl font-bold mb-6">Data Migration Services</h3>
+        <p className="mb-6">Our comprehensive data migration services ensure smooth transitions between systems:</p>
+        
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+          <div className="bg-white p-6 rounded-lg shadow-sm">
+            <h4 className="text-lg font-semibold mb-2">ETL Processes</h4>
+            <p className="text-gray-600">Extract, Transform, and Load processes tailored to your specific migration needs.</p>
+          </div>
+          
+          <div className="bg-white p-6 rounded-lg shadow-sm">
+            <h4 className="text-lg font-semibold mb-2">Data Mapping</h4>
+            <p className="text-gray-600">Detailed mapping between source and target systems to ensure data integrity.</p>
+          </div>
+          
+          <div className="bg-white p-6 rounded-lg shadow-sm">
+            <h4 className="text-lg font-semibold mb-2">Data Cleansing</h4>
+            <p className="text-gray-600">Identification and correction of errors before migration to ensure high data quality.</p>
+          </div>
+          
+          <div className="bg-white p-6 rounded-lg shadow-sm">
+            <h4 className="text-lg font-semibold mb-2">Migration Testing</h4>
+            <p className="text-gray-600">Rigorous testing protocols to validate data integrity and system functionality after migration.</p>
+          </div>
+        </div>
+      </div>
+    )
   },
   "enterprise-integration": {
     title: "Enterprise Integration",
     description: "Remove manual processes to improve the accuracy and timeliness of information",
     icon: "Network",
     heroImage: "https://images.unsplash.com/photo-1498050108023-c5249f4df085",
-    fullDescription: `Our Enterprise Integration solutions connect disparate systems, applications, and data sources to create a cohesive IT ecosystem. We eliminate information silos and automate workflows to enhance operational efficiency and data accuracy.`,
+    fullDescription: `Our Enterprise Integration solutions connect disparate systems, applications, and data sources to create a cohesive IT ecosystem. We eliminate information silos and automate workflows to enhance operational efficiency and data accuracy, enabling seamless communication between all your business systems.`,
     benefits: [
       "Streamlined business processes",
       "Automated data exchange between systems",
@@ -474,64 +689,59 @@ const serviceDetails: Record<string, ServiceDetail> = {
       {
         title: "Legacy System Integration",
         description: "Bridging the gap between legacy systems and modern applications."
+      },
+      {
+        title: "EDI Solutions",
+        description: "Electronic Data Interchange solutions for automated business document exchange."
+      },
+      {
+        title: "Integration Platform Implementation",
+        description: "Deployment of industry-leading integration platforms to connect your systems."
+      },
+      {
+        title: "SOA Architecture",
+        description: "Service-Oriented Architecture design for modular, flexible system integration."
       }
     ],
     approach: "We employ a methodical integration approach, first understanding your IT landscape and business processes, then designing integration solutions that optimize data flow and eliminate redundancies. Our implementations are scalable, adaptable, and built to support your evolving business needs.",
     vendorLogos: [
-      { name: "MuleSoft", logo: "https://upload.wikimedia.org/wikipedia/commons/c/c0/MuleSoft_Logo.png" },
-      { name: "Microsoft", logo: "https://img-prod-cms-rt-microsoft-com.akamaized.net/cms/api/am/imageFileData/RE1Mu3b?ver=5c31" },
-      { name: "IBM", logo: "https://upload.wikimedia.org/wikipedia/commons/5/51/IBM_logo.svg" },
-      { name: "Dell Boomi", logo: "https://www.boomi.com/wp-content/uploads/Boomi-LogoLockup-750x250-1.png" }
+      { name: "MuleSoft", logo: "https://upload.wikimedia.org/wikipedia/commons/c/c0/MuleSoft_Logo.png", url: "https://www.mulesoft.com/" },
+      { name: "Microsoft", logo: "https://img-prod-cms-rt-microsoft-com.akamaized.net/cms/api/am/imageFileData/RE1Mu3b?ver=5c31", url: "https://www.microsoft.com/" },
+      { name: "IBM", logo: "https://upload.wikimedia.org/wikipedia/commons/5/51/IBM_logo.svg", url: "https://www.ibm.com/" },
+      { name: "Dell Boomi", logo: "https://www.boomi.com/wp-content/uploads/Boomi-LogoLockup-750x250-1.png", url: "https://www.boomi.com/" },
+      { name: "Oracle", logo: "https://upload.wikimedia.org/wikipedia/commons/5/50/Oracle_logo.svg", url: "https://www.oracle.com/" },
+      { name: "AWS", logo: "/lovable-uploads/7cdbc548-87fd-4d70-ad02-626876564e8c.png", url: "https://aws.amazon.com/" }
     ],
-    additionalContent: null
-  },
-  "service-desk": {
-    title: "Service Desk",
-    description: "Level 1, 2 & 3 triage and issue management for all your IT needs",
-    icon: "RefreshCw",
-    heroImage: "https://images.unsplash.com/photo-1549923746-c502d488b3ea",
-    fullDescription: `Our Service Desk solutions provide comprehensive IT support to ensure minimal disruption to your business operations. From routine technical assistance to complex problem resolution, our skilled technicians deliver responsive and effective support.`,
-    benefits: [
-      "Minimized IT downtime",
-      "Quick resolution of technical issues",
-      "24/7 support availability",
-      "Multilevel escalation process",
-      "Consistent user experience",
-      "Detailed reporting and analytics"
-    ],
-    offerings: [
-      {
-        title: "Level 1 Support",
-        description: "Initial contact point for issue logging and basic troubleshooting."
-      },
-      {
-        title: "Level 2 Support",
-        description: "More complex issue resolution requiring specialized knowledge."
-      },
-      {
-        title: "Level 3 Support",
-        description: "Expert assistance for the most challenging technical problems."
-      },
-      {
-        title: "Service Desk Management",
-        description: "Oversight and continuous improvement of support processes."
-      }
-    ],
-    approach: "Our Service Desk operates with well-defined processes and SLAs to ensure consistent, high-quality support. We emphasize not just quick issue resolution, but also root cause analysis and proactive measures to prevent recurring problems, reducing overall support needs over time.",
-    vendorLogos: [
-      { name: "ServiceNow", logo: "https://upload.wikimedia.org/wikipedia/commons/5/57/ServiceNow_logo.svg" },
-      { name: "Zendesk", logo: "https://upload.wikimedia.org/wikipedia/commons/c/c8/Zendesk_logo.svg" },
-      { name: "JIRA", logo: "https://cdn.icon-icons.com/icons2/2699/PNG/512/atlassian_jira_logo_icon_170511.png" },
-      { name: "PagerDuty", logo: "https://upload.wikimedia.org/wikipedia/commons/f/f7/PagerDuty_logo.svg" }
-    ],
-    additionalContent: null
+    additionalContent: (
+      <div className="mt-12 bg-gray-50 p-8 rounded-xl">
+        <h3 className="text-2xl font-bold mb-6">API Development Capabilities</h3>
+        <p className="mb-6">Our API development services facilitate effective integration and automation by allowing your applications to communicate and exchange data:</p>
+        
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+          <div className="bg-white p-6 rounded-lg shadow-sm">
+            <h4 className="text-lg font-semibold mb-2">RESTful APIs</h4>
+            <p className="text-gray-600">Development of modern, standards-based REST APIs for web and mobile applications.</p>
+          </div>
+          
+          <div className="bg-white p-6 rounded-lg shadow-sm">
+            <h4 className="text-lg font-semibold mb-2">SOAP Services</h4>
+            <p className="text-gray-600">Implementation of SOAP-based web services for enterprise system integration.</p>
+          </div>
+          
+          <div className="bg-white p-6 rounded-lg shadow-sm">
+            <h4 className="text-lg font-semibold mb-2">Microservices</h4>
+            <p className="text-gray-600">Design and development of microservices architectures for flexible, scalable integrations.</p>
+          </div>
+        </div>
+      </div>
+    )
   },
   "analytics-ai": {
     title: "Analytics & AI",
     description: "Business intelligence and Data Analytics platforms that enable informed decision making",
     icon: "Brain",
     heroImage: "https://images.unsplash.com/photo-1515879218367-8466d910aaa4",
-    fullDescription: `Our Analytics and AI services help organizations harness the power of their data through advanced analytics, business intelligence, and artificial intelligence solutions. We transform raw data into actionable insights that drive strategic decision-making and business growth.`,
+    fullDescription: `Our Analytics and AI services help organizations harness the power of their data through advanced analytics, business intelligence, and artificial intelligence solutions. We transform raw data into actionable insights that drive strategic decision-making and business growth, giving you a competitive edge in today's data-driven world.`,
     benefits: [
       "Data-driven decision making",
       "Predictive insights for future planning",
@@ -556,16 +766,59 @@ const serviceDetails: Record<string, ServiceDetail> = {
       {
         title: "Data Visualization",
         description: "Interactive visual representations of complex data for easier understanding."
+      },
+      {
+        title: "Advanced Analytics",
+        description: "Sophisticated analysis techniques to uncover hidden patterns and insights."
+      },
+      {
+        title: "Natural Language Processing",
+        description: "AI-powered text analysis for sentiment analysis, content classification, and more."
+      },
+      {
+        title: "Computer Vision",
+        description: "Image and video analysis for object recognition and automated visual inspections."
       }
     ],
     approach: "We follow a systematic approach to analytics and AI implementation, starting with understanding your business questions, then designing solutions that leverage the right combination of technologies and methodologies. Our focus is on delivering practical, actionable insights rather than theoretical models.",
     vendorLogos: [
-      { name: "Microsoft Power BI", logo: "https://powerbi.microsoft.com/pictures/shared/social/social-default-image.png" },
-      { name: "Tableau", logo: "https://upload.wikimedia.org/wikipedia/commons/4/4b/Tableau_Logo.png" },
-      { name: "TensorFlow", logo: "https://upload.wikimedia.org/wikipedia/commons/2/2d/Tensorflow_logo.svg" },
-      { name: "Python", logo: "https://upload.wikimedia.org/wikipedia/commons/c/c3/Python-logo-notext.svg" }
+      { name: "Microsoft Power BI", logo: "https://powerbi.microsoft.com/pictures/shared/social/social-default-image.png", url: "https://powerbi.microsoft.com/" },
+      { name: "Tableau", logo: "https://upload.wikimedia.org/wikipedia/commons/4/4b/Tableau_Logo.png", url: "https://www.tableau.com/" },
+      { name: "TensorFlow", logo: "https://upload.wikimedia.org/wikipedia/commons/2/2d/Tensorflow_logo.svg", url: "https://www.tensorflow.org/" },
+      { name: "Python", logo: "https://upload.wikimedia.org/wikipedia/commons/c/c3/Python-logo-notext.svg", url: "https://www.python.org/" },
+      { name: "R", logo: "https://www.r-project.org/logo/Rlogo.svg", url: "https://www.r-project.org/" },
+      { name: "AWS", logo: "/lovable-uploads/7cdbc548-87fd-4d70-ad02-626876564e8c.png", url: "https://aws.amazon.com/" }
     ],
-    additionalContent: null
+    additionalContent: (
+      <div className="mt-12 bg-gray-50 p-8 rounded-xl">
+        <h3 className="text-2xl font-bold mb-6">Machine Learning Capabilities</h3>
+        <p className="mb-6">Our machine learning experts develop custom AI solutions for a wide range of business applications:</p>
+        
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+          <div className="bg-white p-6 rounded-lg shadow-sm">
+            <h4 className="text-lg font-semibold mb-2">Predictive Maintenance</h4>
+            <p className="text-gray-600">AI systems that predict equipment failures before they occur, reducing downtime and maintenance costs.</p>
+          </div>
+          
+          <div className="bg-white p-6 rounded-lg shadow-sm">
+            <h4 className="text-lg font-semibold mb-2">Customer Segmentation</h4>
+            <p className="text-gray-600">Advanced clustering algorithms to identify distinct customer groups for targeted marketing.</p>
+          </div>
+          
+          <div className="bg-white p-6 rounded-lg shadow-sm">
+            <h4 className="text-lg font-semibold mb-2">Demand Forecasting</h4>
+            <p className="text-gray-600">Accurate predictions of product demand to optimize inventory and supply chain management.</p>
+          </div>
+          
+          <div className="bg-white p-6 rounded-lg shadow-sm">
+            <h4 className="text-lg font-semibold mb-2">Anomaly Detection</h4>
+            <p className="text-gray-600">Identification of unusual patterns that may indicate fraud, security threats, or business opportunities.</p>
+          </div>
+        </div>
+        
+        <p className="text-center text-gray-700">We work with you to identify the right AI solutions for your specific business challenges, ensuring practical applications that deliver measurable results.</p>
+      </div>
+    )
   }
 };
 
@@ -575,6 +828,11 @@ const ServiceDetail = () => {
   
   // Get the service details or redirect if not found
   const service = serviceId ? serviceDetails[serviceId] : undefined;
+  
+  // Scroll to top on page load
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [serviceId]);
   
   if (!service) {
     return (
@@ -609,7 +867,7 @@ const ServiceDetail = () => {
           <div className="container max-w-7xl mx-auto px-4 relative z-10">
             <Button 
               variant="outline" 
-              className="mb-8 pl-0 text-white border-white hover:bg-white/10" 
+              className="mb-8 pl-0 text-primary-foreground border-white/70 hover:bg-white/10" 
               onClick={() => navigate(-1)}
             >
               <ArrowLeft className="mr-2 h-4 w-4" />
@@ -677,13 +935,19 @@ const ServiceDetail = () => {
                   <h3 className="text-2xl font-bold mb-8 text-center">Technologies We Work With</h3>
                   <div className="flex flex-wrap justify-center gap-8 bg-white p-8 rounded-xl">
                     {service.vendorLogos.map((vendor, index) => (
-                      <div key={index} className="flex items-center justify-center">
+                      <a 
+                        key={index} 
+                        href={vendor.url} 
+                        target="_blank" 
+                        rel="noopener noreferrer"
+                        className="flex items-center justify-center hover:opacity-80 transition-opacity"
+                      >
                         <img 
                           src={vendor.logo} 
                           alt={vendor.name} 
                           className="max-h-12 max-w-[150px] object-contain" 
                         />
-                      </div>
+                      </a>
                     ))}
                   </div>
                 </div>
@@ -702,7 +966,7 @@ const ServiceDetail = () => {
             <Motion animation="fade-up">
               <h2 className="text-3xl font-bold mb-8">Our Approach</h2>
               <div className="bg-blue-50 p-8 rounded-xl">
-                <p className="text-lg leading-relaxed">
+                <p className="text-lg leading-relaxed text-center md:text-justify">
                   {service.approach}
                 </p>
               </div>
@@ -712,7 +976,7 @@ const ServiceDetail = () => {
                 <Button 
                   size="lg" 
                   onClick={() => {
-                    navigate('/#contact');
+                    window.location.href = '/#contact';
                   }}
                 >
                   Contact Us

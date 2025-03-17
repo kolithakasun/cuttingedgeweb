@@ -46,7 +46,7 @@ const Header = () => {
       <div className="container flex items-center justify-between">
         <Link to="/" className="flex items-center gap-2">
           <img 
-            src="/lovable-uploads/05210934-5ae8-499f-87bc-acaa4792d0d3.png" 
+            src="/lovable-uploads/cc8fb853-4c1f-4b10-8fe0-752100360a7c.png" 
             alt="CuttingEdge Technologies Logo" 
             className="h-10 w-auto" 
           />
