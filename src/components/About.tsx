@@ -15,37 +15,37 @@ const features = [
 const clients = [
   {
     name: 'Unilever',
-    logo: 'https://www.unilever.com.lk/Images/Unilever_logo_tcm1329-408376_w230.png',
+    logo: 'https://www.unilever.com.lk/core-assets/logos/logo-animated.svg',
     url: 'https://www.unilever.com.lk/'
   },
   {
     name: 'Lalanka Group',
-    logo: 'https://lalanka.com/wp-content/uploads/2022/01/logo-png.png',
+    logo: 'https://www.lalanka.com/wp-content/uploads/2024/11/Lalanka-Logo-1.png',
     url: 'https://www.lalanka.com'
   },
   {
     name: 'New Interiors',
-    logo: 'https://newinteriorslk.com/wp-content/uploads/2023/03/NIPL-logo.jpeg',
+    logo: 'https://cuttingedgesl.com/lovable-uploads/newinterior-logo.png',
     url: 'https://www.newinteriorslk.com'
   },
   {
     name: 'Tuk Tuk Rental',
-    logo: 'https://tuktukrental.com/assets/images/ttr-logo.png',
+    logo: 'https://cuttingedgesl.com/lovable-uploads/tuktukrental.png',
     url: 'https://tuktukrental.com/'
   },
   {
     name: 'Worldwide International',
-    logo: 'https://placehold.co/200x80/e4e4e7/18181b?text=WW+International',
+    logo: 'http://www.wweinternational.com/wp-content/uploads/2021/05/WWE.png',
     url: 'http://www.wweinternational.com/'
   },
   {
     name: 'MBE International',
-    logo: 'https://placehold.co/200x80/e4e4e7/18181b?text=MBE+International',
+    logo: 'https://cuttingedgesl.com/lovable-uploads/mbeinternational.png',
     url: 'http://www.mbeinternational.com/'
   },
   {
     name: 'CCE International',
-    logo: 'https://placehold.co/200x80/e4e4e7/18181b?text=CCE+International',
+    logo: 'http://www.cceinternational.com/images/logo.png',
     url: 'http://www.cceinternational.com/'
   }
 ];
