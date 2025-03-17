@@ -7,8 +7,22 @@ import { ArrowLeft, CheckCircle, Globe, Code } from 'lucide-react';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 
+// Define a proper type for the service details
+type ServiceDetail = {
+  title: string;
+  description: string;
+  icon: string;
+  heroImage: string;
+  fullDescription: string;
+  benefits: string[];
+  offerings: { title: string; description: string; }[];
+  approach: string;
+  vendorLogos: { name: string; logo: string; }[];
+  additionalContent?: React.ReactNode;
+};
+
 // Define service details with more comprehensive information
-const serviceDetails = {
+const serviceDetails: Record<string, ServiceDetail> = {
   "it-infrastructure": {
     title: "IT Infrastructure",
     description: "Comprehensive IT infrastructure solutions tailored to your business needs",
@@ -47,7 +61,8 @@ const serviceDetails = {
       { name: "HP", logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/2/29/HP_New_Logo_2D.svg/2048px-HP_New_Logo_2D.svg.png" },
       { name: "Cisco", logo: "https://www.cisco.com/c/dam/en/us/td/i/300001-400000/310001-320000/319001-320000/319641.jpg" },
       { name: "VMware", logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Vmware.svg/1200px-Vmware.svg.png" }
-    ]
+    ],
+    additionalContent: null
   },
   "cybersecurity": {
     title: "Cybersecurity",
@@ -160,7 +175,8 @@ const serviceDetails = {
       { name: "AWS", logo: "https://d1.awsstatic.com/logos/aws-logo-lockups/poweredbyaws/PB_AWS_logo_RGB_stacked_REV_SQ.91cd4af40773cbfbd15577a3c2b8a346fe3e8fa2.png" },
       { name: "Microsoft Azure", logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fa/Microsoft_Azure.svg/1200px-Microsoft_Azure.svg.png" },
       { name: "Google Cloud", logo: "https://cloud.google.com/_static/cloud/images/social-icon-google-cloud-1200-630.png" }
-    ]
+    ],
+    additionalContent: null
   },
   "managed-it-services": {
     title: "Managed IT Services",
@@ -200,7 +216,8 @@ const serviceDetails = {
       { name: "Dell", logo: "https://upload.wikimedia.org/wikipedia/commons/8/82/Dell_Logo.png" },
       { name: "HP", logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/2/29/HP_New_Logo_2D.svg/2048px-HP_New_Logo_2D.svg.png" },
       { name: "Cisco", logo: "https://www.cisco.com/c/dam/en/us/td/i/300001-400000/310001-320000/319001-320000/319641.jpg" }
-    ]
+    ],
+    additionalContent: null
   },
   "digital-transformation": {
     title: "Digital Transformation",
