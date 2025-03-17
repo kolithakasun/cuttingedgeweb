@@ -35,7 +35,7 @@ const clients = [
   },
   {
     name: 'Worldwide International',
-    logo: 'https://cuttingedgesl.com/lovable-uploads/WWE.png',
+    logo: 'http://www.wweinternational.com/wp-content/uploads/2021/05/WWE.png',
     url: 'http://www.wweinternational.com/'
   },
   {
@@ -45,7 +45,7 @@ const clients = [
   },
   {
     name: 'CCE International',
-    logo: 'https://cuttingedgesl.com/lovable-uploads/cce-logo.png',
+    logo: 'http://www.cceinternational.com/images/logo.png',
     url: 'http://www.cceinternational.com/'
   }
 ];
