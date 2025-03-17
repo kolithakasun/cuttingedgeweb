@@ -10,7 +10,12 @@ import {
   Smartphone, 
   MonitorSmartphone, 
   Code, 
-  ArrowRight 
+  Database,
+  ArrowRight,
+  Network,
+  RefreshCw,
+  Brain,
+  BarChart
 } from 'lucide-react';
 
 const serviceItems = [
@@ -49,6 +54,30 @@ const serviceItems = [
     title: 'Custom Software',
     description: 'Tailored software solutions including web applications designed to address your unique business challenges.',
     link: '/services/custom-software'
+  },
+  {
+    icon: Database,
+    title: 'Data Management',
+    description: 'Effectively store, manage and analyze your data with industry leading technology and fast implementations.',
+    link: '/services/data-management'
+  },
+  {
+    icon: Network,
+    title: 'Enterprise Integration',
+    description: 'Remove manual processes to improve the accuracy and timeliness of information across your systems.',
+    link: '/services/enterprise-integration'
+  },
+  {
+    icon: RefreshCw,
+    title: 'Service Desk',
+    description: 'Level 1, 2 & 3 triage and issue management for all your IT needs.',
+    link: '/services/service-desk'
+  },
+  {
+    icon: Brain,
+    title: 'Analytics & AI',
+    description: 'Business intelligence and Data Analytics platforms that enable informed decision making.',
+    link: '/services/analytics-ai'
   }
 ];
 
@@ -89,7 +118,7 @@ const Services = () => {
         </Motion>
         
         <MotionGroup className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {serviceItems.map((service, index) => (
+          {serviceItems.slice(0, 6).map((service, index) => (
             <ServiceCard 
               key={index} 
               icon={service.icon} 

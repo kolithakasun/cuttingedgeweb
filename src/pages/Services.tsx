@@ -1,8 +1,21 @@
 
-import React from 'react';
+import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { Motion, MotionGroup } from '@/components/ui/motion';
-import { Server, Shield, Cloud, Smartphone, MonitorSmartphone, Code, ArrowRight } from 'lucide-react';
+import { 
+  Server, 
+  Shield, 
+  Cloud, 
+  Smartphone, 
+  MonitorSmartphone, 
+  Code, 
+  ArrowRight,
+  Database,
+  Network,
+  RefreshCw,
+  Brain,
+  BarChart
+} from 'lucide-react';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 
@@ -42,6 +55,30 @@ const serviceItems = [
     title: 'Custom Software',
     description: 'Tailored software solutions including web applications designed to address your unique business challenges.',
     link: '/services/custom-software'
+  },
+  {
+    icon: Database,
+    title: 'Data Management',
+    description: 'Effectively store, manage and analyze your data with industry leading technology and fast implementations.',
+    link: '/services/data-management'
+  },
+  {
+    icon: Network,
+    title: 'Enterprise Integration',
+    description: 'Remove manual processes to improve the accuracy and timeliness of information across your systems.',
+    link: '/services/enterprise-integration'
+  },
+  {
+    icon: RefreshCw,
+    title: 'Service Desk',
+    description: 'Level 1, 2 & 3 triage and issue management for all your IT needs.',
+    link: '/services/service-desk'
+  },
+  {
+    icon: Brain,
+    title: 'Analytics & AI',
+    description: 'Business intelligence and Data Analytics platforms that enable informed decision making.',
+    link: '/services/analytics-ai'
   }
 ];
 
@@ -72,6 +109,10 @@ const ServiceCard = ({
 };
 
 const Services = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   return (
     <div className="min-h-screen bg-background">
       <Header />

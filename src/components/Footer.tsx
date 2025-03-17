@@ -15,14 +15,14 @@ const Footer = () => {
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-12">
             <div className="md:col-span-2">
               <div className="mb-4">
-                <a href="#" className="inline-flex items-center gap-2">
+                <Link to="/" className="inline-flex items-center gap-2">
                   <img 
-                    src="/lovable-uploads/e44b6988-8639-4875-86d4-8bf052f2215d.png" 
+                    src="/lovable-uploads/05210934-5ae8-499f-87bc-acaa4792d0d3.png" 
                     alt="CuttingEdge Technologies Logo" 
                     className="h-12 w-auto" 
                   />
                   <span className="text-xl font-bold tracking-tight">CuttingEdge Technologies</span>
-                </a>
+                </Link>
               </div>
               <p className="text-muted-foreground max-w-md mb-6">
                 Providing innovative IT solutions to help businesses thrive in the digital era. We're your trusted technology partner.
@@ -50,16 +50,19 @@ const Footer = () => {
                 <li><Link to="/services/cybersecurity" className="text-muted-foreground hover:text-foreground transition-colors">Cybersecurity</Link></li>
                 <li><Link to="/services/cloud-services" className="text-muted-foreground hover:text-foreground transition-colors">Cloud Services</Link></li>
                 <li><Link to="/services/managed-it-services" className="text-muted-foreground hover:text-foreground transition-colors">Managed IT</Link></li>
+                <li><Link to="/services/digital-transformation" className="text-muted-foreground hover:text-foreground transition-colors">Digital Transformation</Link></li>
+                <li><Link to="/services/custom-software" className="text-muted-foreground hover:text-foreground transition-colors">Custom Software</Link></li>
               </ul>
             </div>
             
             <div>
               <h3 className="text-sm font-semibold uppercase tracking-wider text-gray-400 mb-4">Company</h3>
               <ul className="space-y-3">
-                <li><a href="#about" className="text-muted-foreground hover:text-foreground transition-colors">About</a></li>
-                <li><a href="#" className="text-muted-foreground hover:text-foreground transition-colors">Blog</a></li>
-                <li><a href="#" className="text-muted-foreground hover:text-foreground transition-colors">Careers</a></li>
-                <li><a href="#contact" className="text-muted-foreground hover:text-foreground transition-colors">Contact</a></li>
+                <li><a href="/#about" className="text-muted-foreground hover:text-foreground transition-colors">About</a></li>
+                <li><a href="/#contact" className="text-muted-foreground hover:text-foreground transition-colors">Contact</a></li>
+                <li><Link to="/privacy-policy" className="text-muted-foreground hover:text-foreground transition-colors">Privacy Policy</Link></li>
+                <li><Link to="/terms-of-service" className="text-muted-foreground hover:text-foreground transition-colors">Terms of Service</Link></li>
+                <li><Link to="/cookie-policy" className="text-muted-foreground hover:text-foreground transition-colors">Cookie Policy</Link></li>
               </ul>
             </div>
           </div>
@@ -68,11 +71,6 @@ const Footer = () => {
             <p className="text-muted-foreground text-sm">
               &copy; {currentYear} CuttingEdge Technologies. All rights reserved.
             </p>
-            <div className="flex space-x-6 mt-4 md:mt-0">
-              <Link to="/privacy-policy" className="text-muted-foreground hover:text-foreground text-sm transition-colors">Privacy Policy</Link>
-              <Link to="/terms-of-service" className="text-muted-foreground hover:text-foreground text-sm transition-colors">Terms of Service</Link>
-              <Link to="/cookie-policy" className="text-muted-foreground hover:text-foreground text-sm transition-colors">Cookie Policy</Link>
-            </div>
           </div>
         </div>
       </footer>
