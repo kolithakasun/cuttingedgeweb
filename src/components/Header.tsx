@@ -38,6 +38,18 @@ const Header = () => {
     }
   };
 
+  const navigateToContact = () => {
+    setIsMobileMenuOpen(false);
+    
+    if (location.pathname === '/') {
+      // If already on home page, just scroll to contact
+      document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' });
+    } else {
+      // If on another page, navigate to home and then to contact section
+      window.location.href = '/#contact';
+    }
+  };
+
   return (
     <header className={cn(
       'fixed top-0 left-0 right-0 z-50 transition-all duration-300',
@@ -67,13 +79,7 @@ const Header = () => {
           ))}
           <Button 
             className="ml-2"
-            onClick={() => {
-              if (location.pathname === '/') {
-                document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' });
-              } else {
-                window.location.href = '/#contact';
-              }
-            }}
+            onClick={navigateToContact}
           >
             Get in Touch
           </Button>
@@ -109,14 +115,7 @@ const Header = () => {
           ))}
           <Button 
             className="w-full mt-2"
-            onClick={() => {
-              setIsMobileMenuOpen(false);
-              if (location.pathname === '/') {
-                document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' });
-              } else {
-                window.location.href = '/#contact';
-              }
-            }}
+            onClick={navigateToContact}
           >
             Get in Touch
           </Button>
