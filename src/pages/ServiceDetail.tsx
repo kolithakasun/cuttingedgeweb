@@ -1,3 +1,4 @@
+
 import React, { useEffect } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import { Motion } from '@/components/ui/motion';
@@ -373,10 +374,6 @@ const serviceDetails: Record<string, ServiceDetail> = {
       {
         title: "Business Process Reengineering",
         description: "Redesigning core processes to leverage digital capabilities."
-      },
-      {
-        title: "Change Management",
-        description: "Strategies to help your organization adopt new digital ways of working."
       }
     ],
     approach: "We approach digital transformation as a strategic journey unique to each organization. Our consultative process identifies opportunities for digital enhancement, develops implementation strategies, and guides you through the change management required for successful transformation.",
@@ -385,8 +382,7 @@ const serviceDetails: Record<string, ServiceDetail> = {
       { name: "Adobe", logo: "https://www.adobe.com/content/dam/cc/icons/Adobe_Corporate_Horizontal_Red_HEX.svg", url: "https://www.adobe.com/" },
       { name: "Salesforce", logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f9/Salesforce.com_logo.svg/2560px-Salesforce.com_logo.svg.png", url: "https://www.salesforce.com/" },
       { name: "SAP", logo: "https://www.sap.com/dam/application/shared/logos/sap-logo-svg.svg", url: "https://www.sap.com/" },
-      { name: "Odoo", logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4d/Odoo_logo_rgb.svg/1200px-Odoo_logo_rgb.svg.png", url: "https://www.odoo.com/" },
-      { name: "Zoho", logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/4/48/Zoho-logo.svg/2560px-Zoho-logo.svg.png", url: "https://www.zoho.com/" }
+      { name: "Odoo", logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4d/Odoo_logo_rgb.svg/1200px-Odoo_logo_rgb.svg.png", url: "https://www.odoo.com/" }
     ],
     additionalContent: (
       <div className="mt-12 bg-gray-50 p-8 rounded-xl">
@@ -867,7 +863,7 @@ const ServiceDetail = () => {
           <div className="container max-w-7xl mx-auto px-4 relative z-10">
             <Button 
               variant="outline" 
-              className="mb-8 bg-blue-700/50 text-white border-white/70 hover:bg-white/20" 
+              className="mb-8 bg-blue-700/50 text-white border-white/70 hover:bg-white/20 hover:text-white" 
               onClick={() => navigate(-1)}
             >
               <ArrowLeft className="mr-2 h-4 w-4" />
@@ -933,7 +929,7 @@ const ServiceDetail = () => {
               {service.vendorLogos && (
                 <div className="mt-16">
                   <h3 className="text-2xl font-bold mb-8 text-center">Technologies We Work With</h3>
-                  <div className="flex flex-wrap justify-center gap-8 bg-white p-8 rounded-xl">
+                  <div className="flex flex-wrap justify-center items-center gap-8 bg-white p-8 rounded-xl">
                     {service.vendorLogos.map((vendor, index) => (
                       <a 
                         key={index} 
