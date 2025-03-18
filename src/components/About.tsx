@@ -2,6 +2,7 @@
 import React from 'react';
 import { CheckCircle } from 'lucide-react';
 import { Motion } from '@/components/ui/motion';
+import ClientsCarousel from './ClientsCarousel';
 
 const features = [
   'Expert team with over 15 years of experience',
@@ -12,6 +13,7 @@ const features = [
   'Transparent pricing with no hidden fees'
 ];
 
+// Reordered clients as requested
 const clients = [
   {
     name: 'Unilever',
@@ -19,19 +21,24 @@ const clients = [
     url: 'https://www.unilever.com.lk/'
   },
   {
+    name: 'Tuk Tuk Rental',
+    logo: '/lovable-uploads/a430eb04-04dd-4edb-aec1-ed4b14a6a755.png',
+    url: 'https://tuktukrental.com/'
+  },
+  {
     name: 'Lalanka Group',
     logo: 'https://www.lalanka.com/wp-content/uploads/2024/11/Lalanka-Logo-1.png',
     url: 'https://www.lalanka.com'
   },
   {
-    name: 'New Interiors',
-    logo: 'https://cuttingedgesl.com/lovable-uploads/newinterior-logo.png',
-    url: 'https://www.newinteriorslk.com'
+    name: 'MBE International',
+    logo: '/lovable-uploads/mbeinternational.png',
+    url: 'http://www.mbeinternational.com/'
   },
   {
-    name: 'Tuk Tuk Rental',
-    logo: 'https://cuttingedgesl.com/lovable-uploads/tuktukrental.png',
-    url: 'https://tuktukrental.com/'
+    name: 'New Interiors',
+    logo: '/lovable-uploads/newinterior-logo.png',
+    url: 'https://www.newinteriorslk.com'
   },
   {
     name: 'Worldwide International',
@@ -39,14 +46,14 @@ const clients = [
     url: 'http://www.wweinternational.com/'
   },
   {
-    name: 'MBE International',
-    logo: 'https://cuttingedgesl.com/lovable-uploads/mbeinternational.png',
-    url: 'http://www.mbeinternational.com/'
-  },
-  {
     name: 'CCE International',
     logo: 'http://www.cceinternational.com/images/logo.png',
     url: 'http://www.cceinternational.com/'
+  },
+  {
+    name: 'VElevenOne',
+    logo: '/lovable-uploads/31803e88-5eb7-4ba2-8524-1411fed0ee36.png',
+    url: '#'
   }
 ];
 
@@ -54,83 +61,83 @@ const partners = [
   { 
     name: 'Google', 
     logo: 'https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_272x92dp.png',
-    services: [
-      { name: 'Google Workspace', description: 'Gmail, Drive, Docs, Sheets, Slides, Meet and more' },
-      { name: 'Google Cloud Platform', description: 'Compute Engine, Cloud Storage, BigQuery, Kubernetes Engine' },
-      { name: 'Google Ads', description: 'Search, Display, Video, Shopping campaigns and analytics' }
+    technologies: [
+      'Google Workspace',
+      'Google Cloud Platform',
+      'Google Ads'
     ]
   },
   { 
     name: 'Microsoft', 
     logo: 'https://img-prod-cms-rt-microsoft-com.akamaized.net/cms/api/am/imageFileData/RE1Mu3b?ver=5c31',
-    services: [
-      { name: 'Microsoft 365', description: 'Teams, Word, Excel, PowerPoint, Outlook, SharePoint and more' },
-      { name: 'Azure', description: 'VMs, App Services, Storage, SQL, AI & Machine Learning' },
-      { name: 'Dynamics 365', description: 'Sales, Customer Service, Finance, Supply Chain Management' },
-      { name: 'Windows', description: 'Windows 11, Windows 10, Windows Server' }
+    technologies: [
+      'Microsoft 365',
+      'Azure',
+      'Dynamics 365',
+      'Client and Server Operating Systems'
     ]
   },
   { 
     name: 'AWS', 
-    logo: 'https://d1.awsstatic.com/logos/aws-logo-lockups/poweredbyaws/PB_AWS_logo_RGB_stacked_REV_SQ.91cd4af40773cbfbd15577a3c2b8a346fe3e8fa2.png',
-    services: [
-      { name: 'EC2', description: 'Virtual servers in the cloud with various instance types' },
-      { name: 'S3', description: 'Object storage with industry-leading scalability and availability' },
-      { name: 'RDS', description: 'Managed database service for MySQL, PostgreSQL, SQL Server' },
-      { name: 'Lambda', description: 'Run code without provisioning or managing servers' }
+    logo: '/lovable-uploads/94e73714-9d64-4918-8f00-2e5647c1d1ff.png',
+    technologies: [
+      'EC2',
+      'EKS',
+      'ECS',
+      'Lambda'
     ]
   },
   { 
     name: 'Adobe', 
-    logo: 'https://www.adobe.com/content/dam/cc/icons/Adobe_Corporate_Horizontal_Red_HEX.svg',
-    services: [
-      { name: 'Creative Cloud', description: 'Photoshop, Illustrator, InDesign, Premiere Pro, After Effects' },
-      { name: 'Acrobat', description: 'Create, edit, sign, and manage PDFs professionally' },
-      { name: 'Adobe Sign', description: 'Digital document signing and approval workflows' }
+    logo: '/lovable-uploads/8799d3aa-f884-4605-ad48-04cf6128a870.png',
+    technologies: [
+      'Creative Cloud',
+      'Acrobat',
+      'Adobe Sign'
     ]
   },
   { 
     name: 'Autodesk', 
-    logo: 'https://www.autodesk.com/content/dam/autodesk/www/images/resources/logo-autodesk-300x100.png',
-    services: [
-      { name: 'AutoCAD', description: 'Computer-aided design software for precise 2D and 3D drafting' },
-      { name: 'Revit', description: 'BIM software for architects, structural engineers and contractors' },
-      { name: 'Fusion 360', description: 'Integrated CAD, CAM, CAE, and PCB design software' }
+    logo: '/lovable-uploads/f2d62ca4-1e4f-4d6b-990f-ab0ae33b8f70.png',
+    technologies: [
+      'AutoCAD',
+      'Revit',
+      'Fusion 360'
     ]
   },
   { 
     name: 'SketchUp', 
     logo: 'https://static.trimble.com/sites/default/files/styles/large_3x/public/2021-03/logo-sketchup.png',
-    services: [
-      { name: 'SketchUp Pro', description: 'Intuitive 3D modeling tool for architects and designers' },
-      { name: 'SketchUp Studio', description: 'Professional 3D modeling with advanced features and rendering' }
+    technologies: [
+      'SketchUp Pro',
+      'SketchUp Studio'
     ]
   },
   { 
     name: 'Dell', 
-    logo: 'https://upload.wikimedia.org/wikipedia/commons/8/82/Dell_Logo.png',
-    services: [
-      { name: 'Servers & Storage', description: 'PowerEdge servers, PowerVault storage, and Dell EMC solutions' },
-      { name: 'Desktops & Laptops', description: 'OptiPlex, Latitude, Precision, and XPS systems' },
-      { name: 'Networking', description: 'Switches, routers, and network management solutions' }
+    logo: '/lovable-uploads/038b2bab-ed59-4bc1-9808-d0b9dded77dc.png',
+    technologies: [
+      'Servers & Storage',
+      'Desktops & Laptops',
+      'Networking'
     ]
   },
   { 
     name: 'HP', 
-    logo: 'https://upload.wikimedia.org/wikipedia/commons/thumb/2/29/HP_New_Logo_2D.svg/2048px-HP_New_Logo_2D.svg.png',
-    services: [
-      { name: 'Computing Devices', description: 'EliteBook, ProBook, Z workstations, and commercial desktops' },
-      { name: 'Printing Solutions', description: 'LaserJet, OfficeJet, DesignJet, and managed print services' },
-      { name: 'Security Solutions', description: 'HP Sure Suite, device security, and secure document workflows' }
+    logo: '/lovable-uploads/eaed3217-c110-4be2-8e0a-6aa78382ebc5.png',
+    technologies: [
+      'Computing Devices',
+      'Printing Solutions',
+      'Networking & Servers'
     ]
   },
   { 
     name: 'Lenovo', 
-    logo: 'https://www.lenovo.com/medias/lenovo-logo-full.png?context=bWFzdGVyfHJvb3R8MzcyODl8aW1hZ2UvcG5nfGhmNy9oZDMvOTQ3MDU0MDUyMzU1MC5wbmd8M2Y1NDEzYTQ4ZTQ2MTNhZmZlZmZkZDYwMmJkZmU2YjcyN2YxNTgzYzc4OTVhZDg0YTFhOGRmZGEyMzMyY2JhMA',
-    services: [
-      { name: 'ThinkPad', description: 'Business laptops with industry-leading reliability and security' },
-      { name: 'ThinkCentre', description: 'Commercial desktops optimized for business performance' },
-      { name: 'ThinkServer', description: 'Enterprise-grade servers for businesses of all sizes' }
+    logo: '/lovable-uploads/2ad6c412-0db4-45ff-9712-6789fc543253.png',
+    technologies: [
+      'ThinkPad',
+      'ThinkCentre',
+      'ThinkServer'
     ]
   }
 ];
@@ -193,7 +200,7 @@ const About = () => {
           </Motion>
         </div>
         
-        {/* Clients Section */}
+        {/* Clients Section with Carousel */}
         <Motion animation="fade-up" className="mt-20">
           <div className="text-center mb-12">
             <span className="px-3 py-1 text-sm font-medium bg-secondary text-primary rounded-full">Our Clients</span>
@@ -203,19 +210,7 @@ const About = () => {
             </p>
           </div>
           
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-            {clients.map((client, index) => (
-              <a 
-                key={index} 
-                href={client.url} 
-                target="_blank" 
-                rel="noopener noreferrer"
-                className="flex items-center justify-center p-6 bg-gray-50 rounded-xl h-24 hover:shadow-md transition-shadow"
-              >
-                <img src={client.logo} alt={client.name} className="max-h-16 max-w-full" />
-              </a>
-            ))}
-          </div>
+          <ClientsCarousel clients={clients} />
         </Motion>
         
         {/* Strategic Partners Section */}
@@ -234,7 +229,6 @@ const About = () => {
                 <div className="p-6 flex items-center justify-between">
                   <div>
                     <h3 className="text-xl font-semibold">{partner.name}</h3>
-                    <p className="text-sm text-gray-500">Technology Partner</p>
                   </div>
                   <img 
                     src={partner.logo} 
@@ -243,16 +237,10 @@ const About = () => {
                   />
                 </div>
                 <div className="bg-gray-50 p-4">
-                  <h4 className="text-sm font-medium text-gray-700 mb-2">Services we provide:</h4>
                   <ul className="space-y-2">
-                    {partner.services.map((service, serviceIdx) => (
-                      <li key={serviceIdx} className="text-sm">
-                        <span className="font-medium">{service.name}</span>
-                        {service.description && (
-                          <span className="text-gray-500 block text-xs">
-                            {service.description}
-                          </span>
-                        )}
+                    {partner.technologies.map((tech, techIdx) => (
+                      <li key={techIdx} className="text-sm">
+                        {tech}
                       </li>
                     ))}
                   </ul>
