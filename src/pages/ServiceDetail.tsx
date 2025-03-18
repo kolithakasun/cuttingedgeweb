@@ -1,4 +1,3 @@
-
 import React, { useEffect } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import { Motion } from '@/components/ui/motion';
@@ -61,18 +60,49 @@ const serviceDetails: Record<string, ServiceDetail> = {
       {
         title: "On-premises & Cloud Infrastructure",
         description: "Establishment and support of on-premises, private and public cloud platforms."
+      },
+      {
+        title: "Home & Office Security Systems",
+        description: "CCTV installation, access control systems, and integrated security solutions for homes and offices."
       }
     ],
     approach: "We take a consultative approach to understand your business needs before designing and implementing IT infrastructure solutions. Our team of certified professionals ensures seamless integration with your existing systems and provides ongoing support to maximize performance and reliability.",
     vendorLogos: [
       { name: "Dell", logo: "/lovable-uploads/4f689f47-78aa-467e-9014-e5d029c3908f.png", url: "https://www.dell.com/" },
-      { name: "HP", logo: "https://www.hp.com/content/dam/sites/worldwide/hp-logo-footer-white.svg", url: "https://www.hp.com/" },
-      { name: "Cisco", logo: "/lovable-uploads/88d6cc73-451e-4266-8a99-d89216eefeb8.png", url: "https://www.cisco.com/" },
+      { name: "HP", logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a9/HP_logo_2012.svg/2048px-HP_logo_2012.svg.png", url: "https://www.hp.com/" },
+      { name: "Cisco", logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/0/08/Cisco_logo_blue_2016.svg/1200px-Cisco_logo_blue_2016.svg.png", url: "https://www.cisco.com/" },
       { name: "VMware", logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Vmware.svg/1200px-Vmware.svg.png", url: "https://www.vmware.com/" },
       { name: "Lenovo", logo: "/lovable-uploads/eb8f968e-3b6c-45bd-be2f-aec5410920f3.png", url: "https://www.lenovo.com/" },
       { name: "Fortinet", logo: "/lovable-uploads/a430eb04-04dd-4edb-aec1-ed4b14a6a755.png", url: "https://www.fortinet.com/" }
     ],
-    additionalContent: null
+    additionalContent: (
+      <div className="mt-12 bg-gray-50 p-8 rounded-xl">
+        <h3 className="text-2xl font-bold mb-6">Home & Office Security Systems</h3>
+        <p className="mb-6">We provide comprehensive security solutions for homes and businesses:</p>
+        
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+          <div className="bg-white p-6 rounded-lg shadow-sm">
+            <h4 className="text-lg font-semibold mb-2">CCTV Installation</h4>
+            <p className="text-gray-600">High-quality surveillance systems with remote monitoring capabilities.</p>
+          </div>
+          
+          <div className="bg-white p-6 rounded-lg shadow-sm">
+            <h4 className="text-lg font-semibold mb-2">Access Control</h4>
+            <p className="text-gray-600">Secure entry systems including key cards, biometric scanners, and integrated door controls.</p>
+          </div>
+          
+          <div className="bg-white p-6 rounded-lg shadow-sm">
+            <h4 className="text-lg font-semibold mb-2">Alarm Systems</h4>
+            <p className="text-gray-600">Advanced intruder detection with immediate notification protocols.</p>
+          </div>
+          
+          <div className="bg-white p-6 rounded-lg shadow-sm">
+            <h4 className="text-lg font-semibold mb-2">Integrated Security</h4>
+            <p className="text-gray-600">Unified management of multiple security components through a single interface.</p>
+          </div>
+        </div>
+      </div>
+    )
   },
   "cybersecurity": {
     title: "Cybersecurity",
@@ -190,11 +220,10 @@ const serviceDetails: Record<string, ServiceDetail> = {
     ],
     approach: "We help you navigate the complexities of cloud adoption with a strategic approach focused on your business objectives. Our certified cloud specialists ensure smooth migration, optimal configuration, and ongoing management of your cloud environment.",
     vendorLogos: [
-      { name: "AWS", logo: "/lovable-uploads/7cdbc548-87fd-4d70-ad02-626876564e8c.png", url: "https://aws.amazon.com/" },
+      { name: "AWS", logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/9/93/Amazon_Web_Services_Logo.svg/1200px-Amazon_Web_Services_Logo.svg.png", url: "https://aws.amazon.com/" },
       { name: "Microsoft Azure", logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fa/Microsoft_Azure.svg/1200px-Microsoft_Azure.svg.png", url: "https://azure.microsoft.com/" },
       { name: "Google Cloud", logo: "https://cloud.google.com/_static/cloud/images/social-icon-google-cloud-1200-630.png", url: "https://cloud.google.com/" },
-      { name: "Oracle Cloud", logo: "https://upload.wikimedia.org/wikipedia/commons/5/50/Oracle_logo.svg", url: "https://www.oracle.com/cloud/" },
-      { name: "IBM Cloud", logo: "https://upload.wikimedia.org/wikipedia/commons/5/51/IBM_logo.svg", url: "https://www.ibm.com/cloud" }
+      { name: "Oracle Cloud", logo: "https://upload.wikimedia.org/wikipedia/commons/5/50/Oracle_logo.svg", url: "https://www.oracle.com/cloud/" }
     ],
     additionalContent: (
       <div className="mt-12 bg-gray-50 p-8 rounded-xl">
@@ -263,8 +292,8 @@ const serviceDetails: Record<string, ServiceDetail> = {
     vendorLogos: [
       { name: "Microsoft", logo: "https://img-prod-cms-rt-microsoft-com.akamaized.net/cms/api/am/imageFileData/RE1Mu3b?ver=5c31", url: "https://www.microsoft.com/" },
       { name: "Dell", logo: "/lovable-uploads/4f689f47-78aa-467e-9014-e5d029c3908f.png", url: "https://www.dell.com/" },
-      { name: "HP", logo: "https://www.hp.com/content/dam/sites/worldwide/hp-logo-footer-white.svg", url: "https://www.hp.com/" },
-      { name: "Cisco", logo: "/lovable-uploads/88d6cc73-451e-4266-8a99-d89216eefeb8.png", url: "https://www.cisco.com/" },
+      { name: "HP", logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a9/HP_logo_2012.svg/2048px-HP_logo_2012.svg.png", url: "https://www.hp.com/" },
+      { name: "Cisco", logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/0/08/Cisco_logo_blue_2016.svg/1200px-Cisco_logo_blue_2016.svg.png", url: "https://www.cisco.com/" },
       { name: "Lenovo", logo: "/lovable-uploads/eb8f968e-3b6c-45bd-be2f-aec5410920f3.png", url: "https://www.lenovo.com/" },
       { name: "PagerDuty", logo: "https://upload.wikimedia.org/wikipedia/commons/f/f7/PagerDuty_logo.svg", url: "https://www.pagerduty.com/" },
       { name: "xMatters", logo: "https://www.xmatters.com/wp-content/themes/xmatters-2023/img/icons/logo-xmatters.svg", url: "https://www.xmatters.com/" }
@@ -356,8 +385,8 @@ const serviceDetails: Record<string, ServiceDetail> = {
       { name: "Adobe", logo: "https://www.adobe.com/content/dam/cc/icons/Adobe_Corporate_Horizontal_Red_HEX.svg", url: "https://www.adobe.com/" },
       { name: "Salesforce", logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f9/Salesforce.com_logo.svg/2560px-Salesforce.com_logo.svg.png", url: "https://www.salesforce.com/" },
       { name: "SAP", logo: "https://www.sap.com/dam/application/shared/logos/sap-logo-svg.svg", url: "https://www.sap.com/" },
-      { name: "HubSpot", logo: "https://www.hubspot.com/hubfs/assets/hubspot.com/style-guide/brand-guidelines/guidelines_the-logo.svg", url: "https://www.hubspot.com/" },
-      { name: "Zoho", logo: "https://www.zoho.com/branding/images/zoho-logo.svg", url: "https://www.zoho.com/" }
+      { name: "Odoo", logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4d/Odoo_logo_rgb.svg/1200px-Odoo_logo_rgb.svg.png", url: "https://www.odoo.com/" },
+      { name: "Zoho", logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/4/48/Zoho-logo.svg/2560px-Zoho-logo.svg.png", url: "https://www.zoho.com/" }
     ],
     additionalContent: (
       <div className="mt-12 bg-gray-50 p-8 rounded-xl">
@@ -439,7 +468,7 @@ const serviceDetails: Record<string, ServiceDetail> = {
     approach: "Our development process follows industry best practices, combining agile methodologies with rigorous quality assurance. We collaborate closely with stakeholders throughout the development lifecycle to ensure the final solution precisely meets your business requirements.",
     vendorLogos: [
       { name: "Microsoft", logo: "https://img-prod-cms-rt-microsoft-com.akamaized.net/cms/api/am/imageFileData/RE1Mu3b?ver=5c31", url: "https://www.microsoft.com/" },
-      { name: "AWS", logo: "/lovable-uploads/7cdbc548-87fd-4d70-ad02-626876564e8c.png", url: "https://aws.amazon.com/" },
+      { name: "AWS", logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/9/93/Amazon_Web_Services_Logo.svg/1200px-Amazon_Web_Services_Logo.svg.png", url: "https://aws.amazon.com/" },
       { name: "Google Cloud", logo: "https://cloud.google.com/_static/cloud/images/social-icon-google-cloud-1200-630.png", url: "https://cloud.google.com/" },
       { name: "WordPress", logo: "https://s.w.org/style/images/about/WordPress-logotype-standard.png", url: "https://wordpress.org/" }
     ],
@@ -532,13 +561,13 @@ const serviceDetails: Record<string, ServiceDetail> = {
             </li>
             <li className="flex items-center">
               <div className="w-8 h-8 mr-3 flex items-center justify-center">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/7/75/Drupal_logo.svg" alt="Drupal" className="max-h-8" />
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/75/Drupal_logo.svg/2560px-Drupal_logo.svg.png" alt="Drupal" className="max-h-8" />
               </div>
               <span>Drupal</span>
             </li>
             <li className="flex items-center">
               <div className="w-8 h-8 mr-3 flex items-center justify-center">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/0/00/Shopify_logo_2018.svg" alt="Shopify" className="max-h-8" />
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0e/Shopify_logo_2018.svg/2560px-Shopify_logo_2018.svg.png" alt="Shopify" className="max-h-8" />
               </div>
               <span>Shopify</span>
             </li>
@@ -599,7 +628,7 @@ const serviceDetails: Record<string, ServiceDetail> = {
       { name: "Snowflake", logo: "https://upload.wikimedia.org/wikipedia/commons/f/ff/Snowflake_Logo.svg", url: "https://www.snowflake.com/" },
       { name: "MongoDB", logo: "https://upload.wikimedia.org/wikipedia/commons/9/93/MongoDB_Logo.svg", url: "https://www.mongodb.com/" },
       { name: "PostgreSQL", logo: "https://upload.wikimedia.org/wikipedia/commons/2/29/Postgresql_elephant.svg", url: "https://www.postgresql.org/" },
-      { name: "AWS", logo: "/lovable-uploads/7cdbc548-87fd-4d70-ad02-626876564e8c.png", url: "https://aws.amazon.com/" }
+      { name: "AWS", logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/9/93/Amazon_Web_Services_Logo.svg/1200px-Amazon_Web_Services_Logo.svg.png", url: "https://aws.amazon.com/" }
     ],
     additionalContent: (
       <div className="mt-12 bg-gray-50 p-8 rounded-xl">
@@ -681,7 +710,7 @@ const serviceDetails: Record<string, ServiceDetail> = {
       { name: "IBM", logo: "https://upload.wikimedia.org/wikipedia/commons/5/51/IBM_logo.svg", url: "https://www.ibm.com/" },
       { name: "Dell Boomi", logo: "https://www.boomi.com/wp-content/uploads/Boomi-LogoLockup-750x250-1.png", url: "https://www.boomi.com/" },
       { name: "Oracle", logo: "https://upload.wikimedia.org/wikipedia/commons/5/50/Oracle_logo.svg", url: "https://www.oracle.com/" },
-      { name: "AWS", logo: "/lovable-uploads/7cdbc548-87fd-4d70-ad02-626876564e8c.png", url: "https://aws.amazon.com/" }
+      { name: "AWS", logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/9/93/Amazon_Web_Services_Logo.svg/1200px-Amazon_Web_Services_Logo.svg.png", url: "https://aws.amazon.com/" }
     ],
     additionalContent: (
       <div className="mt-12 bg-gray-50 p-8 rounded-xl">
@@ -758,7 +787,7 @@ const serviceDetails: Record<string, ServiceDetail> = {
       { name: "TensorFlow", logo: "https://upload.wikimedia.org/wikipedia/commons/2/2d/Tensorflow_logo.svg", url: "https://www.tensorflow.org/" },
       { name: "Python", logo: "https://upload.wikimedia.org/wikipedia/commons/c/c3/Python-logo-notext.svg", url: "https://www.python.org/" },
       { name: "R", logo: "https://www.r-project.org/logo/Rlogo.svg", url: "https://www.r-project.org/" },
-      { name: "AWS", logo: "/lovable-uploads/7cdbc548-87fd-4d70-ad02-626876564e8c.png", url: "https://aws.amazon.com/" }
+      { name: "AWS", logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/9/93/Amazon_Web_Services_Logo.svg/1200px-Amazon_Web_Services_Logo.svg.png", url: "https://aws.amazon.com/" }
     ],
     additionalContent: (
       <div className="mt-12 bg-gray-50 p-8 rounded-xl">
@@ -838,7 +867,7 @@ const ServiceDetail = () => {
           <div className="container max-w-7xl mx-auto px-4 relative z-10">
             <Button 
               variant="outline" 
-              className="mb-8 text-primary-foreground border-white/70 hover:bg-white/10" 
+              className="mb-8 bg-blue-700/50 text-white border-white/70 hover:bg-white/20" 
               onClick={() => navigate(-1)}
             >
               <ArrowLeft className="mr-2 h-4 w-4" />
@@ -916,7 +945,7 @@ const ServiceDetail = () => {
                         <img 
                           src={vendor.logo} 
                           alt={vendor.name} 
-                          className="max-h-12 max-w-[150px] object-contain" 
+                          className="h-12 max-w-[150px] object-contain" 
                         />
                       </a>
                     ))}
@@ -964,4 +993,3 @@ const ServiceDetail = () => {
 };
 
 export default ServiceDetail;
-
