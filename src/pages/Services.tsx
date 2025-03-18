@@ -12,9 +12,7 @@ import {
   ArrowRight,
   Database,
   Network,
-  RefreshCw,
-  Brain,
-  BarChart
+  Brain
 } from 'lucide-react';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
@@ -67,12 +65,6 @@ const serviceItems = [
     title: 'Enterprise Integration',
     description: 'Remove manual processes to improve the accuracy and timeliness of information across your systems.',
     link: '/services/enterprise-integration'
-  },
-  {
-    icon: RefreshCw,
-    title: 'Service Desk',
-    description: 'Level 1, 2 & 3 triage and issue management for all your IT needs.',
-    link: '/services/service-desk'
   },
   {
     icon: Brain,

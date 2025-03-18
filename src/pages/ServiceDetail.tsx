@@ -91,7 +91,7 @@ const serviceDetails: Record<string, ServiceDetail> = {
     offerings: [
       {
         title: "Security Assessment & Auditing",
-        description: "Comprehensive evaluation of your security posture with detailed recommendations."
+        description: "Comprehensive security evaluations including vulnerability scanning, penetration testing and detailed assessment reports."
       },
       {
         title: "Endpoint Protection",
@@ -110,16 +110,8 @@ const serviceDetails: Record<string, ServiceDetail> = {
         description: "Multi-layered defense against sophisticated threats and zero-day vulnerabilities."
       },
       {
-        title: "Vulnerability Assessment",
-        description: "Regular scanning and assessment of systems to identify and address security vulnerabilities."
-      },
-      {
-        title: "Penetration Testing",
-        description: "Controlled security testing to identify weaknesses in your cybersecurity defenses."
-      },
-      {
-        title: "VAPT Assessment Reports",
-        description: "Detailed vulnerability assessment and penetration testing with actionable remediation plans."
+        title: "Data Loss Prevention",
+        description: "Strategies and tools to prevent sensitive data from leaving your organization."
       }
     ],
     approach: "We implement defense-in-depth security strategies tailored to your risk profile and business needs. Our approach combines cutting-edge technologies, best practices, and ongoing monitoring to provide comprehensive protection for your digital assets.",
@@ -149,27 +141,6 @@ const serviceDetails: Record<string, ServiceDetail> = {
             <a href="https://www.microsoft.com/en-us/security/business/microsoft-defender" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">Learn more</a>
           </div>
         </div>
-        
-        <h3 className="text-2xl font-bold mb-6">Security Testing & Assessment</h3>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-          <div className="bg-white p-6 rounded-lg shadow-sm flex flex-col">
-            <div className="flex items-center mb-4">
-              <Shield className="h-6 w-6 text-primary mr-3" />
-              <h4 className="text-lg font-semibold">Vulnerability Scanning</h4>
-            </div>
-            <p className="text-gray-600 mb-4">Regular automated scanning of your systems to identify potential security vulnerabilities before they can be exploited.</p>
-          </div>
-          
-          <div className="bg-white p-6 rounded-lg shadow-sm flex flex-col">
-            <div className="flex items-center mb-4">
-              <Server className="h-6 w-6 text-primary mr-3" />
-              <h4 className="text-lg font-semibold">Penetration Testing</h4>
-            </div>
-            <p className="text-gray-600 mb-4">Controlled attacks by our security experts to identify and address weaknesses in your security defenses.</p>
-          </div>
-        </div>
-        
-        <p className="mt-6">Our security experts will help you implement these solutions, configure them to your specific requirements, and provide ongoing management to ensure your organization stays protected from evolving threats.</p>
       </div>
     )
   },
@@ -867,7 +838,7 @@ const ServiceDetail = () => {
           <div className="container max-w-7xl mx-auto px-4 relative z-10">
             <Button 
               variant="outline" 
-              className="mb-8 pl-0 text-primary-foreground border-white/70 hover:bg-white/10" 
+              className="mb-8 text-primary-foreground border-white/70 hover:bg-white/10" 
               onClick={() => navigate(-1)}
             >
               <ArrowLeft className="mr-2 h-4 w-4" />
@@ -966,7 +937,7 @@ const ServiceDetail = () => {
             <Motion animation="fade-up">
               <h2 className="text-3xl font-bold mb-8">Our Approach</h2>
               <div className="bg-blue-50 p-8 rounded-xl">
-                <p className="text-lg leading-relaxed text-center md:text-justify">
+                <p className="text-lg leading-relaxed text-center">
                   {service.approach}
                 </p>
               </div>
@@ -993,3 +964,4 @@ const ServiceDetail = () => {
 };
 
 export default ServiceDetail;
+

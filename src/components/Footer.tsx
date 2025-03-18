@@ -17,7 +17,7 @@ const Footer = () => {
               <div className="mb-4">
                 <Link to="/" className="inline-flex items-center gap-2">
                   <img 
-                    src="/lovable-uploads/cc8fb853-4c1f-4b10-8fe0-752100360a7c.png" 
+                    src="/lovable-uploads/b008b105-f3e0-4406-9e6c-d328c87bc83a.png" 
                     alt="CuttingEdge Technologies Logo" 
                     className="h-12 w-auto" 
                   />
