@@ -30,7 +30,7 @@ const ClientsCarousel: React.FC<ClientsCarouselProps> = ({ clients }) => {
       >
         <CarouselContent>
           {clients.map((client, index) => (
-            <CarouselItem key={index} className="basis-1/2 md:basis-1/4 lg:basis-1/4">
+            <CarouselItem key={index} className="basis-1/2 md:basis-1/3 lg:basis-1/4">
               <a 
                 href={client.url} 
                 target="_blank" 

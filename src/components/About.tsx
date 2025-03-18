@@ -65,7 +65,8 @@ const partners = [
       'Google Workspace',
       'Google Cloud Platform',
       'Google Ads'
-    ]
+    ],
+    description: 'Google Cloud and Workspace solutions for businesses of all sizes, enabling seamless collaboration and secure cloud infrastructure.'
   },
   { 
     name: 'Microsoft', 
@@ -75,7 +76,8 @@ const partners = [
       'Azure',
       'Dynamics 365',
       'Client and Server Operating Systems'
-    ]
+    ],
+    description: 'Comprehensive Microsoft solutions including cloud services, productivity software, and enterprise applications to drive digital transformation.'
   },
   { 
     name: 'AWS', 
@@ -85,7 +87,8 @@ const partners = [
       'EKS',
       'ECS',
       'Lambda'
-    ]
+    ],
+    description: 'Amazon Web Services cloud solutions providing scalable, reliable, and cost-effective infrastructure for your business needs.'
   },
   { 
     name: 'Adobe', 
@@ -94,7 +97,8 @@ const partners = [
       'Creative Cloud',
       'Acrobat',
       'Adobe Sign'
-    ]
+    ],
+    description: 'Adobe creative and document solutions empowering your team to design, create, and manage digital content efficiently.'
   },
   { 
     name: 'Autodesk', 
@@ -103,7 +107,8 @@ const partners = [
       'AutoCAD',
       'Revit',
       'Fusion 360'
-    ]
+    ],
+    description: 'Autodesk design and engineering software solutions for architecture, construction, manufacturing, and entertainment industries.'
   },
   { 
     name: 'SketchUp', 
@@ -111,7 +116,8 @@ const partners = [
     technologies: [
       'SketchUp Pro',
       'SketchUp Studio'
-    ]
+    ],
+    description: 'SketchUp 3D modeling software for architecture, design, construction, and engineering professionals.'
   },
   { 
     name: 'Dell', 
@@ -120,7 +126,8 @@ const partners = [
       'Servers & Storage',
       'Desktops & Laptops',
       'Networking'
-    ]
+    ],
+    description: 'Dell hardware solutions and services providing reliable, high-performance computing and IT infrastructure for businesses.'
   },
   { 
     name: 'HP', 
@@ -129,7 +136,8 @@ const partners = [
       'Computing Devices',
       'Printing Solutions',
       'Networking & Servers'
-    ]
+    ],
+    description: 'HP enterprise solutions covering printing, personal computing, and IT infrastructure to address diverse business requirements.'
   },
   { 
     name: 'Lenovo', 
@@ -138,7 +146,8 @@ const partners = [
       'ThinkPad',
       'ThinkCentre',
       'ThinkServer'
-    ]
+    ],
+    description: 'Lenovo business computing solutions offering reliable, secure, and high-performance devices for enterprise environments.'
   }
 ];
 
@@ -236,14 +245,17 @@ const About = () => {
                     className="h-10 max-w-[120px] object-contain" 
                   />
                 </div>
-                <div className="bg-gray-50 p-4">
-                  <ul className="space-y-2">
-                    {partner.technologies.map((tech, techIdx) => (
-                      <li key={techIdx} className="text-sm">
-                        {tech}
-                      </li>
-                    ))}
-                  </ul>
+                <div className="p-4 border-t border-gray-100">
+                  <p className="text-sm text-gray-600 mb-4">{partner.description}</p>
+                  <div className="bg-gray-50 p-4 rounded-lg">
+                    <ul className="space-y-2">
+                      {partner.technologies.map((tech, techIdx) => (
+                        <li key={techIdx} className="text-sm">
+                          {tech}
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
                 </div>
               </div>
             ))}
