@@ -140,7 +140,7 @@ const partners = [
   },
   {
     name: 'Autodesk',
-    logo: '/lovable-uploads/autodesk-logo.svg',
+    logo: '/lovable-uploads/autodesk-logo.jpg',
     technologies: [
       {
         name: 'AutoCAD',
