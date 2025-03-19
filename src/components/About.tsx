@@ -291,7 +291,7 @@ const About = () => {
         {/* Clients Section with Carousel */}
         <Motion animation="fade-up" className="mt-20">
           <div className="text-center mb-12">
-            <span className="px-3xl py-1 text-sm font-medium bg-secondary text-primary rounded-full">Our Clients</span>
+            <span className="px-3 py-1 text-4xl font-bold font-4xl bg-secondary text-primary rounded-full">Our Clients</span>
             <h2 className="text-3xl font-bold mt-6 mb-4">Trusted by Leading Organizations</h2>
             <p className="text-gray-600 max-w-2xl mx-auto">
               We're proud to work with organizations of all sizes across various industries.
@@ -304,7 +304,7 @@ const About = () => {
         {/* Strategic Partners Section */}
         <Motion animation="fade-up" className="mt-20">
           <div className="text-center mb-12">
-            <span className="px-3xl py-1 text-sm font-medium bg-secondary text-primary rounded-full">Our Partners</span>
+            <span className="px-3 py-1 text-4xl font-bold font-4xl bg-secondary text-primary rounded-full">Our Partners</span>
             <h2 className="text-3xl font-bold mt-6 mb-4">Strategic Technology Partners</h2>
             <p className="text-gray-600 max-w-2xl mx-auto">
               We provide licensing and implementation services in partnership with leading technology vendors.
