@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { cn } from '@/lib/utils';
@@ -16,7 +17,7 @@ const Footer = () => {
               <div className="mb-4">
                 <Link to="/" className="inline-flex items-center gap-2">
                   <img 
-                    src="/lovable-uploads/d63f3739-c35d-4428-8d5a-f2b66e9392e7.png" 
+                    src="/lovable-uploads/749b65dc-5ef6-416d-807f-c96312e0a999.png" 
                     alt="CuttingEdge Technologies Logo" 
                     className="h-12 w-auto" 
                   />

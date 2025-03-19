@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { CheckCircle } from 'lucide-react';
 import { Motion } from '@/components/ui/motion';
@@ -22,7 +21,7 @@ const clients = [
   },
   {
     name: 'Tuk Tuk Rental',
-    logo: '/lovable-uploads/a430eb04-04dd-4edb-aec1-ed4b14a6a755.png',
+    logo: '/lovable-uploads/8536eece-9e05-4f87-8adb-bb03cd8eb345.png',
     url: 'https://tuktukrental.com/'
   },
   {
@@ -66,7 +65,7 @@ const partners = [
       'Google Cloud Platform',
       'Google Ads'
     ],
-    description: 'Google Cloud and Workspace solutions for businesses of all sizes, enabling seamless collaboration and secure cloud infrastructure.'
+    description: 'Google Cloud and Workspace solutions for businesses of all sizes, enabling seamless collaboration and secure cloud infrastructure with tools including Gmail, Drive, Docs, Sheets, Slides, Meet, Compute Engine, Cloud Storage, BigQuery, and Kubernetes Engine.'
   },
   { 
     name: 'Microsoft', 
@@ -77,7 +76,7 @@ const partners = [
       'Dynamics 365',
       'Client and Server Operating Systems'
     ],
-    description: 'Comprehensive Microsoft solutions including cloud services, productivity software, and enterprise applications to drive digital transformation.'
+    description: 'Comprehensive Microsoft solutions including cloud services, productivity software, and enterprise applications to drive digital transformation with Office 365, Teams, SharePoint, Azure services, SQL Server, and Windows operating systems.'
   },
   { 
     name: 'AWS', 
@@ -88,7 +87,7 @@ const partners = [
       'ECS',
       'Lambda'
     ],
-    description: 'Amazon Web Services cloud solutions providing scalable, reliable, and cost-effective infrastructure for your business needs.'
+    description: 'Amazon Web Services cloud solutions providing scalable, reliable, and cost-effective infrastructure for your business needs including compute resources, container orchestration, serverless applications, and enterprise-grade storage.'
   },
   { 
     name: 'Adobe', 
@@ -98,7 +97,7 @@ const partners = [
       'Acrobat',
       'Adobe Sign'
     ],
-    description: 'Adobe creative and document solutions empowering your team to design, create, and manage digital content efficiently.'
+    description: 'Adobe creative and document solutions empowering your team to design, create, and manage digital content efficiently with Photoshop, Illustrator, InDesign, Premiere Pro, After Effects, and document management tools.'
   },
   { 
     name: 'Autodesk', 
@@ -108,7 +107,7 @@ const partners = [
       'Revit',
       'Fusion 360'
     ],
-    description: 'Autodesk design and engineering software solutions for architecture, construction, manufacturing, and entertainment industries.'
+    description: 'Autodesk design and engineering software solutions for architecture, construction, manufacturing, and entertainment industries with powerful 3D modeling, simulation, and visualization capabilities.'
   },
   { 
     name: 'SketchUp', 
@@ -117,7 +116,7 @@ const partners = [
       'SketchUp Pro',
       'SketchUp Studio'
     ],
-    description: 'SketchUp 3D modeling software for architecture, design, construction, and engineering professionals.'
+    description: 'SketchUp 3D modeling software for architecture, design, construction, and engineering professionals with easy-to-use tools for conceptual design, detailed documentation, and collaborative workflows.'
   },
   { 
     name: 'Dell', 
@@ -127,7 +126,7 @@ const partners = [
       'Desktops & Laptops',
       'Networking'
     ],
-    description: 'Dell hardware solutions and services providing reliable, high-performance computing and IT infrastructure for businesses.'
+    description: 'Dell hardware solutions and services providing reliable, high-performance computing and IT infrastructure for businesses including PowerEdge servers, OptiPlex desktops, Latitude laptops, and enterprise storage solutions.'
   },
   { 
     name: 'HP', 
@@ -137,7 +136,7 @@ const partners = [
       'Printing Solutions',
       'Networking & Servers'
     ],
-    description: 'HP enterprise solutions covering printing, personal computing, and IT infrastructure to address diverse business requirements.'
+    description: 'HP enterprise solutions covering printing, personal computing, and IT infrastructure to address diverse business requirements with Elite and ProBook laptops, LaserJet printers, and ProLiant servers.'
   },
   { 
     name: 'Lenovo', 
@@ -147,7 +146,7 @@ const partners = [
       'ThinkCentre',
       'ThinkServer'
     ],
-    description: 'Lenovo business computing solutions offering reliable, secure, and high-performance devices for enterprise environments.'
+    description: 'Lenovo business computing solutions offering reliable, secure, and high-performance devices for enterprise environments including ThinkPad laptops, ThinkCentre desktops, and enterprise-grade servers with comprehensive support.'
   }
 ];
 
