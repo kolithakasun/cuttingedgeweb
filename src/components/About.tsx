@@ -47,7 +47,7 @@ const clients = [
   },
   {
     name: 'CCE International',
-    logo: 'http://www.cceinternational.com/images/cce-logo.png',
+    logo: '/lovable-uploads/cce-logo.png',
     url: 'http://www.cceinternational.com/'
   },
   {
