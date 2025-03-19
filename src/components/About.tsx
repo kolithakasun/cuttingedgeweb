@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { CheckCircle } from 'lucide-react';
 import { Motion } from '@/components/ui/motion';
@@ -21,7 +22,7 @@ const clients = [
   },
   {
     name: 'Tuk Tuk Rental',
-    logo: '/lovable-uploads/8536eece-9e05-4f87-8adb-bb03cd8eb345.png',
+    logo: '/lovable-uploads/dc4fa504-0329-46ac-bfb5-727b77691322.png',
     url: 'https://tuktukrental.com/'
   },
   {
