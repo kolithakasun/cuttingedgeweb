@@ -122,7 +122,7 @@ const partners = [
   },
   {
     name: 'Adobe',
-    logo: '/lovable-uploads/adobe-logo-1.webp',
+    logo: '/lovable-uploads/adobe-logo-1.png',
     technologies: [
       {
         name: 'Creative Cloud',
