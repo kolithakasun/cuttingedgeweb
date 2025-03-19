@@ -22,7 +22,7 @@ const clients = [
   },
   {
     name: 'Tuk Tuk Rental',
-    logo: '/lovable-uploads/dc4fa504-0329-46ac-bfb5-727b77691322.png',
+    logo: '/lovable-uploads/tuktukrental.png',
     url: 'https://tuktukrental.com/'
   },
   {
@@ -62,92 +62,184 @@ const partners = [
     name: 'Google', 
     logo: 'https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_272x92dp.png',
     technologies: [
-      'Google Workspace',
-      'Google Cloud Platform',
-      'Google Ads'
+      {
+        name: 'Google Workspace',
+        description: 'Gmail, Drive, Docs, Sheets, Slides, Meet and more'
+      },
+      {
+        name: 'Google Cloud Platform',
+        description: 'Compute Engine, Cloud Storage, BigQuery, Kubernetes Engine'
+      },
+      {
+        name: 'Google Ads',
+        description: 'Search, Display, Video, Shopping campaigns and analytics'
+      }
     ],
-    description: 'Google Cloud and Workspace solutions for businesses of all sizes, enabling seamless collaboration and secure cloud infrastructure with tools including Gmail, Drive, Docs, Sheets, Slides, Meet, Compute Engine, Cloud Storage, BigQuery, and Kubernetes Engine.'
+    description: 'Google Cloud and Workspace solutions for businesses of all sizes, enabling seamless collaboration and secure cloud infrastructure.'
   },
   { 
     name: 'Microsoft', 
     logo: 'https://img-prod-cms-rt-microsoft-com.akamaized.net/cms/api/am/imageFileData/RE1Mu3b?ver=5c31',
     technologies: [
-      'Microsoft 365',
-      'Azure',
-      'Dynamics 365',
-      'Client and Server Operating Systems'
+      {
+        name: 'Microsoft 365',
+        description: 'Word, Excel, PowerPoint, Outlook, Teams, SharePoint and more'
+      },
+      {
+        name: 'Azure',
+        description: 'Virtual Machines, App Services, SQL Database, Blob Storage'
+      },
+      {
+        name: 'Dynamics 365',
+        description: 'Sales, Customer Service, Field Service, Marketing modules'
+      },
+      {
+        name: 'Windows',
+        description: 'Client and Server operating systems, security and management'
+      }
     ],
-    description: 'Comprehensive Microsoft solutions including cloud services, productivity software, and enterprise applications to drive digital transformation with Office 365, Teams, SharePoint, Azure services, SQL Server, and Windows operating systems.'
+    description: 'Comprehensive Microsoft solutions including cloud services, productivity software, and enterprise applications to drive digital transformation.'
   },
   { 
     name: 'AWS', 
     logo: '/lovable-uploads/94e73714-9d64-4918-8f00-2e5647c1d1ff.png',
     technologies: [
-      'EC2',
-      'EKS',
-      'ECS',
-      'Lambda'
+      {
+        name: 'Compute',
+        description: 'EC2, Lambda, ECS, Fargate, Elastic Beanstalk'
+      },
+      {
+        name: 'Storage',
+        description: 'S3, EBS, EFS, Glacier, Storage Gateway'
+      },
+      {
+        name: 'Databases',
+        description: 'RDS, DynamoDB, Aurora, Redshift, ElastiCache'
+      },
+      {
+        name: 'Networking',
+        description: 'VPC, CloudFront, Route 53, API Gateway, Direct Connect'
+      }
     ],
-    description: 'Amazon Web Services cloud solutions providing scalable, reliable, and cost-effective infrastructure for your business needs including compute resources, container orchestration, serverless applications, and enterprise-grade storage.'
+    description: 'Amazon Web Services cloud solutions providing scalable, reliable, and cost-effective infrastructure for your business needs.'
   },
   { 
     name: 'Adobe', 
     logo: '/lovable-uploads/8799d3aa-f884-4605-ad48-04cf6128a870.png',
     technologies: [
-      'Creative Cloud',
-      'Acrobat',
-      'Adobe Sign'
+      {
+        name: 'Creative Cloud',
+        description: 'Photoshop, Illustrator, InDesign, Premiere Pro, After Effects'
+      },
+      {
+        name: 'Document Cloud',
+        description: 'Acrobat DC, PDF services, e-signature solutions'
+      },
+      {
+        name: 'Experience Cloud',
+        description: 'Analytics, Target, Campaign, Experience Manager'
+      }
     ],
-    description: 'Adobe creative and document solutions empowering your team to design, create, and manage digital content efficiently with Photoshop, Illustrator, InDesign, Premiere Pro, After Effects, and document management tools.'
+    description: 'Adobe creative and document solutions empowering your team to design, create, and manage digital content efficiently.'
   },
   { 
     name: 'Autodesk', 
     logo: '/lovable-uploads/f2d62ca4-1e4f-4d6b-990f-ab0ae33b8f70.png',
     technologies: [
-      'AutoCAD',
-      'Revit',
-      'Fusion 360'
+      {
+        name: 'AutoCAD',
+        description: '2D and 3D CAD design, drafting, modeling, and drawing'
+      },
+      {
+        name: 'Revit',
+        description: 'BIM software for architects, engineers, and construction'
+      },
+      {
+        name: 'Fusion 360',
+        description: 'Integrated CAD, CAM, CAE, and PCB design platform'
+      },
+      {
+        name: '3ds Max',
+        description: '3D modeling, animation, and rendering software'
+      }
     ],
-    description: 'Autodesk design and engineering software solutions for architecture, construction, manufacturing, and entertainment industries with powerful 3D modeling, simulation, and visualization capabilities.'
+    description: 'Autodesk design and engineering software solutions for architecture, construction, manufacturing, and entertainment industries.'
   },
   { 
     name: 'SketchUp', 
     logo: 'https://static.trimble.com/sites/default/files/styles/large_3x/public/2021-03/logo-sketchup.png',
     technologies: [
-      'SketchUp Pro',
-      'SketchUp Studio'
+      {
+        name: 'SketchUp Pro',
+        description: '3D modeling for architecture, interior design, and construction'
+      },
+      {
+        name: 'SketchUp Studio',
+        description: 'Advanced energy analysis and high-fidelity visualization'
+      },
+      {
+        name: 'SketchUp for Web',
+        description: 'Cloud-based 3D modeling accessible from any browser'
+      }
     ],
-    description: 'SketchUp 3D modeling software for architecture, design, construction, and engineering professionals with easy-to-use tools for conceptual design, detailed documentation, and collaborative workflows.'
+    description: 'SketchUp 3D modeling software for architecture, design, construction, and engineering professionals with easy-to-use tools.'
   },
   { 
     name: 'Dell', 
     logo: '/lovable-uploads/038b2bab-ed59-4bc1-9808-d0b9dded77dc.png',
     technologies: [
-      'Servers & Storage',
-      'Desktops & Laptops',
-      'Networking'
+      {
+        name: 'Servers & Storage',
+        description: 'PowerEdge servers, PowerStore, Unity XT, PowerScale storage'
+      },
+      {
+        name: 'Client Solutions',
+        description: 'Latitude, OptiPlex, Precision, XPS laptops and desktops'
+      },
+      {
+        name: 'Networking',
+        description: 'PowerSwitch networking, SD-WAN solutions, data protection'
+      }
     ],
-    description: 'Dell hardware solutions and services providing reliable, high-performance computing and IT infrastructure for businesses including PowerEdge servers, OptiPlex desktops, Latitude laptops, and enterprise storage solutions.'
+    description: 'Dell hardware solutions and services providing reliable, high-performance computing and IT infrastructure for businesses.'
   },
   { 
     name: 'HP', 
     logo: '/lovable-uploads/eaed3217-c110-4be2-8e0a-6aa78382ebc5.png',
     technologies: [
-      'Computing Devices',
-      'Printing Solutions',
-      'Networking & Servers'
+      {
+        name: 'Computing',
+        description: 'EliteBook, ProBook, Z workstations, Elite desktops'
+      },
+      {
+        name: 'Printing',
+        description: 'LaserJet, OfficeJet, DesignJet, Managed Print Services'
+      },
+      {
+        name: 'Enterprise Systems',
+        description: 'ProLiant servers, Storage, Networking, Aruba wireless'
+      }
     ],
-    description: 'HP enterprise solutions covering printing, personal computing, and IT infrastructure to address diverse business requirements with Elite and ProBook laptops, LaserJet printers, and ProLiant servers.'
+    description: 'HP enterprise solutions covering printing, personal computing, and IT infrastructure to address diverse business requirements.'
   },
   { 
     name: 'Lenovo', 
     logo: '/lovable-uploads/2ad6c412-0db4-45ff-9712-6789fc543253.png',
     technologies: [
-      'ThinkPad',
-      'ThinkCentre',
-      'ThinkServer'
+      {
+        name: 'ThinkPad & ThinkBook',
+        description: 'Business laptops, ultrabooks, and mobile workstations'
+      },
+      {
+        name: 'ThinkCentre & ThinkStation',
+        description: 'Business desktops, all-in-ones, and workstations'
+      },
+      {
+        name: 'ThinkSystem & ThinkAgile',
+        description: 'Servers, storage, networking, and hyperconverged systems'
+      }
     ],
-    description: 'Lenovo business computing solutions offering reliable, secure, and high-performance devices for enterprise environments including ThinkPad laptops, ThinkCentre desktops, and enterprise-grade servers with comprehensive support.'
+    description: 'Lenovo business computing solutions offering reliable, secure, and high-performance devices for enterprise environments.'
   }
 ];
 
@@ -248,13 +340,12 @@ const About = () => {
                 <div className="p-4 border-t border-gray-100">
                   <p className="text-sm text-gray-600 mb-4">{partner.description}</p>
                   <div className="bg-gray-50 p-4 rounded-lg">
-                    <ul className="space-y-2">
-                      {partner.technologies.map((tech, techIdx) => (
-                        <li key={techIdx} className="text-sm">
-                          {tech}
-                        </li>
-                      ))}
-                    </ul>
+                    {partner.technologies.map((tech, techIdx) => (
+                      <div key={techIdx} className="mb-3 last:mb-0">
+                        <h4 className="font-medium text-primary">{tech.name}</h4>
+                        <p className="text-sm text-gray-600">{tech.description}</p>
+                      </div>
+                    ))}
                   </div>
                 </div>
               </div>
