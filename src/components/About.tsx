@@ -100,7 +100,7 @@ const partners = [
   },
   {
     name: 'AWS',
-    logo: '/lovable-uploads/94e73714-9d64-4918-8f00-2e5647c1d1ff.png',
+    logo: '/lovable-uploads/cc8fb853-4c1f-4b10-8fe0-752100360a7c.png',
     technologies: [
       {
         name: 'Compute',
@@ -122,7 +122,7 @@ const partners = [
   },
   {
     name: 'Adobe',
-    logo: '/lovable-uploads/8799d3aa-f884-4605-ad48-04cf6128a870.png',
+    logo: '/lovable-uploads/adobe-logo-1.webp',
     technologies: [
       {
         name: 'Creative Cloud',
@@ -140,7 +140,7 @@ const partners = [
   },
   {
     name: 'Autodesk',
-    logo: '/lovable-uploads/f2d62ca4-1e4f-4d6b-990f-ab0ae33b8f70.png',
+    logo: '/lovable-uploads/autodesk-logo.svg',
     technologies: [
       {
         name: 'AutoCAD',
@@ -158,7 +158,7 @@ const partners = [
   },
   {
     name: 'SketchUp',
-    logo: 'https://static.trimble.com/sites/default/files/styles/large_3x/public/2021-03/logo-sketchup.png',
+    logo: '/lovable-uploads/sketchup-logo.png',
     technologies: [
       {
         name: 'SketchUp Pro',
@@ -176,7 +176,7 @@ const partners = [
   },
   {
     name: 'Dell',
-    logo: '/lovable-uploads/038b2bab-ed59-4bc1-9808-d0b9dded77dc.png',
+    logo: '/lovable-uploads/Dell_Logo.svg.png',
     technologies: [
       {
         name: 'Servers & Storage',
@@ -194,7 +194,7 @@ const partners = [
   },
   {
     name: 'HP',
-    logo: '/lovable-uploads/eaed3217-c110-4be2-8e0a-6aa78382ebc5.png',
+    logo: '/lovable-uploads/Hewlett-Packard-Logo-2009.png',
     technologies: [
       {
         name: 'Computing',
@@ -212,7 +212,7 @@ const partners = [
   },
   {
     name: 'Lenovo',
-    logo: '/lovable-uploads/2ad6c412-0db4-45ff-9712-6789fc543253.png',
+    logo: '/lovable-uploads/88d6cc73-451e-4266-8a99-d89216eefeb8.png',
     technologies: [
       {
         name: 'ThinkPad & ThinkBook',
