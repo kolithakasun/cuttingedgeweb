@@ -22,7 +22,7 @@ const clients = [
   },
   {
     name: 'Tuk Tuk Rental',
-    logo: '/lovable-uploads/12e47029-39ff-46d6-a780-4cfd4a62fd33.png',
+    logo: 'lovable-uploads/7cdbc548-87fd-4d70-ad02-626876564e8c.png',
     url: 'https://tuktukrental.com/'
   },
   {
