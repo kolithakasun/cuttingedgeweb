@@ -22,7 +22,7 @@ const clients = [
   },
   {
     name: 'Tuk Tuk Rental',
-    logo: '/lovable-uploads/tuktukrental.png',
+    logo: '/lovable-uploads/ee0802c8-b897-4228-a62f-68cc11be3135.png',
     url: 'https://tuktukrental.com/'
   },
   {
@@ -74,8 +74,7 @@ const partners = [
         name: 'Google Ads',
         description: 'Search, Display, Video, Shopping campaigns and analytics'
       }
-    ],
-    description: 'Google Cloud and Workspace solutions for businesses of all sizes, enabling seamless collaboration and secure cloud infrastructure.'
+    ]
   },
   { 
     name: 'Microsoft', 
@@ -97,8 +96,7 @@ const partners = [
         name: 'Windows',
         description: 'Client and Server operating systems, security and management'
       }
-    ],
-    description: 'Comprehensive Microsoft solutions including cloud services, productivity software, and enterprise applications to drive digital transformation.'
+    ]
   },
   { 
     name: 'AWS', 
@@ -106,11 +104,7 @@ const partners = [
     technologies: [
       {
         name: 'Compute',
-        description: 'EC2, Lambda, ECS, Fargate, Elastic Beanstalk'
-      },
-      {
-        name: 'Storage',
-        description: 'S3, EBS, EFS, Glacier, Storage Gateway'
+        description: 'EC2, Lambda, EKS, ECS, Fargate, Elastic Beanstalk'
       },
       {
         name: 'Databases',
@@ -119,9 +113,12 @@ const partners = [
       {
         name: 'Networking',
         description: 'VPC, CloudFront, Route 53, API Gateway, Direct Connect'
+      },
+      {
+        name: 'Containers',
+        description: 'EKS, ECS, ECR, App Mesh, Copilot'
       }
-    ],
-    description: 'Amazon Web Services cloud solutions providing scalable, reliable, and cost-effective infrastructure for your business needs.'
+    ]
   },
   { 
     name: 'Adobe', 
@@ -139,8 +136,7 @@ const partners = [
         name: 'Experience Cloud',
         description: 'Analytics, Target, Campaign, Experience Manager'
       }
-    ],
-    description: 'Adobe creative and document solutions empowering your team to design, create, and manage digital content efficiently.'
+    ]
   },
   { 
     name: 'Autodesk', 
@@ -157,13 +153,8 @@ const partners = [
       {
         name: 'Fusion 360',
         description: 'Integrated CAD, CAM, CAE, and PCB design platform'
-      },
-      {
-        name: '3ds Max',
-        description: '3D modeling, animation, and rendering software'
       }
-    ],
-    description: 'Autodesk design and engineering software solutions for architecture, construction, manufacturing, and entertainment industries.'
+    ]
   },
   { 
     name: 'SketchUp', 
@@ -181,8 +172,7 @@ const partners = [
         name: 'SketchUp for Web',
         description: 'Cloud-based 3D modeling accessible from any browser'
       }
-    ],
-    description: 'SketchUp 3D modeling software for architecture, design, construction, and engineering professionals with easy-to-use tools.'
+    ]
   },
   { 
     name: 'Dell', 
@@ -200,8 +190,7 @@ const partners = [
         name: 'Networking',
         description: 'PowerSwitch networking, SD-WAN solutions, data protection'
       }
-    ],
-    description: 'Dell hardware solutions and services providing reliable, high-performance computing and IT infrastructure for businesses.'
+    ]
   },
   { 
     name: 'HP', 
@@ -219,8 +208,7 @@ const partners = [
         name: 'Enterprise Systems',
         description: 'ProLiant servers, Storage, Networking, Aruba wireless'
       }
-    ],
-    description: 'HP enterprise solutions covering printing, personal computing, and IT infrastructure to address diverse business requirements.'
+    ]
   },
   { 
     name: 'Lenovo', 
@@ -238,8 +226,7 @@ const partners = [
         name: 'ThinkSystem & ThinkAgile',
         description: 'Servers, storage, networking, and hyperconverged systems'
       }
-    ],
-    description: 'Lenovo business computing solutions offering reliable, secure, and high-performance devices for enterprise environments.'
+    ]
   }
 ];
 
@@ -338,10 +325,9 @@ const About = () => {
                   />
                 </div>
                 <div className="p-4 border-t border-gray-100">
-                  <p className="text-sm text-gray-600 mb-4">{partner.description}</p>
-                  <div className="bg-gray-50 p-4 rounded-lg">
+                  <div className="space-y-3">
                     {partner.technologies.map((tech, techIdx) => (
-                      <div key={techIdx} className="mb-3 last:mb-0">
+                      <div key={techIdx}>
                         <h4 className="font-medium text-primary">{tech.name}</h4>
                         <p className="text-sm text-gray-600">{tech.description}</p>
                       </div>
