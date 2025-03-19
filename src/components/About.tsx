@@ -13,7 +13,7 @@ const features = [
   'Transparent pricing with no hidden fees'
 ];
 
-// Reordered clients as requested
+// Updated Tuk Tuk Rental logo with the newly uploaded image
 const clients = [
   {
     name: 'Unilever',
@@ -22,7 +22,7 @@ const clients = [
   },
   {
     name: 'Tuk Tuk Rental',
-    logo: '/lovable-uploads/ee0802c8-b897-4228-a62f-68cc11be3135.png',
+    logo: '/lovable-uploads/12e47029-39ff-46d6-a780-4cfd4a62fd33.png',
     url: 'https://tuktukrental.com/'
   },
   {
