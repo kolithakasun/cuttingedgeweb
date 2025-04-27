@@ -54,31 +54,45 @@ const Contact = () => {
       [id]: value
     });
   };
-  
+
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
-    
-    // Show both toast notifications to ensure the user gets feedback
-    toast.success("Message sent! We'll get back to you as soon as possible.");
-    uiToast({
-      title: "Message sent!",
-      description: "We'll get back to you as soon as possible.",
-    });
-    
-    // Email would normally be sent via a server endpoint
+
     console.log("Form submitted with data:", formData);
-    
-    // Simulate form submission
-    setTimeout(() => {
-      setIsSubmitting(false);
-      setFormData({
-        name: '',
-        email: '',
-        subject: '',
-        message: ''
+
+    fetch("http://localhost:3000/api/send-email", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(formData),
+    })
+      .then((data) => {
+        setFormData({
+          name: '',
+          email: '',
+          subject: '',
+          message: '',
+        });
+        setIsSubmitting(false);
+        toast.success(
+          "Message sent! We'll get back to you as soon as possible."
+        );
+        uiToast({
+          title: "Message sent!",
+          description: "We'll get back to you as soon as possible.",
+        });
+      })
+      .catch((error) => {
+        setIsSubmitting(false);
+        console.error("Error sending email:", error);
+        toast.error("Failed to send message. Please try again later.");
+        uiToast({
+          title: "Error",
+          description: "Failed to send message. Please try again later.",
+        });
       });
-    }, 1500);
   };
   
   return (
