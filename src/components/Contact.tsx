@@ -61,7 +61,7 @@ const Contact = () => {
 
     console.log("Form submitted with data:", formData);
 
-    fetch("http://localhost:3000/api/send-email", {
+    fetch("http://api.cuttingedgesl.com/api/send-email", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
