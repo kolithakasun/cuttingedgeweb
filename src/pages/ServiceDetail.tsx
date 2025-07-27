@@ -69,12 +69,12 @@ const serviceDetails: Record<string, ServiceDetail> = {
     ],
     approach: "We take a consultative approach to understand your business needs before designing and implementing IT infrastructure solutions. Our team of certified professionals ensures seamless integration with your existing systems and provides ongoing support to maximize performance and reliability.",
     vendorLogos: [
-      { name: "Dell", logo: "/lovable-uploads/4f689f47-78aa-467e-9014-e5d029c3908f.png", url: "https://www.dell.com/" },
-      { name: "HP", logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a9/HP_logo_2012.svg/2048px-HP_logo_2012.svg.png", url: "https://www.hp.com/" },
-      { name: "Cisco", logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/0/08/Cisco_logo_blue_2016.svg/1200px-Cisco_logo_blue_2016.svg.png", url: "https://www.cisco.com/" },
-      { name: "VMware", logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Vmware.svg/1200px-Vmware.svg.png", url: "https://www.vmware.com/" },
-      { name: "Lenovo", logo: "/lovable-uploads/eb8f968e-3b6c-45bd-be2f-aec5410920f3.png", url: "https://www.lenovo.com/" },
-      { name: "Fortinet", logo: "/lovable-uploads/a430eb04-04dd-4edb-aec1-ed4b14a6a755.png", url: "https://www.fortinet.com/" }
+      { name: "Dell", logo: "/lovable-uploads/Dell_Logo.svg.png", url: "https://www.dell.com/" },
+      { name: "HP", logo: "/lovable-uploads/1200px-HP_logo_2012.svg.png", url: "https://www.hp.com/" },
+      { name: "Cisco", logo: "/lovable-uploads/0/08/Cisco_logo_blue_2016.svg.png", url: "https://www.cisco.com/" },
+      { name: "VMware", logo: "/lovable-uploads/9/9a/Vmware.svg.png", url: "https://www.vmware.com/" },
+      { name: "Lenovo", logo: "/lovable-uploads/Lenovo.png", url: "https://www.lenovo.com/" },
+      { name: "Fortinet", logo: "/lovable-uploads/Fortinet.png", url: "https://www.fortinet.com/" }
     ],
     additionalContent: (
       <div className="mt-12 bg-gray-50 p-8 rounded-xl">
