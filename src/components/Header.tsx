@@ -23,7 +23,7 @@ const Header = () => {
     { title: 'Home', href: '/' },
     { title: 'Services', href: '/services' },
     { title: 'About', href: '/#about' },
-    { title: 'Contact', href: '/#contact' },
+    // { title: 'Contact', href: '/#contact' },
   ];
 
   const handleNavClick = (href: string) => {
