@@ -292,7 +292,11 @@ const serviceDetails: Record<string, ServiceDetail> = {
     approach: "Our managed services model delivers proactive maintenance, rapid support, and strategic guidance through a team of certified IT professionals. We become your trusted technology partner, ensuring your IT environment supports and enhances your business operations.",
     vendorLogos: [
       { name: "PagerDuty", logo: "/lovable-uploads/PagerDuty.png", url: "https://www.pagerduty.com/" },
-      { name: "xMatters", logo: "/lovable-uploads/xmatters.png", url: "https://www.xmatters.com/" }
+      { name: "xMatters", logo: "/lovable-uploads/xmatters.png", url: "https://www.xmatters.com/" },
+      { name: "ServiceNow", logo: "/lovable-uploads/servicenow.png", url: "https://www.servicenow.com/" },
+      { name: "Jira", logo: "/lovable-uploads/Jira.png", url: "https://www.atlassian.com/software/jira" },
+      { name: "FreshDesk", logo: "/lovable-uploads/Freshdesk.png", url: "https://freshdesk.com/" },
+      { name: "RedHat", logo: "/lovable-uploads/Redhat.png", url: "https://www.redhat.com/" }
     ],
     additionalContent: (
       <div className="mt-12 bg-gray-50 p-8 rounded-xl">
