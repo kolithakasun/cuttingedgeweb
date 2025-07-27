@@ -69,12 +69,12 @@ const serviceDetails: Record<string, ServiceDetail> = {
     ],
     approach: "We take a consultative approach to understand your business needs before designing and implementing IT infrastructure solutions. Our team of certified professionals ensures seamless integration with your existing systems and provides ongoing support to maximize performance and reliability.",
     vendorLogos: [
-      { name: "Dell", logo: "/lovable-uploads/4f689f47-78aa-467e-9014-e5d029c3908f.png", url: "https://www.dell.com/" },
-      { name: "HP", logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a9/HP_logo_2012.svg/2048px-HP_logo_2012.svg.png", url: "https://www.hp.com/" },
-      { name: "Cisco", logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/0/08/Cisco_logo_blue_2016.svg/1200px-Cisco_logo_blue_2016.svg.png", url: "https://www.cisco.com/" },
-      { name: "VMware", logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Vmware.svg/1200px-Vmware.svg.png", url: "https://www.vmware.com/" },
-      { name: "Lenovo", logo: "/lovable-uploads/eb8f968e-3b6c-45bd-be2f-aec5410920f3.png", url: "https://www.lenovo.com/" },
-      { name: "Fortinet", logo: "/lovable-uploads/a430eb04-04dd-4edb-aec1-ed4b14a6a755.png", url: "https://www.fortinet.com/" }
+      { name: "Dell", logo: "/lovable-uploads/Dell_Logo.svg.png", url: "https://www.dell.com/" },
+      { name: "HP", logo: "/lovable-uploads/1200px-HP_logo_2012.svg.png", url: "https://www.hp.com/" },
+      { name: "Cisco", logo: "/lovable-uploads/0/08/Cisco_logo_blue_2016.svg.png", url: "https://www.cisco.com/" },
+      { name: "VMware", logo: "/lovable-uploads/9/9a/Vmware.svg.png", url: "https://www.vmware.com/" },
+      { name: "Lenovo", logo: "/lovable-uploads/Lenovo.png", url: "https://www.lenovo.com/" },
+      { name: "Fortinet", logo: "/lovable-uploads/Fortinet.png", url: "https://www.fortinet.com/" }
     ],
     additionalContent: (
       <div className="mt-12 bg-gray-50 p-8 rounded-xl">
@@ -147,12 +147,12 @@ const serviceDetails: Record<string, ServiceDetail> = {
     ],
     approach: "We implement defense-in-depth security strategies tailored to your risk profile and business needs. Our approach combines cutting-edge technologies, best practices, and ongoing monitoring to provide comprehensive protection for your digital assets.",
     vendorLogos: [
-      { name: "Microsoft", logo: "https://img-prod-cms-rt-microsoft-com.akamaized.net/cms/api/am/imageFileData/RE1Mu3b?ver=5c31", url: "https://www.microsoft.com/" },
-      { name: "ESET", logo: "/lovable-uploads/290e5970-3e3d-4de3-be09-8908b57071e3.png", url: "https://www.eset.com/" },
-      { name: "Symantec", logo: "/lovable-uploads/b3c28d88-13f6-4572-b281-63fe406eec18.png", url: "https://www.broadcom.com/products/cyber-security" },
-      { name: "SentinelOne", logo: "/lovable-uploads/937a97b0-9b36-48bc-b424-dc6bceb32d22.png", url: "https://www.sentinelone.com/" },
-      { name: "Nessus", logo: "https://www.tenable.com/sites/all/themes/tenablefourteen/images/Logo-Tenable-Blue-Inline-RGB.svg", url: "https://www.tenable.com/products/nessus" },
-      { name: "Fortinet", logo: "/lovable-uploads/a430eb04-04dd-4edb-aec1-ed4b14a6a755.png", url: "https://www.fortinet.com/" }
+      { name: "Microsoft", logo: "/lovable-uploads/Microsoft_Sentinel.png", url: "https://www.microsoft.com/" },
+      { name: "ESET", logo: "/lovable-uploads/ESET.png", url: "https://www.eset.com/" },
+      { name: "Symantec", logo: "/lovable-uploads/Symantec.png", url: "https://www.broadcom.com/products/cyber-security" },
+      { name: "SentinelOne", logo: "/lovable-uploads/SentinelOne.png", url: "https://www.sentinelone.com/" },
+      { name: "Nessus", logo: "/lovable-uploads/Nessus.png", url: "https://www.tenable.com/products/nessus" },
+      { name: "Fortinet", logo: "/lovable-uploads/Fortinet.png", url: "https://www.fortinet.com/" }
     ],
     additionalContent: (
       <div className="mt-12 bg-gray-50 p-8 rounded-xl">
@@ -291,13 +291,8 @@ const serviceDetails: Record<string, ServiceDetail> = {
     ],
     approach: "Our managed services model delivers proactive maintenance, rapid support, and strategic guidance through a team of certified IT professionals. We become your trusted technology partner, ensuring your IT environment supports and enhances your business operations.",
     vendorLogos: [
-      { name: "Microsoft", logo: "https://img-prod-cms-rt-microsoft-com.akamaized.net/cms/api/am/imageFileData/RE1Mu3b?ver=5c31", url: "https://www.microsoft.com/" },
-      { name: "Dell", logo: "/lovable-uploads/4f689f47-78aa-467e-9014-e5d029c3908f.png", url: "https://www.dell.com/" },
-      { name: "HP", logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a9/HP_logo_2012.svg/2048px-HP_logo_2012.svg.png", url: "https://www.hp.com/" },
-      { name: "Cisco", logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/0/08/Cisco_logo_blue_2016.svg/1200px-Cisco_logo_blue_2016.svg.png", url: "https://www.cisco.com/" },
-      { name: "Lenovo", logo: "/lovable-uploads/eb8f968e-3b6c-45bd-be2f-aec5410920f3.png", url: "https://www.lenovo.com/" },
-      { name: "PagerDuty", logo: "https://upload.wikimedia.org/wikipedia/commons/f/f7/PagerDuty_logo.svg", url: "https://www.pagerduty.com/" },
-      { name: "xMatters", logo: "https://www.xmatters.com/wp-content/themes/xmatters-2023/img/icons/logo-xmatters.svg", url: "https://www.xmatters.com/" }
+      { name: "PagerDuty", logo: "/lovable-uploads/PagerDuty.png", url: "https://www.pagerduty.com/" },
+      { name: "xMatters", logo: "/lovable-uploads/xMatters.png", url: "https://www.xmatters.com/" }
     ],
     additionalContent: (
       <div className="mt-12 bg-gray-50 p-8 rounded-xl">
@@ -619,12 +614,13 @@ const serviceDetails: Record<string, ServiceDetail> = {
     ],
     approach: "We take a holistic approach to data management, focusing on your organization's unique data challenges and objectives. Our experts implement industry best practices and cutting-edge technologies to ensure your data is accurate, accessible, and secure throughout its lifecycle.",
     vendorLogos: [
-      { name: "Microsoft", logo: "https://img-prod-cms-rt-microsoft-com.akamaized.net/cms/api/am/imageFileData/RE1Mu3b?ver=5c31", url: "https://www.microsoft.com/" },
+      { name: "Microsoft SQL", logo: "/lovable-uploads/Microsoft_SQL.png", url: "https://www.microsoft.com/en-us/sql-server" },
       { name: "Oracle", logo: "https://upload.wikimedia.org/wikipedia/commons/5/50/Oracle_logo.svg", url: "https://www.oracle.com/" },
       { name: "Snowflake", logo: "https://upload.wikimedia.org/wikipedia/commons/f/ff/Snowflake_Logo.svg", url: "https://www.snowflake.com/" },
       { name: "MongoDB", logo: "https://upload.wikimedia.org/wikipedia/commons/9/93/MongoDB_Logo.svg", url: "https://www.mongodb.com/" },
       { name: "PostgreSQL", logo: "https://upload.wikimedia.org/wikipedia/commons/2/29/Postgresql_elephant.svg", url: "https://www.postgresql.org/" },
-      { name: "AWS", logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/9/93/Amazon_Web_Services_Logo.svg/1200px-Amazon_Web_Services_Logo.svg.png", url: "https://aws.amazon.com/" }
+      { name: "AWS", logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/9/93/Amazon_Web_Services_Logo.svg/1200px-Amazon_Web_Services_Logo.svg.png", url: "https://aws.amazon.com/" },
+      { name: "Azure", logo: "/lovable-uploads/Microsoft_Azure_Logo.svg.png", url: "https://azure.microsoft.com/"}
     ],
     additionalContent: (
       <div className="mt-12 bg-gray-50 p-8 rounded-xl">
@@ -701,10 +697,10 @@ const serviceDetails: Record<string, ServiceDetail> = {
     ],
     approach: "We employ a methodical integration approach, first understanding your IT landscape and business processes, then designing integration solutions that optimize data flow and eliminate redundancies. Our implementations are scalable, adaptable, and built to support your evolving business needs.",
     vendorLogos: [
-      { name: "MuleSoft", logo: "https://upload.wikimedia.org/wikipedia/commons/c/c0/MuleSoft_Logo.png", url: "https://www.mulesoft.com/" },
+      { name: "MuleSoft", logo: "/lovable-uploads/MuleSoft.png", url: "https://www.mulesoft.com/" },
       { name: "Microsoft", logo: "https://img-prod-cms-rt-microsoft-com.akamaized.net/cms/api/am/imageFileData/RE1Mu3b?ver=5c31", url: "https://www.microsoft.com/" },
       { name: "IBM", logo: "https://upload.wikimedia.org/wikipedia/commons/5/51/IBM_logo.svg", url: "https://www.ibm.com/" },
-      { name: "Dell Boomi", logo: "https://www.boomi.com/wp-content/uploads/Boomi-LogoLockup-750x250-1.png", url: "https://www.boomi.com/" },
+      { name: "Dell Boomi", logo: "/lovable-uploads/Dell_Boomi.png", url: "https://www.boomi.com/" },
       { name: "Oracle", logo: "https://upload.wikimedia.org/wikipedia/commons/5/50/Oracle_logo.svg", url: "https://www.oracle.com/" },
       { name: "AWS", logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/9/93/Amazon_Web_Services_Logo.svg/1200px-Amazon_Web_Services_Logo.svg.png", url: "https://aws.amazon.com/" }
     ],
