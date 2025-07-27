@@ -71,8 +71,8 @@ const serviceDetails: Record<string, ServiceDetail> = {
     vendorLogos: [
       { name: "Dell", logo: "/lovable-uploads/Dell_Logo.svg.png", url: "https://www.dell.com/" },
       { name: "HP", logo: "/lovable-uploads/1200px-HP_logo_2012.svg.png", url: "https://www.hp.com/" },
-      { name: "Cisco", logo: "/lovable-uploads/0/08/Cisco_logo_blue_2016.svg.png", url: "https://www.cisco.com/" },
-      { name: "VMware", logo: "/lovable-uploads/9/9a/Vmware.svg.png", url: "https://www.vmware.com/" },
+      { name: "Cisco", logo: "/lovable-uploads/Cisco-logo.png", url: "https://www.cisco.com/" },
+      { name: "VMware", logo: "/lovable-uploads/92-925106_vmware-workstation-logo-png.png", url: "https://www.vmware.com/" },
       { name: "Lenovo", logo: "/lovable-uploads/Lenovo.png", url: "https://www.lenovo.com/" },
       { name: "Fortinet", logo: "/lovable-uploads/Fortinet.png", url: "https://www.fortinet.com/" }
     ],
@@ -148,9 +148,9 @@ const serviceDetails: Record<string, ServiceDetail> = {
     approach: "We implement defense-in-depth security strategies tailored to your risk profile and business needs. Our approach combines cutting-edge technologies, best practices, and ongoing monitoring to provide comprehensive protection for your digital assets.",
     vendorLogos: [
       { name: "Microsoft", logo: "/lovable-uploads/Microsoft_Sentinel.png", url: "https://www.microsoft.com/" },
-      { name: "ESET", logo: "/lovable-uploads/ESET.png", url: "https://www.eset.com/" },
+      { name: "ESET", logo: "/lovable-uploads/Eset.jpg", url: "https://www.eset.com/" },
       { name: "Symantec", logo: "/lovable-uploads/Symantec.png", url: "https://www.broadcom.com/products/cyber-security" },
-      { name: "SentinelOne", logo: "/lovable-uploads/SentinelOne.png", url: "https://www.sentinelone.com/" },
+      { name: "SentinelOne", logo: "/lovable-uploads/sentinelone-logo.jpg", url: "https://www.sentinelone.com/" },
       { name: "Nessus", logo: "/lovable-uploads/Nessus.png", url: "https://www.tenable.com/products/nessus" },
       { name: "Fortinet", logo: "/lovable-uploads/Fortinet.png", url: "https://www.fortinet.com/" }
     ],
@@ -292,7 +292,7 @@ const serviceDetails: Record<string, ServiceDetail> = {
     approach: "Our managed services model delivers proactive maintenance, rapid support, and strategic guidance through a team of certified IT professionals. We become your trusted technology partner, ensuring your IT environment supports and enhances your business operations.",
     vendorLogos: [
       { name: "PagerDuty", logo: "/lovable-uploads/PagerDuty.png", url: "https://www.pagerduty.com/" },
-      { name: "xMatters", logo: "/lovable-uploads/xMatters.png", url: "https://www.xmatters.com/" }
+      { name: "xMatters", logo: "/lovable-uploads/xmatters.png", url: "https://www.xmatters.com/" }
     ],
     additionalContent: (
       <div className="mt-12 bg-gray-50 p-8 rounded-xl">
