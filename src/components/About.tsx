@@ -42,7 +42,7 @@ const clients = [
   },
   {
     name: 'Worldwide International',
-    logo: 'http://www.wweinternational.com/wp-content/uploads/2021/05/WWE.png',
+    logo: '/lovable-uploads/WWE.png',
     url: 'http://www.wweinternational.com/'
   },
   {
@@ -53,7 +53,7 @@ const clients = [
   {
     name: 'VElevenOne',
     logo: '/lovable-uploads/V-Eleven-One-logo.png',
-    url: '#'
+    url: 'https://www.velevenone.com/'
   }
 ];
 
