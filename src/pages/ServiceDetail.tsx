@@ -72,7 +72,7 @@ const serviceDetails: Record<string, ServiceDetail> = {
       { name: "Dell", logo: "/lovable-uploads/Dell_Logo.svg.png", url: "https://www.dell.com/" },
       { name: "HP", logo: "/lovable-uploads/1200px-HP_logo_2012.svg.png", url: "https://www.hp.com/" },
       { name: "Cisco", logo: "/lovable-uploads/Cisco-logo.png", url: "https://www.cisco.com/" },
-      { name: "VMware", logo: "/lovable-uploads/92-925106_vmware-workstation-logo-png.png", url: "https://www.vmware.com/" },
+      { name: "VMware", logo: "/lovable-uploads/VMware_logo.svg.png", url: "https://www.vmware.com/" },
       { name: "Lenovo", logo: "/lovable-uploads/Lenovo.png", url: "https://www.lenovo.com/" },
       { name: "Fortinet", logo: "/lovable-uploads/Fortinet.png", url: "https://www.fortinet.com/" }
     ],
