@@ -1,17 +1,32 @@
-# Use official Node.js image as base
-FROM node:18-alpine
+# Build stage
+FROM node:18-alpine AS builder
 
-# Set working directory in the container
+# Set working directory
 WORKDIR /app
 
-# Copy the rest of the application code
-COPY . .
+# Copy package files
+COPY package*.json ./
 
 # Install dependencies
-RUN npm install
+RUN npm ci --only=production
 
-# Expose the application port
-EXPOSE 8080
+# Copy source code
+COPY . .
 
-# Start the application
-CMD ["npm", "run", "dev"]
+# Build the application
+RUN npm run build
+
+# Production stage
+FROM nginx:alpine
+
+# Copy built application from builder stage
+COPY --from=builder /app/dist /usr/share/nginx/html
+
+# Copy nginx configuration for SPA routing
+COPY nginx.conf /etc/nginx/conf.d/default.conf
+
+# Expose port 80
+EXPOSE 80
+
+# Start nginx
+CMD ["nginx", "-g", "daemon off;"]
